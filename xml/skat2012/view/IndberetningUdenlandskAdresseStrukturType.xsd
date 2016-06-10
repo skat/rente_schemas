@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+      <xs:schema xmlns:skat2012="http://skat.dk/begrebsmodel/2012/01/01/"
+                 xmlns:xs="http://www.w3.org/2001/XMLSchema"
+                 targetNamespace="http://skat.dk/begrebsmodel/2012/01/01/"
+                 elementFormDefault="qualified"
+                 attributeFormDefault="unqualified"
+                 version="1.0">
+         
+         <xs:annotation>
+            <xs:documentation/>
+            <xs:documentation>r14234</xs:documentation>
+         </xs:annotation>
+         <xs:include schemaLocation="../class/IndberetningUdenlandskAdresse.xsd"/>
+         <xs:include schemaLocation="../class/Land.xsd"/>
+         <xs:element name="IndberetningUdenlandskAdresseStruktur"
+                     type="skat2012:IndberetningUdenlandskAdresseStrukturType"/>
+         <xs:complexType name="IndberetningUdenlandskAdresseStrukturType">
+         
+         
+         
+         
+         
+         
+         
+         
+         
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+               <xs:sequence>
+               <xs:element name="VejNavnPostBoksValg">
+                  <xs:complexType>
+                     <xs:choice>
+                        <xs:sequence>
+                           <xs:element name="VejNavn">
+                              <xs:complexType>
+                                 <xs:sequence>
+                                    <xs:element ref="skat2012:IndberetningUdenlandskAdresseVejNavn"/>
+
+                                    <xs:element ref="skat2012:IndberetningUdenlandskAdressePostBoksNummer" minOccurs="0"/>
+
+
+                                 </xs:sequence>
+                              </xs:complexType>
+                           </xs:element>
+				
+				                    </xs:sequence>
+				                    <xs:element ref="skat2012:IndberetningUdenlandskAdressePostBoksNummer"/>
+                     </xs:choice>
+                  </xs:complexType>
+               </xs:element>
+
+               <xs:element ref="skat2012:IndberetningUdenlandskAdresseCONavn" minOccurs="0"/>
+
+
+
+               <xs:element ref="skat2012:IndberetningUdenlandskAdresseHusNummer" minOccurs="0"/>
+
+
+
+               <xs:element ref="skat2012:IndberetningUdenlandskAdresseEtageTekst" minOccurs="0"/>
+
+
+
+               <xs:element ref="skat2012:IndberetningUdenlandskAdresseSideDørTekst" minOccurs="0"/>
+
+
+
+               <xs:element ref="skat2012:IndberetningUdenlandskAdresseBy" minOccurs="0"/>
+
+
+
+               <xs:element ref="skat2012:IndberetningUdenlandskAdressePostNummer" minOccurs="0"/>
+
+               <xs:element ref="skat2012:IndberetningUdenlandskAdressePostDistrikt"/>
+
+               <xs:element ref="skat2012:IndberetningUdenlandskAdresseHusNavn" minOccurs="0"/>
+
+
+
+               <xs:element ref="skat2012:IndberetningUdenlandskAdresseLejlighedNummer" minOccurs="0"/>
+
+
+
+               <xs:element ref="skat2012:IndberetningUdenlandskAdresseLandsdel" minOccurs="0"/>
+
+               <xs:element ref="skat2012:LandKode"/>
+               </xs:sequence>
+            
+         
+         
+         
+         
+         </xs:complexType>
+      </xs:schema>

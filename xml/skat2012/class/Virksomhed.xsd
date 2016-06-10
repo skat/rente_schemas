@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+      <xs:schema xmlns:skat2012="http://skat.dk/begrebsmodel/2012/01/01/"
+                 xmlns:xs="http://www.w3.org/2001/XMLSchema"
+                 targetNamespace="http://skat.dk/begrebsmodel/2012/01/01/"
+                 elementFormDefault="qualified"
+                 attributeFormDefault="unqualified"
+                 version="1.0">
+         <xs:annotation>
+               <xs:documentation>VIGTIGT! - SKAT definerer JuridiskEnhed, som et fælles begreb for alle de enheder, som (potentielt set) skal afregne told, skatter og afgifter: Alle typer af Virksomhed (identificeret ved SE-nummer), Person (identificeret ved CVR), UdenlandskVirksomhed og UdenlandskPerson. - CVR definerer juridisk enhed, som en virksomhed, identificeret ved CVR-nummer. DISSE TO DEFINITIONER MÅ IKKE FORVEKSLES.  Begrebet, Virksomhed, indeholder identifikationsoplysninger om virksomheder, samt en virksomheds start- og eventuel ophørsdato. En virksomhed er identificeret med et CVR-nummer eller SE-nummer. Der findes 3 typer af ’virksomheder’, som ALLE er specialiseringer af SKAT-begrebet, JuridiskEnhed.   01. Juridisk enhed (CVR-definition), som er identificeret med et CVR-nummer 02. Administrativ enhed, som er identificeret med et SE-nummer (tilknyttet en juridisk enhed) 03. Ikke CVR-enhed, som er identificeret med et SE-nummer (ikke tilknyttet en juridisk enhed)  Eksempel: CVRNummer SENummer Virksomhedstype 11 11 11 11 11 11 11 11 01 11 11 11 11 22 22 22 22 02 11 11 11 11 33 33 33 33 02 ’null’  44 44 44 44 03  01. En virksomhed, som er en juridisk enhed (CVRs definition), er optaget i CVR-registret og tildeles kun ét CVR-nummer. Et CVR-nummer svarer til CPR-nummer for en fysisk person. Ved CVRs definition af juridisk enhed forstås: - En fysisk person i dennes egenskab af arbejdsgiver eller selvstændigt erhvervsdrivende.  - En juridisk person (eksempelvis A/S, ApS) eller en filial af en udenlandsk juridisk person.  - En statslig administrativ enhed.  - En region.  - En kommune.  - Et kommunalt fællesskab.  02. En juridisk enhed (CVRs definition) kan efter eget ønske være opdelt i en eller flere enheder, som afregner told, skatter og afgifter. En sådan enhed kaldes en administrativ enhed og tildeles et SE-nummer. Et administrativt SE-nummer er entydigt relateret til ét CVR-nummer. En administrativ enhed ophører, når den juridiske enhed ophører, og kan ikke starte før den juridiske enhed. En administrativ enhed kan ophøre tidligere end den juridiske enhed.  03. En enhed, som er registreringspligtig i henhold til told- skatte- eller afgiftslovgivningen og, som hverken er en juridisk eller administrativ enhed, identificeres med et SE-nummer. En sådan enhed benævnes en Ikke CVR-enhed.  Identifikationsnumret er et nummer på 8 karakterer uanset om det er et CVR-nummer, et administrativt SE-nummer eller SE-nummer for en ikke CVR-enhed.</xs:documentation>
+            </xs:annotation>
+         <xs:include schemaLocation="../types/SENummerType.xsd"/>
+         <xs:include schemaLocation="../types/CVRNummerType.xsd"/>
+         <xs:include schemaLocation="../types/DatoType.xsd"/>
+         <xs:element name="VirksomhedSENummer" type="skat2012:SENummerType">
+               
+               <xs:annotation>
+                  <xs:documentation>8-cifret nummer,  der entydigt identificerer en registreret virksomhed i SKAT.</xs:documentation>
+               </xs:annotation>
+            </xs:element>
+         <xs:element name="VirksomhedCVRNummer" type="skat2012:CVRNummerType">
+               
+               <xs:annotation>
+                  <xs:documentation>Det nummer der tildeles juridiske enheder i et Centralt Virksomheds Register (CVR).</xs:documentation>
+               </xs:annotation>
+            </xs:element>
+         <xs:element name="VirksomhedStartDato" type="skat2012:DatoType">
+               
+               <xs:annotation>
+                  <xs:documentation>Angiver startdato for virksomheden</xs:documentation>
+               </xs:annotation>
+            </xs:element>
+         <xs:element name="VirksomhedOphørDato" type="skat2012:DatoType">
+               
+               <xs:annotation>
+                  <xs:documentation>Angiver slutdato for virksomheden</xs:documentation>
+               </xs:annotation>
+            </xs:element>
+      </xs:schema>

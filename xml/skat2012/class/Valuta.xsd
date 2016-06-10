@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+      <xs:schema xmlns:skat2012="http://skat.dk/begrebsmodel/2012/01/01/"
+                 xmlns:xs="http://www.w3.org/2001/XMLSchema"
+                 targetNamespace="http://skat.dk/begrebsmodel/2012/01/01/"
+                 elementFormDefault="qualified"
+                 attributeFormDefault="unqualified"
+                 version="1.0">
+         <xs:annotation>
+               <xs:documentation>Indeholder oplysning om den valutakurs der er anvendt ved omregning.</xs:documentation>
+            </xs:annotation>
+         <xs:include schemaLocation="../types/ValutaType.xsd"/>
+         <xs:include schemaLocation="../types/DatoType.xsd"/>
+         <xs:include schemaLocation="../types/ValutaKursType.xsd"/>
+         <xs:element name="ValutaKode" type="skat2012:ValutaType">
+               
+               <xs:annotation>
+                  <xs:documentation>Angiver valuta enheden (ISO-møntkoden) for et beløb.</xs:documentation>
+               </xs:annotation>
+            </xs:element>
+         <xs:element name="ValutaDato" type="skat2012:DatoType">
+               
+               <xs:annotation>
+                  <xs:documentation>Den dato hvor valutaomregningen er foretaget</xs:documentation>
+               </xs:annotation>
+            </xs:element>
+         <xs:element name="ValutaKurs" type="skat2012:ValutaKursType">
+               
+               <xs:annotation>
+                  <xs:documentation>Den valutakurs der er anvendt til omregning</xs:documentation>
+               </xs:annotation>
+            </xs:element>
+      </xs:schema>

@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+      <xs:schema xmlns:skat2012="http://skat.dk/begrebsmodel/2012/01/01/"
+                 xmlns:xs="http://www.w3.org/2001/XMLSchema"
+                 targetNamespace="http://skat.dk/begrebsmodel/2012/01/01/"
+                 elementFormDefault="qualified"
+                 attributeFormDefault="unqualified"
+                 version="1.0">
+         
+         <xs:annotation>
+            <xs:documentation/>
+            <xs:documentation>r14234</xs:documentation>
+         </xs:annotation>
+         <xs:include schemaLocation="../class/Indkomst.xsd"/>
+         <xs:include schemaLocation="../class/Virksomhed.xsd"/>
+         <xs:include schemaLocation="../class/Konto.xsd"/>
+				     
+         <xs:include schemaLocation="../class/Indberetning.xsd"/>
+         <xs:include schemaLocation="../class/Bank.xsd"/>
+         <xs:include schemaLocation="../class/PantebrevDepot.xsd"/>
+         <xs:include schemaLocation="../class/KontoType.xsd"/>
+         <xs:include schemaLocation="../class/Pantebrev.xsd"/>
+         <xs:include schemaLocation="../class/BankKonto.xsd"/>
+         <xs:include schemaLocation="../operational/ValutaStatusKode.xsd"/>
+				     
+         <xs:include schemaLocation="../class/Valuta.xsd"/>
+         <xs:include schemaLocation="../class/Rente.xsd"/>
+         <xs:include schemaLocation="../class/Laan.xsd"/>
+         <xs:include schemaLocation="../operational/LaanForholdGaeldTilstand.xsd"/>
+				     
+				     
+         <xs:include schemaLocation="../view/IndberetningIdentifikatorStrukturType.xsd"/>
+				     
+         <xs:include schemaLocation="../view/KontohaverListeStrukturType.xsd"/>
+				     
+         <xs:element name="RenteIndberetningPantebreveStruktur"
+                     type="skat2012:RenteIndberetningPantebreveStrukturType"/>
+         <xs:complexType name="RenteIndberetningPantebreveStrukturType">
+            <xs:sequence>
+         
+         
+         
+         
+         
+         
+         
+         
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+               <!--Sequence removed-->
+                  <xs:element name="Indkomstperiode">
+                     <xs:complexType>
+                        <xs:sequence>
+                           <xs:element ref="skat2012:IndkomstÅr"/>
+
+                           <xs:element ref="skat2012:IndkomstPeriodeTil" minOccurs="0"/>
+
+
+                        </xs:sequence>
+                     </xs:complexType>
+                  </xs:element>
+                  <xs:element name="Indberetningspligtig">
+                     <xs:complexType>
+                        <xs:sequence>
+                           <xs:element ref="skat2012:VirksomhedSENummer"/>
+                        </xs:sequence>
+                     </xs:complexType>
+                  </xs:element>
+                  <xs:element ref="skat2012:KontoID"/>
+                  <xs:element name="RetbarKontoOplysninger">
+                     <xs:complexType>
+                        <xs:sequence>
+                           <xs:element ref="skat2012:IndberetningIdentifikatorStruktur"/>
+
+                           <xs:element ref="skat2012:IndberetningReferenceNummer" minOccurs="0"/>
+
+
+                           <xs:element name="PantebrevDepot">
+                              <xs:complexType>
+                                 <xs:sequence>
+
+                                    <xs:element ref="skat2012:BankRegisteringsnummer" minOccurs="0"/>
+
+                                    <xs:element ref="skat2012:PantebrevDepotNummer"/>
+                  
+                                    <xs:element ref="skat2012:KontoTypeKode"/>
+                  
+                                    <xs:element ref="skat2012:PantebrevDepotNummer"/>
+                  
+                                    <xs:element ref="skat2012:PantebrevÆndringKode"/>
+                  
+                                    <xs:element ref="skat2012:KontoStartDato"/>
+
+                                    <xs:element ref="skat2012:KontoOphørDato" minOccurs="0"/>
+
+
+
+                                    <xs:element ref="skat2012:BankKontoIBANNummer" minOccurs="0"/>
+
+
+
+                                    <xs:element ref="skat2012:ValutaStatusKode" minOccurs="0"/>
+
+
+
+                                    <xs:element ref="skat2012:ValutaKode" minOccurs="0"/>
+
+
+                                 </xs:sequence>
+                              </xs:complexType>
+                           </xs:element>
+                           <xs:element name="Beløb">
+                              <xs:complexType>
+                                 <xs:sequence>
+                                    <xs:element ref="skat2012:RenteBeløb"/>
+
+                                    <xs:element ref="skat2012:LånRestgældBeløb" minOccurs="0"/>
+
+
+
+                                    <xs:element ref="skat2012:LånKursværdi" minOccurs="0"/>
+
+                                    <xs:element ref="skat2012:LånForholdGældTilstand"/>
+                                 </xs:sequence>
+                              </xs:complexType>
+                           </xs:element>
+                           <xs:element ref="skat2012:KontohaverListeStruktur"/>
+                        </xs:sequence>
+                     </xs:complexType>
+                  </xs:element>
+               
+            
+         
+         
+         
+         
+            </xs:sequence>
+         </xs:complexType>
+      </xs:schema>

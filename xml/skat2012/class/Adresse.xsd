@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+      <xs:schema xmlns:skat2012="http://skat.dk/begrebsmodel/2012/01/01/"
+                 xmlns:xs="http://www.w3.org/2001/XMLSchema"
+                 targetNamespace="http://skat.dk/begrebsmodel/2012/01/01/"
+                 elementFormDefault="qualified"
+                 attributeFormDefault="unqualified"
+                 version="1.0">
+         <xs:annotation>
+               <xs:documentation>En superklasse i forhold til de specialiserede klasser: VirksomhedAdresse og PersonAdresse. Indeholder ordnede adresselagringer, hvor hvert adresseelement udfyldes særskilt. Fritekst-adresser benyttes i stedet for, klassen AlternativeAdresse.</xs:documentation>
+            </xs:annotation>
+         <xs:include schemaLocation="../types/VirksomhedAdresseLoebeNummerType.xsd"/>
+         <xs:include schemaLocation="../types/AdresseAnvendelseKodeType.xsd"/>
+         <xs:include schemaLocation="../types/TekstKortType.xsd"/>
+         <xs:include schemaLocation="../types/VejKodeType.xsd"/>
+         <xs:include schemaLocation="../types/HusNummerType.xsd"/>
+         <xs:include schemaLocation="../types/HusBogstavType.xsd"/>
+         <xs:include schemaLocation="../types/LigeUligeType.xsd"/>
+         <xs:include schemaLocation="../types/NavnType.xsd"/>
+         <xs:include schemaLocation="../types/EtageType.xsd"/>
+         <xs:include schemaLocation="../types/EtageTekstType.xsd"/>
+         <xs:include schemaLocation="../types/SideDoerTekstType.xsd"/>
+         <xs:include schemaLocation="../types/PostNummerType.xsd"/>
+         <xs:include schemaLocation="../types/PostDistriktType.xsd"/>
+         <xs:include schemaLocation="../types/LandsDelType.xsd"/>
+         <xs:include schemaLocation="../types/PostBoksNummerType.xsd"/>
+         <xs:include schemaLocation="../types/DatoType.xsd"/>
+         <xs:element name="AdresseFortløbendeNummer" type="skat2012:VirksomhedAdresseLøbeNummerType">
+               
+               <xs:annotation>
+                  <xs:documentation>Angiver fortløbende nummerering ved flere adresser af samme type og på samme tidspunkt.</xs:documentation>
+               </xs:annotation>
+            </xs:element>
+         <xs:element name="AdresseAnvendelseKode" type="skat2012:AdresseAnvendelseKodeType">
+               
+               <xs:annotation>
+                  <xs:documentation>Kode som angiver adresseringsmuligheder. 0 = Adressen kan anvendes til direkte adressering 1 = Adressen kan ikke anvendes til direkte adressering 8 = Adressen består kun af navn 9 = Ingen adresse pga. nyt personnummer</xs:documentation>
+               </xs:annotation>
+            </xs:element>
+         <xs:element name="AdresseVejNavn" type="skat2012:TekstKortType">
+               
+               <xs:annotation>
+                  <xs:documentation>Angiver navnet  på en vej/gade  i Danmark</xs:documentation>
+               </xs:annotation>
+            </xs:element>
+         <xs:element name="AdresseVejKode" type="skat2012:VejKodeType">
+               
+               <xs:annotation>
+                  <xs:documentation>Kode der sammen med kommunenummer entydigt identificerer en vej eller en del af en vej i Danmark.</xs:documentation>
+               </xs:annotation>
+            </xs:element>
+         <xs:element name="AdresseFraHusNummer" type="skat2012:HusNummerType">
+               
+               <xs:annotation>
+                  <xs:documentation>Angiver 1. husnummer i et vejafsnit i gaden eller på vejen.</xs:documentation>
+               </xs:annotation>
+            </xs:element>
+         <xs:element name="AdresseFraHusBogstav" type="skat2012:HusBogstavType">
+               
+               <xs:annotation>
+                  <xs:documentation>Angiver bogstav tilknyttet husnummeret.  Ifølge bekendtgørelse om vejnavne og adresser må kun værdierne A-Z benyttes. På grund af risikoen for forveksling bør bogstaverne I, J, O og Q dog ikke benyttes</xs:documentation>
+               </xs:annotation>
+            </xs:element>
+         <xs:element name="AdresseTilHusNummer" type="skat2012:HusNummerType">
+               
+               <xs:annotation>
+                  <xs:documentation>Angiver sidste lige husnummer i et vejafsnit i gaden eller på vejen.</xs:documentation>
+               </xs:annotation>
+            </xs:element>
+         <xs:element name="AdresseTilHusBogstav" type="skat2012:HusBogstavType">
+               
+               <xs:annotation>
+                  <xs:documentation>Angiver bogstav tilknyttet husnummeret.  Ifølge bekendtgørelse om vejnavne og adresser må kun værdierne A-Z benyttes. På grund af risikoen for forveksling bør bogstaverne I, J, O og Q dog ikke benyttes</xs:documentation>
+               </xs:annotation>
+            </xs:element>
+         <xs:element name="AdresseLigeUlige" type="skat2012:LigeUligeType">
+               
+               <xs:annotation>
+                  <xs:documentation>Angivelse om tal er lige eller ulige.</xs:documentation>
+               </xs:annotation>
+            </xs:element>
+         <xs:element name="AdresseLejlighedNummer" type="skat2012:HusNummerType">
+               
+               <xs:annotation>
+                  <xs:documentation>BØR IKKE ANVENDES! Dækkes af AdresseSIdeDørTekst</xs:documentation>
+               </xs:annotation>
+            </xs:element>
+         <xs:element name="AdresseHusNavn" type="skat2012:NavnType">
+               
+               <xs:annotation>
+                  <xs:documentation>Navn på en bygning - fx Christiansborg, Sølyst osv.</xs:documentation>
+               </xs:annotation>
+            </xs:element>
+         <xs:element name="AdresseEtage" type="skat2012:EtageType">
+               
+               <xs:annotation>
+                  <xs:documentation>BØR IKKE ANVENDES! Dækker det samme som AdresseEtageTekst </xs:documentation>
+               </xs:annotation>
+            </xs:element>
+         <xs:element name="AdresseEtageTekst" type="skat2012:EtageTekstType">
+               
+               <xs:annotation>
+                  <xs:documentation>Angiver etagen tilknyttet husnummer/husbogstav</xs:documentation>
+               </xs:annotation>
+            </xs:element>
+         <xs:element name="AdresseSideDørTekst" type="skat2012:SideDørTekstType">
+               
+               <xs:annotation>
+                  <xs:documentation>Angiver side/dør tilknyttet husnummer/husbogstav</xs:documentation>
+               </xs:annotation>
+            </xs:element>
+         <xs:element name="AdresseCONavn" type="skat2012:NavnType">
+               
+               <xs:annotation>
+                  <xs:documentation>Angiver navn for en CO-adresse (for virksomheder)</xs:documentation>
+               </xs:annotation>
+            </xs:element>
+         <xs:element name="AdressePostNummer" type="skat2012:PostNummerType">
+               
+               <xs:annotation>
+                  <xs:documentation>Angiver postnummer (4-cifre)</xs:documentation>
+               </xs:annotation>
+            </xs:element>
+         <xs:element name="AdressePostDistrikt" type="skat2012:PostDistriktType">
+               
+               <xs:annotation>
+                  <xs:documentation>Angiver postdistriktnavn for postnummer</xs:documentation>
+               </xs:annotation>
+            </xs:element>
+         <xs:element name="AdresseLandsBy" type="skat2012:NavnType">
+               
+               <xs:annotation>
+                  <xs:documentation>BØR IKKE ANVENDES! Dækker det samme som ByNavn</xs:documentation>
+               </xs:annotation>
+            </xs:element>
+         <xs:element name="AdresseByNavn" type="skat2012:NavnType">
+               
+               <xs:annotation>
+                  <xs:documentation>Angiver bynavn (lokalt stednavn)</xs:documentation>
+               </xs:annotation>
+            </xs:element>
+         <xs:element name="AdresseLandsDel" type="skat2012:LandsDelType">
+               
+               <xs:annotation>
+                  <xs:documentation>del af et land, som i geografisk ell. administrativ henseende udgør en enhed</xs:documentation>
+               </xs:annotation>
+            </xs:element>
+         <xs:element name="AdressePostBox" type="skat2012:PostBoksNummerType">
+               
+               <xs:annotation>
+                  <xs:documentation>Angiver postboksnummer</xs:documentation>
+               </xs:annotation>
+            </xs:element>
+         <xs:element name="AdresseGyldigFra" type="skat2012:DatoType">
+               
+               <xs:annotation>
+                  <xs:documentation>Angiver startdato for adresse (år md dg)</xs:documentation>
+               </xs:annotation>
+            </xs:element>
+         <xs:element name="AdresseGyldigTil" type="skat2012:DatoType">
+               
+               <xs:annotation>
+                  <xs:documentation>Angiver slutdato for adressen (år md dg)</xs:documentation>
+               </xs:annotation>
+            </xs:element>
+      </xs:schema>

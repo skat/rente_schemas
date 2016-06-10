@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+      
+      <xs:schema xmlns:skat2012="http://skat.dk/begrebsmodel/2012/01/01/"
+                 xmlns:xs="http://www.w3.org/2001/XMLSchema"
+                 targetNamespace="http://skat.dk/begrebsmodel/2012/01/01/"
+                 elementFormDefault="qualified"
+                 version="1.0">
+            
+            <xs:simpleType name="HusBogstavType">
+               <xs:annotation>
+                  <xs:documentation>Angiver bogstav tilknyttet husnummeret</xs:documentation>
+               </xs:annotation>
+               <xs:restriction base="xs:string">
+                  <xs:maxLength value="1"/>
+                  <xs:pattern value="[a-zA-Z]"/>
+               </xs:restriction>
+            </xs:simpleType>
+         </xs:schema>

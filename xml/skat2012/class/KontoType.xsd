@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+      <xs:schema xmlns:skat2012="http://skat.dk/begrebsmodel/2012/01/01/"
+                 xmlns:xs="http://www.w3.org/2001/XMLSchema"
+                 targetNamespace="http://skat.dk/begrebsmodel/2012/01/01/"
+                 elementFormDefault="qualified"
+                 attributeFormDefault="unqualified"
+                 version="1.0">
+         <xs:annotation>
+               <xs:documentation>Beskriver typen af bankkonto, fx  almindelig gæld til pengeinstitut, børneopsparingskonto eller prioritetslån.</xs:documentation>
+            </xs:annotation>
+         <xs:include schemaLocation="../types/KodeType.xsd"/>
+         <xs:element name="KontoTypeKode" type="skat2012:KodeType">
+               
+               <xs:annotation>
+                  <xs:documentation>Kode for typen af bankkonto:  10 = Børneopsparingskonto 11 = Boligopsparingskonto 12 = Indskud og indskudskapital hos Andelsselskaber 13 = Almindeligt indskud 14 = Uidentificerede konti 15 = Boligsparekontrakt 16 = Uddannelseskonto 17 = Etableringskonto 19 = Konjunkturudligningskonto 21 = Reservefondsudlodninger 22 = Afkast på livsforsikringer 23 = Kapitalværdistigning af forsikringer 24 = Udbetaling til arbejdsgiveren 25 = Tilbagebetaling af præmier til forsikringer 26 = Selvpensioneringskonto oprettet før 2. juni 1998 27 = Etableringskonto der er reserveret skibsanparter 28 = Investeringsfondskonto der er reserveret skibsanparter 29 = Udligningsordning for kunstnere 30 = Beregnet præmie/gevinst 33 = Prioritetsgæld hos realkreditinstitutter og reallånefonde 34 = 1. Prioritetslån hos forsikringsselskaber og pensionskasser 41 = Studielån, betalte studielånsrenter 42 = Studielån, misligholdte 43 = Studielån, overgangsordning mm. 44 = Studielån, tilskrevne/forfaldne renter i aktuelt år 47 = Andre misligholdte fordringer til staten 48 = Andre misligholdte fordringer til staten 53 = 1. Prioritetslån hos pengeinstitutter 54 = Statsgaranterede studielån i studietiden 55 = Statsgaranterede studielån under afvikling 56 = Almindelig gæld til pengeinstitutter mv. 57 = Almindelig gæld til pengeinstitutter mv., forudbetalte renter 58 = Misligholdte studielån. 59 = Lån ydet af kommuner 73 = Deponeret pantebrev (depothaver) 84 = Deponeret pantebrev (låntager)</xs:documentation>
+               </xs:annotation>
+            </xs:element>
+      </xs:schema>

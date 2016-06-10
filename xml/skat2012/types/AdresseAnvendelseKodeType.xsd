@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+      
+      <xs:schema xmlns:skat2012="http://skat.dk/begrebsmodel/2012/01/01/"
+                 xmlns:xs="http://www.w3.org/2001/XMLSchema"
+                 targetNamespace="http://skat.dk/begrebsmodel/2012/01/01/"
+                 elementFormDefault="qualified"
+                 version="1.0">
+            
+            <xs:simpleType name="AdresseAnvendelseKodeType">
+               <xs:annotation>
+                  <xs:documentation>0 = Adressen kan anvendes til direkte adressering 1 = Adressen kan ikke anvendes til direkte adressering 8 = Adressen består kun af navn 9 = Ingen adresse pga. nyt personnummer</xs:documentation>
+               </xs:annotation>
+               <xs:restriction base="xs:integer">
+                  <xs:enumeration value="0"/>
+                  <xs:enumeration value="1"/>
+                  <xs:enumeration value="8"/>
+                  <xs:enumeration value="9"/>
+                  <xs:totalDigits value="1"/>
+               </xs:restriction>
+            </xs:simpleType>
+         </xs:schema>

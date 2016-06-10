@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+      <xs:schema xmlns:skat2012="http://skat.dk/begrebsmodel/2012/01/01/"
+                 xmlns:xs="http://www.w3.org/2001/XMLSchema"
+                 targetNamespace="http://skat.dk/begrebsmodel/2012/01/01/"
+                 elementFormDefault="qualified"
+                 attributeFormDefault="unqualified"
+                 version="1.0">
+         <xs:annotation>
+               <xs:documentation>Indeholder oplysninger som identificerer et land.</xs:documentation>
+            </xs:annotation>
+         <xs:include schemaLocation="../types/AdresseLandKodeType.xsd"/>
+         <xs:include schemaLocation="../types/TekstKortType.xsd"/>
+         <xs:include schemaLocation="../types/LandeNummerKodeType.xsd"/>
+         <xs:element name="LandKode" type="skat2012:AdresseLandKodeType">
+               
+               <xs:annotation>
+                  <xs:documentation>Landekode</xs:documentation>
+               </xs:annotation>
+            </xs:element>
+         <xs:element name="LandNavn" type="skat2012:TekstKortType">
+               
+               <xs:annotation>
+                  <xs:documentation>Navnet på landet</xs:documentation>
+               </xs:annotation>
+            </xs:element>
+         <xs:element name="LandNummerKode" type="skat2012:LandeNummerKodeType">
+               
+               <xs:annotation>
+                  <xs:documentation>Landenummerkode</xs:documentation>
+               </xs:annotation>
+            </xs:element>
+      </xs:schema>

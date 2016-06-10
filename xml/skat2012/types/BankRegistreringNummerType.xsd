@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+      
+      <xs:schema xmlns:skat2012="http://skat.dk/begrebsmodel/2012/01/01/"
+                 xmlns:xs="http://www.w3.org/2001/XMLSchema"
+                 targetNamespace="http://skat.dk/begrebsmodel/2012/01/01/"
+                 elementFormDefault="qualified"
+                 version="1.0">
+            
+            <xs:simpleType name="BankRegistreringNummerType">
+               <xs:annotation>
+                  <xs:documentation>Virksomhedens reg-nr for den specifikke angivelsestype.  Foruden de angivelsestyper, hvor TastSelv Erhverv håndterer betalingen, kan virksomheden også tilmelde angivelsestypen Importspecifikation, selv om TastSelv Erhverv ikke håndterer angivelse og betaling vedrørende Import.  Når en bankkonto er tilmeldt og videregivet til PBS, anvendes den ikke mere i TastSelv Erhverv, og skal heller ikke præsenteres på nogen grænseflade.   Er betalingsformidler PBS kan betalingsformen PBS først anvendes i TastSelv Erhverv når kontoen er oprettet i PBS LeverandørService (leverance retur skal være modtaget fra PBS).</xs:documentation>
+               </xs:annotation>
+               <xs:restriction base="xs:string">
+                  <xs:maxLength value="5"/>
+                  <xs:pattern value="[0-9]{4,5}"/>
+               </xs:restriction>
+            </xs:simpleType>
+         </xs:schema>

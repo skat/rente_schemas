@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+      <xs:schema xmlns:skat2012="http://skat.dk/begrebsmodel/2012/01/01/"
+                 xmlns:xs="http://www.w3.org/2001/XMLSchema"
+                 targetNamespace="http://skat.dk/begrebsmodel/2012/01/01/"
+                 elementFormDefault="qualified"
+                 attributeFormDefault="unqualified"
+                 version="1.0">
+         
+         <xs:annotation>
+            <xs:documentation/>
+            <xs:documentation>r14234</xs:documentation>
+         </xs:annotation>
+         <xs:include schemaLocation="../class/PersonNavn.xsd"/>
+         <xs:include schemaLocation="../class/Person.xsd"/>
+         <xs:element name="UkendtPersonKontoEjerStruktur"
+                     type="skat2012:UkendtPersonKontoEjerStrukturType"/>
+         <xs:complexType name="UkendtPersonKontoEjerStrukturType">
+         
+         
+         
+         
+         
+         
+         
+         
+            
+            
+            
+            
+               <xs:sequence>
+                  <xs:element ref="skat2012:PersonNavnForNavn"/>
+                  
+                  <xs:element ref="skat2012:PersonNavnEfterNavn"/>
+
+               <xs:element ref="skat2012:PersonCPRNummer" minOccurs="0"/>
+
+            </xs:sequence>
+            
+         
+         
+         
+         
+         </xs:complexType>
+      </xs:schema>

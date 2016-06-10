@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+      <xs:schema xmlns:skat2012="http://skat.dk/begrebsmodel/2012/01/01/"
+                 xmlns:xs="http://www.w3.org/2001/XMLSchema"
+                 targetNamespace="http://skat.dk/begrebsmodel/2012/01/01/"
+                 elementFormDefault="qualified"
+                 attributeFormDefault="unqualified"
+                 version="1.0">
+         <xs:annotation>
+               <xs:documentation>Privat person identificeret ved et personnummer (CPR-nummer). </xs:documentation>
+            </xs:annotation>
+         <xs:include schemaLocation="../types/CPRNummerType.xsd"/>
+         <xs:include schemaLocation="../types/MarkeringType.xsd"/>
+         <xs:include schemaLocation="../types/DatoType.xsd"/>
+         <xs:include schemaLocation="../types/FoedeStedType.xsd"/>
+         <xs:include schemaLocation="../types/AdresseLandKodeType.xsd"/>
+         <xs:include schemaLocation="../types/KoenType.xsd"/>
+         <xs:element name="PersonCPRNummer" type="skat2012:CPRNummerType">
+               
+               <xs:annotation>
+                  <xs:documentation>CPR-nummer er et 10 cifret personnummer der entydigt identificerer en dansk person.</xs:documentation>
+               </xs:annotation>
+            </xs:element>
+         <xs:element name="PersonNavnAdresseBeskyttelseMarkering" type="skat2012:MarkeringType">
+               
+               <xs:annotation>
+                  <xs:documentation>Angiver om en persons navn og adresse er beskyttet for offentligheden.  Markeringen bliver sat af Folkeregistret, dvs. i Det Centrale Personregister (CPR).  Det er således kun myndigheder med lovmæssigt grundlag, som har adgang til disse data (fx i forbindelse med sagsbehandling).</xs:documentation>
+               </xs:annotation>
+            </xs:element>
+         <xs:element name="PersonFødselDato" type="skat2012:DatoType">
+               
+               <xs:annotation>
+                  <xs:documentation>Personens fødselsdato</xs:documentation>
+               </xs:annotation>
+            </xs:element>
+         <xs:element name="PersonFødeSted" type="skat2012:FødeStedType">
+               
+               <xs:annotation>
+                  <xs:documentation>Stammer fra CPS og udenlandsk pension.</xs:documentation>
+               </xs:annotation>
+            </xs:element>
+         <xs:element name="PersonFødeLandKode" type="skat2012:AdresseLandKodeType">
+               
+               <xs:annotation>
+                  <xs:documentation>Stammer fra CPS og udenlandsk pension.</xs:documentation>
+               </xs:annotation>
+            </xs:element>
+         <xs:element name="PersonGyldigFra" type="skat2012:DatoType">
+               
+               <xs:annotation>
+                  <xs:documentation>Gyldighed startdato for en Person. Person kan skifte CPRNummer, NavnAdresseBeskyttelseMarkering og FødselDato.  - CPR-skifte kan ske ved kønskifteoperationer eller fejlvurdering af køn og FødselDato, eller fordi en udenlandsk person har fået et midlertidigt CPRNummer.  - NavnAdresseBeskyttelseMarkering kan ændre sig ved at en Person anmoder Folkeregistret om navn- &amp; adressebeskyttelse.  - FødselDato kan ændre sig ved at man har fejlvurderet en alder.</xs:documentation>
+               </xs:annotation>
+            </xs:element>
+         <xs:element name="PersonGyldigTil" type="skat2012:DatoType">
+               
+               <xs:annotation>
+                  <xs:documentation>Gyldighed slutdato for en Person. Person kan skifte CPRNummer, NavnAdresseBeskyttelseMarkering og FødselDato.  - CPR-skifte kan ske ved kønskifteoperationer eller fejlvurdering af køn og FødselDato, eller fordi en udenlandsk person har fået et midlertidigt CPRNummer.  - NavnAdresseBeskyttelseMarkering kan ændre sig ved at en Person anmoder Folkeregistret om navn- &amp; adressebeskyttelse.  - FødselDato kan ændre sig ved at man har fejlvurderet en alder.</xs:documentation>
+               </xs:annotation>
+            </xs:element>
+         <xs:element name="PersonKøn" type="skat2012:KønType">
+               
+               <xs:annotation>
+                  <xs:documentation>kategorisering af individer ud fra deres forplantningsorganer </xs:documentation>
+               </xs:annotation>
+            </xs:element>
+      </xs:schema>

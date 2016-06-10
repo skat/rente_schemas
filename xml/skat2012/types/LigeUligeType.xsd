@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+      
+      <xs:schema xmlns:skat2012="http://skat.dk/begrebsmodel/2012/01/01/"
+                 xmlns:xs="http://www.w3.org/2001/XMLSchema"
+                 targetNamespace="http://skat.dk/begrebsmodel/2012/01/01/"
+                 elementFormDefault="qualified"
+                 version="1.0">
+            
+            <xs:simpleType name="LigeUligeType">
+               <xs:annotation>
+                  <xs:documentation>Angivelse om tal er lige eller ulige.</xs:documentation>
+               </xs:annotation>
+               <xs:restriction base="xs:string">
+                  <xs:maxLength value="10"/>
+                  <xs:pattern value="[a-zA-ZøæåØÆÅ]*"/>
+                  <xs:enumeration value="Lige"/>
+                  <xs:enumeration value="Ulige"/>
+               </xs:restriction>
+            </xs:simpleType>
+         </xs:schema>

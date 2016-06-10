@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+      <xs:schema xmlns:skat2012="http://skat.dk/begrebsmodel/2012/01/01/"
+                 xmlns:xs="http://www.w3.org/2001/XMLSchema"
+                 targetNamespace="http://skat.dk/begrebsmodel/2012/01/01/"
+                 elementFormDefault="qualified"
+                 attributeFormDefault="unqualified"
+                 version="1.0">
+         <xs:annotation>
+               <xs:documentation>Angiver virksomhedens primære (officielle) navn, der knytter sig til den primære (officielle) adresse (virksomhedsadressen) og identificerer virksomheden.</xs:documentation>
+            </xs:annotation>
+         <xs:include schemaLocation="../types/NavnType.xsd"/>
+         <xs:include schemaLocation="../types/FirmaNavnKortType.xsd"/>
+         <xs:include schemaLocation="../types/DatoType.xsd"/>
+         <xs:element name="VirksomhedNavnFirmaNavn" type="skat2012:NavnType">
+               
+               <xs:annotation>
+                  <xs:documentation>Angiver virksomhedens fulde navn.</xs:documentation>
+               </xs:annotation>
+            </xs:element>
+         <xs:element name="VirksomhedNavnFirmaNavnKort" type="skat2012:FirmaNavnKortType">
+               
+               <xs:annotation>
+                  <xs:documentation>Angiver virksomhedens forkortede navn (max 34 karakterer)</xs:documentation>
+               </xs:annotation>
+            </xs:element>
+         <xs:element name="VirksomhedNavnGyldigFra" type="skat2012:DatoType">
+               
+               <xs:annotation>
+                  <xs:documentation>Angiver startdato for virksomhedens navn (år md dg)</xs:documentation>
+               </xs:annotation>
+            </xs:element>
+         <xs:element name="VirksomhedNavnGyldigTil" type="skat2012:DatoType">
+               
+               <xs:annotation>
+                  <xs:documentation>Angiver slutdato for virksomhedens navn (år md dg)</xs:documentation>
+               </xs:annotation>
+            </xs:element>
+      </xs:schema>

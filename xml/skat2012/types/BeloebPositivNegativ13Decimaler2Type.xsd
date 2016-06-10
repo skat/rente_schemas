@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+      
+      <xs:schema xmlns:skat2012="http://skat.dk/begrebsmodel/2012/01/01/"
+                 xmlns:xs="http://www.w3.org/2001/XMLSchema"
+                 targetNamespace="http://skat.dk/begrebsmodel/2012/01/01/"
+                 elementFormDefault="qualified"
+                 version="1.0">
+            
+            <xs:simpleType name="BeløbPositivNegativ13Decimaler2Type">
+               <xs:annotation>
+                  <xs:documentation>Angiver positive og negative beløb på 13 karakterer samt 2 decimaler. Værdierne ligger indenfor følgende område: -9.999.999.999.999,00 - 9.999.999.999.999,00</xs:documentation>
+               </xs:annotation>
+               <xs:restriction base="xs:decimal">
+                  <xs:maxInclusive value="9999999999999"/>
+                  <xs:minInclusive value="-9999999999999"/>
+                  <xs:fractionDigits value="2"/>
+               </xs:restriction>
+            </xs:simpleType>
+         </xs:schema>

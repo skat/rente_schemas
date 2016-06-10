@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+      <xs:schema xmlns:skat2012="http://skat.dk/begrebsmodel/2012/01/01/"
+                 xmlns:xs="http://www.w3.org/2001/XMLSchema"
+                 targetNamespace="http://skat.dk/begrebsmodel/2012/01/01/"
+                 elementFormDefault="qualified"
+                 attributeFormDefault="unqualified"
+                 version="1.0">
+         
+         <xs:annotation>
+            <xs:documentation/>
+            <xs:documentation>r14234</xs:documentation>
+         </xs:annotation>
+         <xs:include schemaLocation="../class/PersonNavn.xsd"/>
+         <xs:include schemaLocation="../class/Person.xsd"/>
+				     
+         <xs:include schemaLocation="../class/Land.xsd"/>
+         <xs:include schemaLocation="../view/TINNummerStrukturType.xsd"/>
+				     
+         <xs:element name="KendtPersonKontoEjerStruktur"
+                     type="skat2012:KendtPersonKontoEjerStrukturType"/>
+         <xs:complexType name="KendtPersonKontoEjerStrukturType">
+         
+         
+         
+         
+         
+         
+         
+         
+            
+            
+            
+            
+            
+            
+            
+            
+               <xs:sequence>
+                  <xs:element ref="skat2012:PersonNavnForNavn"/>
+                  
+                  <xs:element ref="skat2012:PersonNavnEfterNavn"/>
+
+               <xs:element ref="skat2012:PersonCPRNummer" minOccurs="0"/>
+
+
+               <xs:element name="PersonIdentifikationValg">
+                  <xs:complexType>
+                     <xs:choice>
+                        <xs:element ref="skat2012:TINNummerStruktur"/>
+				
+				                    <xs:sequence>
+				
+                           <xs:element name="Fødselsinformation">
+                              <xs:complexType>
+                                 <xs:sequence>
+                                    <xs:element ref="skat2012:PersonFødselDato"/>
+                  
+                                    <xs:element ref="skat2012:LandKode"/>
+
+                                    <xs:element ref="skat2012:PersonFødeSted" minOccurs="0"/>
+
+
+                                 </xs:sequence>
+                              </xs:complexType>
+                           </xs:element>
+                        </xs:sequence>
+                     </xs:choice>
+                  </xs:complexType>
+               </xs:element>
+            </xs:sequence>
+            
+         
+         
+         
+         
+         </xs:complexType>
+      </xs:schema>

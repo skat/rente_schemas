@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+      <xs:schema xmlns:skat2012="http://skat.dk/begrebsmodel/2012/01/01/"
+                 xmlns:xs="http://www.w3.org/2001/XMLSchema"
+                 targetNamespace="http://skat.dk/begrebsmodel/2012/01/01/"
+                 elementFormDefault="qualified"
+                 attributeFormDefault="unqualified"
+                 version="1.0">
+         
+         <xs:annotation>
+            <xs:documentation/>
+            <xs:documentation>r14234</xs:documentation>
+         </xs:annotation>
+         <xs:include schemaLocation="../class/Virksomhed.xsd"/>
+         <xs:include schemaLocation="../class/Person.xsd"/>
+				     
+				     
+         <xs:include schemaLocation="../class/VirksomhedNavn.xsd"/>
+				     
+				     
+				     
+         <xs:include schemaLocation="../view/IndberetningUdenlandskAdresseStrukturType.xsd"/>
+				     
+         <xs:include schemaLocation="../view/KendtVirksomhedKontoEjerStrukturType.xsd"/>
+				     
+         <xs:include schemaLocation="../view/KendtPersonKontoEjerStrukturType.xsd"/>
+				     
+         <xs:include schemaLocation="../view/UkendtPersonKontoEjerStrukturType.xsd"/>
+				     
+         <xs:include schemaLocation="../view/DiplomatStrukturType.xsd"/>
+				     
+         <xs:element name="IndberetningÅrsUltimoKontohaverStruktur"
+                     type="skat2012:IndberetningÅrsUltimoKontohaverStrukturType"/>
+         <xs:complexType name="IndberetningÅrsUltimoKontohaverStrukturType">
+         
+         
+         
+         
+         
+         
+         
+         
+         
+            
+            
+            
+            
+            
+            
+            
+            
+            
+               <xs:sequence>
+               <xs:element name="IndlændingUdlændingVlag">
+                  <xs:complexType>
+                     <xs:choice>
+                        <xs:sequence>
+                           <xs:element name="Indlænding">
+                              <xs:complexType>
+                                 <xs:sequence>
+                                    <xs:element name="PersonVirksomhedValg">
+                                       <xs:complexType>
+                                          <xs:choice>
+                                             <xs:element ref="skat2012:VirksomhedSENummer"/>
+				
+				
+				                                         <xs:element ref="skat2012:PersonCPRNummer"/>
+                                          </xs:choice>
+                                       </xs:complexType>
+                                    </xs:element>
+                                 </xs:sequence>
+                              </xs:complexType>
+                           </xs:element>
+				
+				                    </xs:sequence>
+                        <xs:sequence>
+				
+                           <xs:element name="ValutariskUdlænding">
+                              <xs:complexType>
+                                 <xs:sequence>
+                                    <xs:element ref="skat2012:IndberetningUdenlandskAdresseStruktur"/>
+                                    <xs:element name="PersonVirksomhedValg">
+                                       <xs:complexType>
+                                          <xs:choice>
+                                             <xs:sequence>
+                                                <xs:element name="VirksomhedValg">
+                                                   <xs:complexType>
+                                                      <xs:choice>
+                                                         <xs:element ref="skat2012:KendtVirksomhedKontoEjerStruktur"/>
+				
+				                                                     <xs:sequence>
+				
+                                                            <xs:element name="UkendtVirksomhedKontoEjer">
+                                                               <xs:complexType>
+                                                                  <xs:sequence>
+                                                                     <xs:element ref="skat2012:VirksomhedNavnFirmaNavn"/>
+                                                                  </xs:sequence>
+                                                               </xs:complexType>
+                                                            </xs:element>
+                                                         </xs:sequence>
+                                                      </xs:choice>
+                                                   </xs:complexType>
+                                                </xs:element>
+				
+				                                         </xs:sequence>
+                                             <xs:sequence>
+				
+                                                <xs:element name="PersonValg">
+                                                   <xs:complexType>
+                                                      <xs:choice>
+                                                         <xs:element ref="skat2012:KendtPersonKontoEjerStruktur"/>
+				
+				
+				                                                     <xs:element ref="skat2012:UkendtPersonKontoEjerStruktur"/>
+                                                      </xs:choice>
+                                                   </xs:complexType>
+                                                </xs:element>
+                                             </xs:sequence>
+                                          </xs:choice>
+                                       </xs:complexType>
+                                    </xs:element>
+                                 </xs:sequence>
+                              </xs:complexType>
+                           </xs:element>
+				
+				                    </xs:sequence>
+				                    <xs:element ref="skat2012:DiplomatStruktur"/>
+                     </xs:choice>
+                  </xs:complexType>
+               </xs:element>
+            </xs:sequence>
+            
+         
+         
+         
+         
+         </xs:complexType>
+      </xs:schema>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+      
+      <xs:schema xmlns:skat2012="http://skat.dk/begrebsmodel/2012/01/01/"
+                 xmlns:xs="http://www.w3.org/2001/XMLSchema"
+                 targetNamespace="http://skat.dk/begrebsmodel/2012/01/01/"
+                 elementFormDefault="qualified"
+                 version="1.0">
+            
+            <xs:simpleType name="SENummerType">
+               <xs:annotation>
+                  <xs:documentation>8-cifret nummer,  der entydigt identificerer en registreret virksomhed i SKAT.</xs:documentation>
+               </xs:annotation>
+               <xs:restriction base="xs:integer">
+                  <xs:pattern value="[0-9]{8}"/>
+                  <xs:totalDigits value="8"/>
+               </xs:restriction>
+            </xs:simpleType>
+         </xs:schema>

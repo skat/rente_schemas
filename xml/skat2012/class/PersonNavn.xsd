@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+      <xs:schema xmlns:skat2012="http://skat.dk/begrebsmodel/2012/01/01/"
+                 xmlns:xs="http://www.w3.org/2001/XMLSchema"
+                 targetNamespace="http://skat.dk/begrebsmodel/2012/01/01/"
+                 elementFormDefault="qualified"
+                 attributeFormDefault="unqualified"
+                 version="1.0">
+         <xs:annotation>
+               <xs:documentation>Klassen indeholder en persons fulde navn, sammen med en gyldig fra og gyldig til, idet et navn skal ændres, fx når en person bliver gift.  Når Navn er udfyldt, er det ikke nødvendigt at udfylde ForNavn og EfterNavn og omvendt. Såfremt alle felter er udfyldt skal det sikres, at det der står i felterne stemmer overens.</xs:documentation>
+            </xs:annotation>
+         <xs:include schemaLocation="../types/NavnType.xsd"/>
+         <xs:include schemaLocation="../types/DatoType.xsd"/>
+         <xs:element name="PersonNavnNavn" type="skat2012:NavnType">
+               
+               <xs:annotation>
+                  <xs:documentation>Angiver adresseringsnavn (for- og efternavn) på en person.</xs:documentation>
+               </xs:annotation>
+            </xs:element>
+         <xs:element name="PersonNavnForNavn" type="skat2012:NavnType">
+               
+               <xs:annotation>
+                  <xs:documentation>Stammer fra CPS og udenlandsk pension</xs:documentation>
+               </xs:annotation>
+            </xs:element>
+         <xs:element name="PersonNavnEfterNavn" type="skat2012:NavnType">
+               
+               <xs:annotation>
+                  <xs:documentation>Stammer fra CPS og udenlandsk pension.</xs:documentation>
+               </xs:annotation>
+            </xs:element>
+         <xs:element name="PersonNavnGyldigFra" type="skat2012:DatoType">
+               
+               <xs:annotation>
+                  <xs:documentation>Dato hvorfra navnet er gyldigt</xs:documentation>
+               </xs:annotation>
+            </xs:element>
+         <xs:element name="PersonNavnGyldigTil" type="skat2012:DatoType">
+               
+               <xs:annotation>
+                  <xs:documentation>Dato hvortil navnet er gyldigt</xs:documentation>
+               </xs:annotation>
+            </xs:element>
+      </xs:schema>

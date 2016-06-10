@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+      <xs:schema xmlns:skat2012="http://skat.dk/begrebsmodel/2012/01/01/"
+                 xmlns:xs="http://www.w3.org/2001/XMLSchema"
+                 targetNamespace="http://skat.dk/begrebsmodel/2012/01/01/"
+                 elementFormDefault="qualified"
+                 attributeFormDefault="unqualified"
+                 version="1.0">
+         <xs:annotation>
+               <xs:documentation>Bank eller andet pengeinstitut. Oprettet til udenlandske udbetalinger.</xs:documentation>
+            </xs:annotation>
+         <xs:include schemaLocation="../types/NavnType.xsd"/>
+         <xs:include schemaLocation="../types/BICNummerType.xsd"/>
+         <xs:include schemaLocation="../types/DatoType.xsd"/>
+         <xs:include schemaLocation="../types/BankRegistreringNummerType.xsd"/>
+         <xs:element name="BankNavn" type="skat2012:NavnType">
+               
+               <xs:annotation>
+                  <xs:documentation>Bankens navn</xs:documentation>
+               </xs:annotation>
+            </xs:element>
+         <xs:element name="BankBICKode" type="skat2012:BICNummerType">
+               
+               <xs:annotation>
+                  <xs:documentation>BIC (Bank Identifier Code) alias SWIFT-kode.</xs:documentation>
+               </xs:annotation>
+            </xs:element>
+         <xs:element name="BankGyldigFra" type="skat2012:DatoType">
+               
+               <xs:annotation>
+                  <xs:documentation>Dato for hvornår kontooplysning er gyldig fra.</xs:documentation>
+               </xs:annotation>
+            </xs:element>
+         <xs:element name="BankGyldigTil" type="skat2012:DatoType">
+               
+               <xs:annotation>
+                  <xs:documentation>Dato for hvornår kontooplysning er gyldig til.</xs:documentation>
+               </xs:annotation>
+            </xs:element>
+         <xs:element name="BankRegisteringsnummer" type="skat2012:BankRegistreringNummerType">
+               
+               <xs:annotation>
+                  <xs:documentation>Bankens registeringsnummer (kun danske)</xs:documentation>
+               </xs:annotation>
+            </xs:element>
+      </xs:schema>

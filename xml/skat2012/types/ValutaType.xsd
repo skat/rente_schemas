@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+      
+      <xs:schema xmlns:skat2012="http://skat.dk/begrebsmodel/2012/01/01/"
+                 xmlns:xs="http://www.w3.org/2001/XMLSchema"
+                 targetNamespace="http://skat.dk/begrebsmodel/2012/01/01/"
+                 elementFormDefault="qualified"
+                 version="1.0">
+            
+            <xs:simpleType name="ValutaType">
+               <xs:annotation>
+                  <xs:documentation>Angiver valuta enheden (ISO-møntkoden) for et beløb. Fx den som en angivelsen er indberettet i, hvis der er tale om en angivelsestype med beløb.   På nuværende tidspunkt kan SKAT kun modtage angivelser i danske kroner.</xs:documentation>
+               </xs:annotation>
+               <xs:restriction base="xs:string">
+                  <xs:maxLength value="3"/>
+                  <xs:pattern value="[A-Z]{2,3}"/>
+               </xs:restriction>
+            </xs:simpleType>
+         </xs:schema>
