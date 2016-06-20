@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+      <xs:schema xmlns:skat2012="http://skat.dk/begrebsmodel/2012/01/01/"
+                 xmlns:xs="http://www.w3.org/2001/XMLSchema"
+                 targetNamespace="http://skat.dk/begrebsmodel/2012/01/01/"
+                 elementFormDefault="qualified"
+                 attributeFormDefault="unqualified"
+                 version="1.0">
+         
+         <xs:annotation>
+            <xs:documentation/>
+            <xs:documentation>r14359</xs:documentation>
+         </xs:annotation>
+         <xs:include schemaLocation="../class/Adresse.xsd"/>
+         <xs:include schemaLocation="../class/AdresseType.xsd"/>
+         <xs:include schemaLocation="../class/Land.xsd"/>
+         <xs:element name="AdresseStruktur" type="skat2012:AdresseStrukturType"/>
+         <xs:complexType name="AdresseStrukturType">
+         
+         
+         
+         
+         
+         
+         
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+               <xs:sequence>
+               <xs:element name="Adresse">
+                  <xs:complexType>
+                     <xs:sequence>
+
+                        <xs:element ref="skat2012:AdresseFortløbendeNummer" minOccurs="0"/>
+
+
+
+                        <xs:element ref="skat2012:AdresseAnvendelseKode" minOccurs="0"/>
+
+
+
+                        <xs:element ref="skat2012:AdresseVejNavn" minOccurs="0"/>
+
+
+
+                        <xs:element ref="skat2012:AdresseVejKode" minOccurs="0"/>
+
+
+
+                        <xs:element ref="skat2012:AdresseFraHusNummer" minOccurs="0"/>
+
+
+
+                        <xs:element ref="skat2012:AdresseTilHusNummer" minOccurs="0"/>
+
+
+
+                        <xs:element ref="skat2012:AdresseFraHusBogstav" minOccurs="0"/>
+
+
+
+                        <xs:element ref="skat2012:AdresseTilHusBogstav" minOccurs="0"/>
+
+
+
+                        <xs:element ref="skat2012:AdresseLigeUlige" minOccurs="0"/>
+
+
+
+                        <xs:element ref="skat2012:AdresseEtageTekst" minOccurs="0"/>
+
+
+
+                        <xs:element ref="skat2012:AdresseSideDørTekst" minOccurs="0"/>
+
+
+
+                        <xs:element ref="skat2012:AdresseCONavn" minOccurs="0"/>
+
+
+
+                        <xs:element ref="skat2012:AdressePostNummer" minOccurs="0"/>
+
+
+
+                        <xs:element ref="skat2012:AdressePostDistrikt" minOccurs="0"/>
+
+
+
+                        <xs:element ref="skat2012:AdresseByNavn" minOccurs="0"/>
+
+
+
+                        <xs:element ref="skat2012:AdressePostBox" minOccurs="0"/>
+
+
+
+                        <xs:element ref="skat2012:AdresseGyldigFra" minOccurs="0"/>
+
+
+
+                        <xs:element ref="skat2012:AdresseGyldigTil" minOccurs="0"/>
+
+
+
+                        <xs:element ref="skat2012:AdresseTypeKode" minOccurs="0"/>
+
+
+
+                        <xs:element ref="skat2012:AdresseTypeTekst" minOccurs="0"/>
+
+
+
+                        <xs:element ref="skat2012:AdresseTypeGyldigFra" minOccurs="0"/>
+
+
+
+                        <xs:element ref="skat2012:AdresseTypeGyldigTil" minOccurs="0"/>
+
+
+
+                        <xs:element ref="skat2012:LandKode" minOccurs="0"/>
+
+
+
+                        <xs:element ref="skat2012:LandNavn" minOccurs="0"/>
+
+
+                     </xs:sequence>
+                  </xs:complexType>
+               </xs:element>
+            </xs:sequence>
+            
+         
+         
+         
+         
+         
+         
+         
+         
+         </xs:complexType>
+      </xs:schema>

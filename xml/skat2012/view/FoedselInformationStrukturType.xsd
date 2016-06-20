@@ -8,13 +8,12 @@
          
          <xs:annotation>
             <xs:documentation/>
-            <xs:documentation>r14234</xs:documentation>
+            <xs:documentation>r14359</xs:documentation>
          </xs:annotation>
-         <xs:include schemaLocation="../class/PersonNavn.xsd"/>
          <xs:include schemaLocation="../class/Person.xsd"/>
-         <xs:element name="UkendtPersonKontoEjerStruktur"
-                     type="skat2012:UkendtPersonKontoEjerStrukturType"/>
-         <xs:complexType name="UkendtPersonKontoEjerStrukturType">
+         <xs:include schemaLocation="../class/Land.xsd"/>
+         <xs:element name="FødselInformationStruktur" type="skat2012:FødselInformationStrukturType"/>
+         <xs:complexType name="FødselInformationStrukturType">
          
          
          
@@ -28,11 +27,11 @@
             
             
                <xs:sequence>
-                  <xs:element ref="skat2012:PersonNavnForNavn"/>
+                  <xs:element ref="skat2012:PersonFødselDato"/>
                   
-                  <xs:element ref="skat2012:PersonNavnEfterNavn"/>
+                  <xs:element ref="skat2012:LandKode"/>
 
-               <xs:element ref="skat2012:PersonCPRNummer" minOccurs="0"/>
+               <xs:element ref="skat2012:PersonFødeSted" minOccurs="0"/>
 
             </xs:sequence>
             

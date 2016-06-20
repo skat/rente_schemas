@@ -8,7 +8,7 @@
          
          <xs:annotation>
             <xs:documentation/>
-            <xs:documentation>r14234</xs:documentation>
+            <xs:documentation>r14359</xs:documentation>
          </xs:annotation>
          <xs:include schemaLocation="../class/Indberetning.xsd"/>
          <xs:element name="IndberetningIdentifikatorStruktur"

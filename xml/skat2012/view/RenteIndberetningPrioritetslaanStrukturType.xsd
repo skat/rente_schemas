@@ -8,25 +8,22 @@
          
          <xs:annotation>
             <xs:documentation/>
-            <xs:documentation>r14234</xs:documentation>
+            <xs:documentation>r14359</xs:documentation>
          </xs:annotation>
          <xs:include schemaLocation="../class/Indkomst.xsd"/>
          <xs:include schemaLocation="../class/Virksomhed.xsd"/>
          <xs:include schemaLocation="../class/Konto.xsd"/>
 				     
          <xs:include schemaLocation="../class/Indberetning.xsd"/>
+         <xs:include schemaLocation="../class/PantIdentifikation.xsd"/>
          <xs:include schemaLocation="../class/KontoType.xsd"/>
-         <xs:include schemaLocation="../class/Bank.xsd"/>
-         <xs:include schemaLocation="../class/Pantebrev.xsd"/>
          <xs:include schemaLocation="../class/Kommune.xsd"/>
          <xs:include schemaLocation="../class/Ejendom.xsd"/>
          <xs:include schemaLocation="../class/Land.xsd"/>
          <xs:include schemaLocation="../class/Kontantlaan.xsd"/>
          <xs:include schemaLocation="../class/Ejerskifte.xsd"/>
-         <xs:include schemaLocation="../class/BankKonto.xsd"/>
          <xs:include schemaLocation="../operational/ValutaStatusKode.xsd"/>
 				     
-         <xs:include schemaLocation="../class/Valuta.xsd"/>
          <xs:include schemaLocation="../class/Rente.xsd"/>
          <xs:include schemaLocation="../class/Laan.xsd"/>
          <xs:include schemaLocation="../operational/LaanForholdGaeldTilstand.xsd"/>
@@ -71,9 +68,6 @@
             
             
             
-            
-            
-            
                <!--Sequence removed-->
                   <xs:element name="Indkomstperiode">
                      <xs:complexType>
@@ -94,7 +88,7 @@
                      </xs:complexType>
                   </xs:element>
                   <xs:element ref="skat2012:KontoID"/>
-                  <xs:element name="RetbarKontoOplysninger">
+                  <xs:element name="RetbarPrioritetslånKontoOplysninger">
                      <xs:complexType>
                         <xs:sequence>
                            <xs:element ref="skat2012:IndberetningIdentifikatorStruktur"/>
@@ -102,14 +96,12 @@
                            <xs:element ref="skat2012:IndberetningReferenceNummer" minOccurs="0"/>
 
 
-                           <xs:element name="PrioritetslånKonto">
+                           <xs:element name="KontoDetaljer">
                               <xs:complexType>
                                  <xs:sequence>
+                                    <xs:element ref="skat2012:PantIdentifikationNummer"/>
+                  
                                     <xs:element ref="skat2012:KontoTypeKode"/>
-
-                                    <xs:element ref="skat2012:BankRegisteringsnummer" minOccurs="0"/>
-
-                                    <xs:element ref="skat2012:PantebrevLånePantNummer"/>
 
                                     <xs:element ref="skat2012:KommuneNummer" minOccurs="0"/>
 
@@ -132,27 +124,13 @@
 
                                     <xs:element ref="skat2012:KontantlånIndfriKode" minOccurs="0"/>
 
-
-
-                                    <xs:element ref="skat2012:EjerskifteKode" minOccurs="0"/>
-
+                                    <xs:element ref="skat2012:EjerskifteKode"/>
+                  
                                     <xs:element ref="skat2012:KontoStartDato"/>
 
                                     <xs:element ref="skat2012:KontoOphørDato" minOccurs="0"/>
 
-
-
-                                    <xs:element ref="skat2012:BankKontoIBANNummer" minOccurs="0"/>
-
-
-
-                                    <xs:element ref="skat2012:ValutaStatusKode" minOccurs="0"/>
-
-
-
-                                    <xs:element ref="skat2012:ValutaKode" minOccurs="0"/>
-
-
+                                    <xs:element ref="skat2012:ValutaStatusKode"/>
                                  </xs:sequence>
                               </xs:complexType>
                            </xs:element>
@@ -160,10 +138,8 @@
                               <xs:complexType>
                                  <xs:sequence>
                                     <xs:element ref="skat2012:RenteBeløb"/>
-
-                                    <xs:element ref="skat2012:LånRestgældBeløb" minOccurs="0"/>
-
-
+                  
+                                    <xs:element ref="skat2012:LånRestgældBeløb"/>
 
                                     <xs:element ref="skat2012:LånKursværdi" minOccurs="0"/>
 
