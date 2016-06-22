@@ -89,7 +89,7 @@
                            <xs:element ref="skat2012:IndberetningReferenceNummer" minOccurs="0"/>
 
 
-                           <xs:element name="KontoDetajler">
+                           <xs:element name="KontoDetaljer">
                               <xs:complexType>
                                  <xs:sequence>
                                     <!--Sequence removed-->
