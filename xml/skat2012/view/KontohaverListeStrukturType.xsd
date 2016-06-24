@@ -8,22 +8,22 @@
          
          <xs:annotation>
             <xs:documentation/>
-            <xs:documentation>r14359</xs:documentation>
+            <xs:documentation>r14372</xs:documentation>
          </xs:annotation>
          <xs:include schemaLocation="../class/KontoEjerstatus.xsd"/>
          <xs:include schemaLocation="../class/Person.xsd"/>
-         <xs:include schemaLocation="../class/Virksomhed.xsd"/>
          <xs:include schemaLocation="../class/PersonNavn.xsd"/>
 				     
 				     
-				     
+         <xs:include schemaLocation="../class/Virksomhed.xsd"/>
 				     
 				     
 				     
          <xs:include schemaLocation="../class/VirksomhedNavn.xsd"/>
 				     
 				     
-         <xs:include schemaLocation="../operational/KontohaverUdenCPRNummer.xsd"/>
+         <xs:include schemaLocation="../operational/KontohaverUkendt.xsd"/>
+				     
 				     
          <xs:include schemaLocation="../view/FoedselInformationStrukturType.xsd"/>
 				     
@@ -31,9 +31,8 @@
 				     
          <xs:include schemaLocation="../view/IndberetningUdenlandskAdresseStrukturType.xsd"/>
 				     
+				     
          <xs:include schemaLocation="../view/TINNummerStrukturType.xsd"/>
-				     
-				     
 				     
 				     
 				     
@@ -89,31 +88,38 @@
                                                    <xs:element name="IndlændingValg">
                                                       <xs:complexType>
                                                          <xs:choice>
-                                                            <xs:element ref="skat2012:PersonCPRNummer"/>
-				
-				
-				                                                        <xs:element ref="skat2012:VirksomhedSENummer"/>
-				
-				                                                        <xs:sequence>
-				
-                                                               <xs:element name="KontohaverUdenCPRNummer">
+                                                            <xs:sequence>
+                                                               <xs:element name="PersonValg">
                                                                   <xs:complexType>
-                                                                     <xs:sequence>
-                                                                        <xs:element ref="skat2012:PersonNavnForNavn"/>
+                                                                     <xs:choice>
+                                                                        <xs:element ref="skat2012:PersonCPRNummer"/>
+				
+				                                                                    <xs:sequence>
+				
+                                                                           <xs:element name="KontohaverUdenCPRNummer">
+                                                                              <xs:complexType>
+                                                                                 <xs:sequence>
+                                                                                    <xs:element ref="skat2012:PersonNavnForNavn"/>
                   
-                                                                        <xs:element ref="skat2012:PersonNavnEfterNavn"/>
+                                                                                    <xs:element ref="skat2012:PersonNavnEfterNavn"/>
 
-                                                                        <xs:element ref="skat2012:FødselInformationStruktur" minOccurs="0"/>
-
-
-
-                                                                        <xs:element ref="skat2012:AdresseStruktur" minOccurs="0"/>
+                                                                                    <xs:element ref="skat2012:FødselInformationStruktur" minOccurs="0"/>
 
 
-                                                                     </xs:sequence>
+
+                                                                                    <xs:element ref="skat2012:AdresseStruktur" minOccurs="0"/>
+
+
+                                                                                 </xs:sequence>
+                                                                              </xs:complexType>
+                                                                           </xs:element>
+                                                                        </xs:sequence>
+                                                                     </xs:choice>
                                                                   </xs:complexType>
                                                                </xs:element>
-                                                            </xs:sequence>
+				
+				                                                        </xs:sequence>
+				                                                        <xs:element ref="skat2012:VirksomhedSENummer"/>
                                                          </xs:choice>
                                                       </xs:complexType>
                                                    </xs:element>
@@ -128,37 +134,21 @@
                                                                <xs:element name="Person">
                                                                   <xs:complexType>
                                                                      <xs:sequence>
-                                                                        <xs:element ref="skat2012:PersonNavnForNavn"/>
-                  
-                                                                        <xs:element ref="skat2012:PersonNavnEfterNavn"/>
 
                                                                         <xs:element ref="skat2012:PersonCPRNummer" minOccurs="0"/>
 
+                                                                        <xs:element ref="skat2012:PersonNavnForNavn"/>
+                  
+                                                                        <xs:element ref="skat2012:PersonNavnEfterNavn"/>
+                  
                                                                         <xs:element ref="skat2012:IndberetningUdenlandskAdresseStruktur"/>
-                                                                        <!--Sequence removed-->
 
-                                                                           <xs:element name="PersonIdentifikationValg" minOccurs="0">
-                                                                              <xs:complexType>
-                                                                                 <xs:choice>
-                                                                                    <xs:sequence>
-                                                                                       <xs:element name="TINInformation">
-                                                                                          <xs:complexType>
-                                                                                             <xs:sequence>
-                                                                                                <xs:element ref="skat2012:TINNummerStruktur"/>
-
-                                                                                                <xs:element ref="skat2012:FødselInformationStruktur" minOccurs="0"/>
+                                                                        <xs:element ref="skat2012:FødselInformationStruktur" minOccurs="0"/>
 
 
-                                                                                             </xs:sequence>
-                                                                                          </xs:complexType>
-                                                                                       </xs:element>
-				
-				                                                                                </xs:sequence>
-				                                                                                <xs:element ref="skat2012:FødselInformationStruktur"/>
-                                                                                 </xs:choice>
-                                                                              </xs:complexType>
-                                                                           </xs:element>
-                                                                        
+
+                                                                        <xs:element ref="skat2012:TINNummerStruktur" minOccurs="0"/>
+
 
                                                                      </xs:sequence>
                                                                   </xs:complexType>
@@ -170,13 +160,16 @@
                                                                <xs:element name="Virksomhed">
                                                                   <xs:complexType>
                                                                      <xs:sequence>
-                                                                        <xs:element ref="skat2012:VirksomhedNavnFirmaNavn"/>
 
                                                                         <xs:element ref="skat2012:VirksomhedSENummer" minOccurs="0"/>
 
-                                                                        <xs:element ref="skat2012:IndberetningUdenlandskAdresseStruktur"/>
+                                                                        <xs:element ref="skat2012:VirksomhedNavnFirmaNavn"/>
                   
-                                                                        <xs:element ref="skat2012:TINNummerStruktur"/>
+                                                                        <xs:element ref="skat2012:IndberetningUdenlandskAdresseStruktur"/>
+
+                                                                        <xs:element ref="skat2012:TINNummerStruktur" minOccurs="0"/>
+
+
                                                                      </xs:sequence>
                                                                   </xs:complexType>
                                                                </xs:element>
@@ -184,7 +177,9 @@
                                                          </xs:choice>
                                                       </xs:complexType>
                                                    </xs:element>
-                                                </xs:sequence>
+				
+				                                            </xs:sequence>
+				                                            <xs:element ref="skat2012:KontohaverUkendt"/>
                                              </xs:choice>
                                           </xs:complexType>
                                        </xs:element>
@@ -230,7 +225,16 @@
                                                    </xs:element>
 				
 				                                            </xs:sequence>
-				                                            <xs:element ref="skat2012:KontohaverUdenCPRNummer"/>
+                                                <xs:sequence>
+				
+                                                   <xs:element name="KontohaverUdenCPRSENummer">
+                                                      <xs:complexType>
+                                                         <xs:sequence>
+                                                            <xs:element ref="skat2012:KontohaverUkendt"/>
+                                                         </xs:sequence>
+                                                      </xs:complexType>
+                                                   </xs:element>
+                                                </xs:sequence>
                                              </xs:choice>
                                           </xs:complexType>
                                        </xs:element>

@@ -8,13 +8,13 @@
          
          <xs:annotation>
             <xs:documentation/>
-            <xs:documentation>r14359</xs:documentation>
+            <xs:documentation>r14372</xs:documentation>
          </xs:annotation>
          <xs:include schemaLocation="../class/Indkomst.xsd"/>
          <xs:include schemaLocation="../class/Virksomhed.xsd"/>
          <xs:include schemaLocation="../class/Konto.xsd"/>
 				     
-         <xs:include schemaLocation="../class/Indberetning.xsd"/>
+         <xs:include schemaLocation="../class/Note.xsd"/>
          <xs:include schemaLocation="../class/Bank.xsd"/>
          <xs:include schemaLocation="../class/BankKonto.xsd"/>
          <xs:include schemaLocation="../class/IndlaanKonto.xsd"/>
@@ -78,7 +78,7 @@
                         <xs:sequence>
                            <xs:element ref="skat2012:IndberetningIdentifikatorStruktur"/>
 
-                           <xs:element ref="skat2012:IndberetningReferenceNummer" minOccurs="0"/>
+                           <xs:element ref="skat2012:NoteTekst" minOccurs="0"/>
 
 
                            <xs:element name="KontoDetaljer">
@@ -114,8 +114,10 @@
                                     <xs:element ref="skat2012:RenteBeløb"/>
                   
                                     <xs:element ref="skat2012:RenteIndestående"/>
-                  
-                                    <xs:element ref="skat2012:RenteKalkuleretPræmieBeløb"/>
+
+                                    <xs:element ref="skat2012:RenteKalkuleretPræmieBeløb" minOccurs="0"/>
+
+
                                  </xs:sequence>
                               </xs:complexType>
                            </xs:element>

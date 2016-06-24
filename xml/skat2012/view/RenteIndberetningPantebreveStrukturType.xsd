@@ -8,16 +8,15 @@
          
          <xs:annotation>
             <xs:documentation/>
-            <xs:documentation>r14359</xs:documentation>
+            <xs:documentation>r14372</xs:documentation>
          </xs:annotation>
          <xs:include schemaLocation="../class/Indkomst.xsd"/>
          <xs:include schemaLocation="../class/Virksomhed.xsd"/>
          <xs:include schemaLocation="../class/Konto.xsd"/>
 				     
-         <xs:include schemaLocation="../class/Indberetning.xsd"/>
+         <xs:include schemaLocation="../class/Note.xsd"/>
          <xs:include schemaLocation="../class/Bank.xsd"/>
          <xs:include schemaLocation="../class/PantebrevDepot.xsd"/>
-         <xs:include schemaLocation="../class/KontoType.xsd"/>
          <xs:include schemaLocation="../operational/PantebrevAEndringKode.xsd"/>
 				     
          <xs:include schemaLocation="../class/Rente.xsd"/>
@@ -61,7 +60,6 @@
             
             
             
-            
                <!--Sequence removed-->
                   <xs:element name="Indkomstperiode">
                      <xs:complexType>
@@ -87,7 +85,7 @@
                         <xs:sequence>
                            <xs:element ref="skat2012:IndberetningIdentifikatorStruktur"/>
 
-                           <xs:element ref="skat2012:IndberetningReferenceNummer" minOccurs="0"/>
+                           <xs:element ref="skat2012:NoteTekst" minOccurs="0"/>
 
 
                            <xs:element name="KontoDetaljer">
@@ -104,8 +102,6 @@
                                        </xs:element>
                                     
                                     <xs:element ref="skat2012:PantebrevDepotNummer"/>
-                  
-                                    <xs:element ref="skat2012:KontoTypeKode"/>
                   
                                     <xs:element ref="skat2012:PantebrevÆndringKode"/>
                   
@@ -130,20 +126,24 @@
                                  </xs:sequence>
                               </xs:complexType>
                            </xs:element>
-                           <xs:element name="Debitor">
+                           <xs:element name="LånTager">
                               <xs:complexType>
                                  <xs:sequence>
                                     <xs:element ref="skat2012:KontohaverListeStruktur"/>
                                  </xs:sequence>
                               </xs:complexType>
                            </xs:element>
-                           <xs:element name="Kreditor">
-                              <xs:complexType>
-                                 <xs:sequence>
-                                    <xs:element ref="skat2012:KontohaverListeStruktur"/>
-                                 </xs:sequence>
-                              </xs:complexType>
-                           </xs:element>
+                           <!--Sequence removed-->
+
+                              <xs:element name="DepotHaver" minOccurs="0">
+                                 <xs:complexType>
+                                    <xs:sequence>
+                                       <xs:element ref="skat2012:KontohaverListeStruktur"/>
+                                    </xs:sequence>
+                                 </xs:complexType>
+                              </xs:element>
+                           
+
                         </xs:sequence>
                      </xs:complexType>
                   </xs:element>

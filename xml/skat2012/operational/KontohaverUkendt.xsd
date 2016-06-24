@@ -6,9 +6,5 @@
                  version="1.0">
          <xs:include schemaLocation="../types/Tekst0Type.xsd"/>
          
-         <xs:element name="KontohaverUdenCPRNummer" type="skat2012:Tekst0Type">
-            <xs:annotation>
-               <xs:documentation>Generel type for markeringer. Kan være:  false true</xs:documentation>
-            </xs:annotation>
-         </xs:element>
+         <xs:element name="KontohaverUkendt" type="skat2012:Tekst0Type"/>
       </xs:schema>
