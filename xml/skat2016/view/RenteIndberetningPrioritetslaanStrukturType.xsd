@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:ekap2016="http://skat.dk/ekapital/2016/01/01" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://skat.dk/ekapital/2016/01/01" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0">
+	<xs:annotation>
+		<xs:documentation/>
+		<xs:documentation>r14419</xs:documentation>
+	</xs:annotation>
+	<xs:include schemaLocation="../class/Indkomst.xsd"/>
+	<xs:include schemaLocation="../class/Virksomhed.xsd"/>
+	<xs:include schemaLocation="../class/Konto.xsd"/>
+	<xs:include schemaLocation="../class/Note.xsd"/>
+	<xs:include schemaLocation="../class/PantIdentifikation.xsd"/>
+	<xs:include schemaLocation="../class/KontoType.xsd"/>
+	<xs:include schemaLocation="../class/Kommune.xsd"/>
+	<xs:include schemaLocation="../class/Ejendom.xsd"/>
+	<xs:include schemaLocation="../class/Land.xsd"/>
+	<xs:include schemaLocation="../class/Kontantlaan.xsd"/>
+	<xs:include schemaLocation="../class/Ejerskifte.xsd"/>
+	<xs:include schemaLocation="../class/LaanForhold.xsd"/>
+	<xs:include schemaLocation="../class/Rente.xsd"/>
+	<xs:include schemaLocation="../class/Laan.xsd"/>
+	<xs:include schemaLocation="../view/IndberetningIdentifikatorStrukturType.xsd"/>
+	<xs:include schemaLocation="../view/KontohaverListeStrukturType.xsd"/>
+	<xs:element name="RenteIndberetningPrioritetslånStruktur" type="ekap2016:RenteIndberetningPrioritetslånStrukturType"/>
+	<xs:complexType name="RenteIndberetningPrioritetslånStrukturType">
+		<xs:sequence>
+			<xs:element name="Indkomstperiode">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element ref="ekap2016:IndkomstÅr"/>
+						<xs:element ref="ekap2016:IndkomstPeriodeTil" minOccurs="0"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="Indberetningspligtig">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element ref="ekap2016:VirksomhedSENummer"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element ref="ekap2016:KontoID"/>
+			<xs:element name="RetbarPrioritetslånKontoOplysninger">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element ref="ekap2016:IndberetningIdentifikatorStruktur"/>
+						<xs:element ref="ekap2016:NoteTekst" minOccurs="0"/>
+						<xs:element name="KontoDetaljer">
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element ref="ekap2016:PantIdentifikationNummer"/>
+									<xs:element ref="ekap2016:KontoTypeKode"/>
+									<xs:element ref="ekap2016:KommuneNummer" minOccurs="0"/>
+									<xs:element ref="ekap2016:EjendomNummer" minOccurs="0"/>
+									<xs:element name="EjendomLand" minOccurs="0">
+										<xs:complexType>
+											<xs:sequence>
+												<xs:element ref="ekap2016:LandKode"/>
+											</xs:sequence>
+										</xs:complexType>
+									</xs:element>
+									<xs:element ref="ekap2016:KontantlånIndfriKode" minOccurs="0"/>
+									<xs:element ref="ekap2016:EjerskifteKode"/>
+									<xs:element ref="ekap2016:LånForholdRestanceMarkering" minOccurs="0"/>
+									<xs:element ref="ekap2016:LånForholdGældEftergivelseKode" minOccurs="0"/>
+									<xs:element ref="ekap2016:KontoStartDato"/>
+									<xs:element ref="ekap2016:KontoOphørDato" minOccurs="0"/>
+									<xs:element ref="ekap2016:RenteValutaStatusKode"/>
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+						<xs:element name="Beløb">
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element ref="ekap2016:RenteBeløb"/>
+									<xs:element ref="ekap2016:LånRestgældBeløb" minOccurs="0"/>
+									<xs:element ref="ekap2016:LånKursværdi" minOccurs="0"/>
+									<xs:element ref="ekap2016:KontantlånKurstab" minOccurs="0"/>
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+						<xs:element ref="ekap2016:KontohaverListeStruktur"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

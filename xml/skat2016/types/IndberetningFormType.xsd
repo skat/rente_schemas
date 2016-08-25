@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:ekap2016="http://skat.dk/ekapital/2016/01/01" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://skat.dk/ekapital/2016/01/01" elementFormDefault="qualified" version="1.0">
+	<xs:simpleType name="IndberetningFormType">
+		<xs:restriction base="xs:integer">
+			<xs:maxInclusive value="3"/>
+			<xs:minInclusive value="1"/>
+			<xs:totalDigits value="1"/>
+		</xs:restriction>
+	</xs:simpleType>
+</xs:schema>

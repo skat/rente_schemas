@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:ekap2016="http://skat.dk/ekapital/2016/01/01" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://skat.dk/ekapital/2016/01/01" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0">
+	<xs:annotation>
+		<xs:documentation>Kunden har en ejerstatus ift bankkonto</xs:documentation>
+	</xs:annotation>
+	<xs:include schemaLocation="../types/Tekst1Type.xsd"/>
+	<xs:include schemaLocation="../types/AntalKontohavereType.xsd"/>
+	<xs:element name="KontoEjerstatusKode" type="ekap2016:Tekst1Type">
+		<xs:annotation>
+			<xs:documentation>[ANDERS: ALT HAVD DER HAR MED INDIVIDSTRUKTURER SKAL UD AF DENNE BESKRIVELSE]  Angiver kontoejerens forhold til kontoen:  0 = kontoen/depotet indehaves af èn fysisk eller juridisk person, der har bopæl eller hjemsted her i landet.  1 = Valutaudlænding jf. ejerstatus 5. Ejerstatuskode = 1 anvendes også såfremt, der er flere end 2 konto/depothavere, der alle er valutaudlændinge.  2 = Selskaber, foreninger o.lign. uden cvr-/se-nr. Der anføres cpr-nr. om formanden eller en anden person, der er berettiget til at handle på den berettigedes eller forpligtigedes vegne. Ejerstatuskoden anvendes ligeledes, hvor der er mere end 2 personlige konto/depothavere eller hvor konto/depothavere er et cpr-eller cvr-/se-nr. Der kan foretages indberetning på samtlige konto/depothavere med ejerstatuskode 2. Såfremt der foretages indberetning på alle, skal opmærksomheden dog henledes på, at hver af indberetningerne tællles med på den kvittering, der dannes med de fulde beløb. Det kan derfor give afstemningsafvigelser i forhold til den indberetningspligtiges regnskab.  4 = To personlige indehavere med hver sit cpr-nr. Konti (indskud og udlån), depoter, kuponer og handelsrenter med ejerstatus 4 indberettes med de fulde beløb på begge indehaveres personnumre. Oplysningerne indberettes således to gange identisk bortset fra personnummer. Ejerstatuskode 4 kan ikke anvendes, hvis to kontohavere er et cpr-eller cvr-/se-nr. I sådanne tilfælde skal ejerstatuskode 2 anvendes.  5 = To personlige indehavere, hvor den ene eller begge indehavere hverken har bopæl eller hjemsted her i landet. Såfremt den ene indehaver har bopæl eller hjemsted her i Danmark indberettes denne indehaver med ejerstatus 4. Der indberettes de fulde beløb på begge indehavere.  7 = Kontohaver er noteret som flygtning, asylansøger eller person, der har fået bevilget asyl og som endnu ikke har fået tildelt dansk cpr-nr.  Kontotypen kan kun anvendes for INDVNR 2207, renter af indskud mv., med kontotype 13.  Indberetningen foretages uden angivelse af cpr-eller cvr-/se-nr. for kontohaver. Der er dog mulighed for at foretage indberetning af fødselsdag, måned og år såfremt dette er noteret. I feltet CPR-/CVR-/SE-nr. indberettes disse oplysninger som de første 6 cifre (DD/MM/ÅÅ) efterfulgt af 4 nuller. Denne regel gælder kun i forbindelse med ejerstatus = 7.  Der skal altid indberettes navn- og adresseoplysninger. Som adresse indberettes adressen for det asyl/flygtningecenter, hvor personen har ophold.  Feltet landekode skal ikke udfyldes.  8 = Børneopsparingskonti Individ 2204: Kræver depottypekode 10 Individ 2206: Forbeholdt den finansielle sektor.</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:element name="KontoEjerstatusAntalKontohavere" type="ekap2016:AntalKontohavereType">
+		<xs:annotation>
+			<xs:documentation>Angiver om en konto har En, To eller FlereEndTo ejere. Hvis FlereEndTo ejere behøver indberetter kun oplyse en enkelt ejer.</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+</xs:schema>

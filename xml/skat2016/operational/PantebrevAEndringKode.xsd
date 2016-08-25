@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:ekap2016="http://skat.dk/ekapital/2016/01/01" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://skat.dk/ekapital/2016/01/01" elementFormDefault="qualified" version="1.0">
+	<xs:include schemaLocation="../types/TalHel2Type.xsd"/>
+	<xs:element name="PantebrevÆndringKode" type="ekap2016:TalHel2Type">
+		<xs:annotation>
+			<xs:documentation>00  = pantebrevet har været anbragt i depot hele året.  01= der er sket kreditorskift i kalenderåret (typisk ved køb/salg af pantebrevet) eller pantebrevet er indlagt i/udtaget af depot i løbet af året.  02= der er sket debitorskift i løbet af kalenderåret (typisk ved køb/salg af ejendommen).  03= både hændelsen 01 og hændelsen 02 er indtruffet.  For depothaver (kreditor) kan kun indberettes en af værdierne nul eller 01. For låntager kan indberettes en af værdierne  nul, 01, 02 eller 03. Indberetning af værdierne 02 og 03 for låntager foretages kun, når hændelsen er indtruffet mens pantebrevet har været anbragt i depot. Den indberetningspligtige kan dog foretage denne type indberetning i alle tilfælde, også når hændelsen er indtruffet mens pantebrevet ikke var indlagt i depotet.</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+</xs:schema>

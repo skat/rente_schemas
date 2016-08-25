@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:ekap2016="http://skat.dk/ekapital/2016/01/01" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://skat.dk/ekapital/2016/01/01" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0">
+	<xs:annotation>
+		<xs:documentation>Generisk begreb, som dækker over alle typer renter, som anvendes i SKAT, fx ifm med skatteberegning.</xs:documentation>
+	</xs:annotation>
+	<xs:include schemaLocation="../types/BeloebType.xsd"/>
+	<xs:include schemaLocation="../types/Tekst1Type.xsd"/>
+	<xs:include schemaLocation="../types/BeloebPositivNegativ13Decimaler2Type.xsd"/>
+	<xs:element name="RenteBeløb" type="ekap2016:BeløbType">
+		<xs:annotation>
+			<xs:documentation>Angiver et givent rentebeløb.</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:element name="RenteValutaStatusKode" type="ekap2016:Tekst1Type">
+		<xs:annotation>
+			<xs:documentation>Feltet skal være udfyldt med en af følgende værdier:  0 = Fordringen er udstedt i danske kr.  1= Fordringen er udstedt i fremmed valuta inkl. EURO </xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:element name="RenteKalkuleretPræmieBeløb" type="ekap2016:BeløbPositivNegativ13Decimaler2Type">
+		<xs:annotation>
+			<xs:documentation>For såvel boligsparekonti (kontotypekode 15) som for uddannelseskonti (kontotypekode 16) indberettes beregnet samlet (ikke tilskrevet) præmie pr. 31. december 1993 for de enkelte konti.</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+</xs:schema>
