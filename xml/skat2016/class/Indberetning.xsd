@@ -13,7 +13,7 @@
 	</xs:element>
 	<xs:element name="IndberetningForm" type="ekap2016:IndberetningFormType">
 		<xs:annotation>
-			<xs:documentation>Angiver hvilken indberetningstype, der er tale om:   Initiel: Indberetningen indeholder nye oplysninger   Rettelse: Indberetningen indeholder korrektioner til tidligere indberettede oplysninger   Sletning: Indberetningen er en invalidering af seneste indberetning inklusiv historik</xs:documentation>
+			<xs:documentation>Angiver hvilken indberetningstype, der er tale om:   1. Initiel: Indberetningen indeholder nye oplysninger   2. Rettelse: Indberetningen indeholder korrektioner til tidligere indberettede oplysninger   3. Sletning: Indberetningen er en invalidering af seneste indberetning inklusiv historik</xs:documentation>
 		</xs:annotation>
 	</xs:element>
 	<xs:element name="IndberetningReferenceNummer" type="ekap2016:Tekst255Type">

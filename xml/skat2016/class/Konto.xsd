@@ -7,12 +7,12 @@
 	<xs:include schemaLocation="../types/Tekst30Type.xsd"/>
 	<xs:element name="KontoStartDato" type="ekap2016:DatoType">
 		<xs:annotation>
-			<xs:documentation>KontoStartDato angives i formen DDMMÅÅ og skal altid indberettes. Angiver dato for kontoens oprettelse.</xs:documentation>
+			<xs:documentation>KontoStartDato angives i formen YYYY-MM-DD og skal altid indberettes. Angiver dato for kontoens oprettelse.</xs:documentation>
 		</xs:annotation>
 	</xs:element>
 	<xs:element name="KontoOphørDato" type="ekap2016:DatoType">
 		<xs:annotation>
-			<xs:documentation>KontoOphørDato angives i formen DDMMÅÅ og angiver dato for kontoens ophør.</xs:documentation>
+			<xs:documentation>KontoOphørDato angives i formen YYYY-MM-DD og angiver dato for kontoens ophør.</xs:documentation>
 		</xs:annotation>
 	</xs:element>
 	<xs:element name="KontoID" type="ekap2016:Tekst30Type">

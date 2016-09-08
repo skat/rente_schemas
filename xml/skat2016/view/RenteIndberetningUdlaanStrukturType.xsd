@@ -2,7 +2,7 @@
 <xs:schema xmlns:ekap2016="http://skat.dk/ekapital/2016/01/01" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://skat.dk/ekapital/2016/01/01" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0">
 	<xs:annotation>
 		<xs:documentation/>
-		<xs:documentation>r14419</xs:documentation>
+		<xs:documentation>r14836</xs:documentation>
 	</xs:annotation>
 	<xs:include schemaLocation="../class/Indkomst.xsd"/>
 	<xs:include schemaLocation="../class/Virksomhed.xsd"/>
@@ -36,43 +36,60 @@
 				</xs:complexType>
 			</xs:element>
 			<xs:element ref="ekap2016:KontoID"/>
-			<xs:element name="RetbarUdlånKontoOplysninger">
+			<xs:element name="IndberetningValg">
 				<xs:complexType>
-					<xs:sequence>
-						<xs:element ref="ekap2016:IndberetningIdentifikatorStruktur"/>
-						<xs:element ref="ekap2016:NoteTekst" minOccurs="0"/>
-						<xs:element name="KontoDetaljer">
-							<xs:complexType>
-								<xs:sequence>
-									<xs:element name="Pengeinstitut" minOccurs="0">
-										<xs:complexType>
-											<xs:sequence>
-												<xs:element ref="ekap2016:BankRegistreringsnummer"/>
-												<xs:element ref="ekap2016:BankKontoIBANNummer"/>
-											</xs:sequence>
-										</xs:complexType>
-									</xs:element>
-									<xs:element ref="ekap2016:UdlånKontoNummer"/>
-									<xs:element ref="ekap2016:KontoTypeKode"/>
-									<xs:element ref="ekap2016:LånForholdRestanceMarkering" minOccurs="0"/>
-									<xs:element ref="ekap2016:LånForholdGældEftergivelseKode" minOccurs="0"/>
-									<xs:element ref="ekap2016:KontoStartDato"/>
-									<xs:element ref="ekap2016:KontoOphørDato" minOccurs="0"/>
-									<xs:element ref="ekap2016:RenteValutaStatusKode"/>
-								</xs:sequence>
-							</xs:complexType>
-						</xs:element>
-						<xs:element name="Beløb">
-							<xs:complexType>
-								<xs:sequence>
-									<xs:element ref="ekap2016:RenteBeløb"/>
-									<xs:element ref="ekap2016:LånRestgældBeløb" minOccurs="0"/>
-									<xs:element ref="ekap2016:LånKursværdi" minOccurs="0"/>
-								</xs:sequence>
-							</xs:complexType>
-						</xs:element>
-						<xs:element ref="ekap2016:KontohaverListeStruktur"/>
-					</xs:sequence>
+					<xs:choice>
+						<xs:sequence>
+							<xs:element name="Invalidering">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element ref="ekap2016:IndberetningIdentifikatorStruktur"/>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+						<xs:sequence>
+							<xs:element name="RetbarUdlånKontoOplysninger">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element ref="ekap2016:IndberetningIdentifikatorStruktur"/>
+										<xs:element ref="ekap2016:NoteTekst" minOccurs="0"/>
+										<xs:element name="KontoDetaljer">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="Pengeinstitut" minOccurs="0">
+														<xs:complexType>
+															<xs:sequence>
+																<xs:element ref="ekap2016:BankRegistreringsnummer"/>
+																<xs:element ref="ekap2016:BankKontoIBANNummer"/>
+															</xs:sequence>
+														</xs:complexType>
+													</xs:element>
+													<xs:element ref="ekap2016:UdlånKontoNummer"/>
+													<xs:element ref="ekap2016:KontoTypeKode"/>
+													<xs:element ref="ekap2016:LånForholdRestanceMarkering" minOccurs="0"/>
+													<xs:element ref="ekap2016:LånForholdGældEftergivelseKode" minOccurs="0"/>
+													<xs:element ref="ekap2016:KontoStartDato"/>
+													<xs:element ref="ekap2016:KontoOphørDato" minOccurs="0"/>
+													<xs:element ref="ekap2016:RenteValutaStatusKode"/>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="Beløb">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element ref="ekap2016:RenteBeløb"/>
+													<xs:element ref="ekap2016:LånRestgældBeløb" minOccurs="0"/>
+													<xs:element ref="ekap2016:LånKursværdi" minOccurs="0"/>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+										<xs:element ref="ekap2016:KontohaverListeStruktur"/>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:choice>
 				</xs:complexType>
 			</xs:element>
 		</xs:sequence>
