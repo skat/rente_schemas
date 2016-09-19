@@ -3,7 +3,7 @@
 	<xs:include schemaLocation="../types/Tekst15Type.xsd"/>
 	<xs:element name="UdlånKontoNummer" type="ekap2016:Tekst15Type">
 		<xs:annotation>
-			<xs:documentation>Angiver en tekst på max. 15 alfanummeriske karakterer</xs:documentation>
+			<xs:documentation>Det hos kontoførende registrerede nummer for kontoen. Som kontonummer kan bl.a. benyttes sags-/journalnummer.</xs:documentation>
 		</xs:annotation>
 	</xs:element>
 </xs:schema>

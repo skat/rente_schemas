@@ -4,7 +4,7 @@
 	<xs:include schemaLocation="../types/DatoType.xsd"/>
 	<xs:element name="KontohaverUkendt" type="ekap2016:Tekst0Type">
 		<xs:annotation>
-			<xs:documentation>Angiver at der er en kontohaver, som ikke ikke kan identificeres. Angives ved at indsætte tomt tag.</xs:documentation>
+			<xs:documentation>Angiver at der er en kontohaver, som ikke kan identificeres. Angives ved at indsætte tomt tag.</xs:documentation>
 		</xs:annotation>
 	</xs:element>
 	<xs:element name="KontohaverOpstartDatoEjerskifte" type="ekap2016:DatoType">

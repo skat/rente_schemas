@@ -7,7 +7,7 @@
 	<xs:include schemaLocation="../types/KodeType.xsd"/>
 	<xs:element name="TINNummer" type="ekap2016:Tekst25Type">
 		<xs:annotation>
-			<xs:documentation>Identifikattionen Tax Identification Number (TIN).  Kan fx være et kørekortsnummer.</xs:documentation>
+			<xs:documentation>Identifikattionen Tax Identification Number (TIN).  Retmæssig ejers skattemæssige ID-nr. efter bopælslandets regler.</xs:documentation>
 		</xs:annotation>
 	</xs:element>
 	<xs:element name="TINType" type="ekap2016:KodeType">

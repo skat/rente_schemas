@@ -6,7 +6,7 @@
 	<xs:include schemaLocation="../types/Tekst25Type.xsd"/>
 	<xs:element name="PantIdentifikationNummer" type="ekap2016:Tekst25Type">
 		<xs:annotation>
-			<xs:documentation>En tekststreng med op til 25 alfanummeriske karakterer.</xs:documentation>
+			<xs:documentation>Det hos den indberetningspligtige registrerede nummer (låne/pant- eller kontonummer) for låneforholdet. </xs:documentation>
 		</xs:annotation>
 	</xs:element>
 </xs:schema>
