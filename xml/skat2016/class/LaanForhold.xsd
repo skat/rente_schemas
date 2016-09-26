@@ -1,21 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xs:schema xmlns:ekap2016="http://skat.dk/ekapital/2016/01/01" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://skat.dk/ekapital/2016/01/01" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0">
-	<xs:include schemaLocation="../types/MarkeringType.xsd"/>
-	<xs:include schemaLocation="../types/Tekst1Type.xsd"/>
-	<xs:include schemaLocation="../types/BeloebType.xsd"/>
-	<xs:element name="LånForholdRestanceMarkering" type="ekap2016:MarkeringType">
-		<xs:annotation>
-			<xs:documentation>Der skal indberettes en særlig markering af renter i låneforhold, hvor der er ubetalte forfaldne renter vedrørende det kalenderår, der går forud for det kalenderår, som indberetningen i øvrigt omfatter. Den ubetalte rente fra året før er en opsummeret rente også fra tidligere indkomstår.  Parterne har i den forbindelse aftalefrihed ved afgørelse af dækningsrækkefølge for á conto indbetalinger. Disse anses derfor som udgangspunkt at dække, hvad parterne har aftalt. Findes der ingen aftale mellem parterne, anlægges der normalt den praksis, at á conto indbetalinger forlods dækker ikke betalte forfaldne renter.  Restancemarkering  En af følgende værdier skal udfyldes   SAND: Ingen restance eller betingelser i øvrigt for restancemarkering opfyldt, jf. nedenfor.   FALSK: Ved udgangen af det kalenderår, indberetning omfatter, er der registreret restancer på samme låneforhold, som er forfaldne senest ved udgangen af det foregående kalenderår.  NB: Der skal ikke opsættes restancemarkering for studielån i studietiden.  </xs:documentation>
-		</xs:annotation>
-	</xs:element>
-	<xs:element name="LånForholdGældEftergivelseKode" type="ekap2016:Tekst1Type">
-		<xs:annotation>
-			<xs:documentation>Gældseftergivelse Der foretages markering af låneforhold, hvor der er givet gældseftergivelse. Markeringen skal foretages for låneforhold, hvor gældseftergivelse er aftalt efter lovens ikrafttræden den 1. juni 1995.  Markeringen skal foretages i feltet for restancemarkering med følgende værdier:   4: Eftergivelsen er led i en offentlig gældseftergivelse.  5: Eftergivelsen er led i en privat (betinget) gældseftergivelse.   6: Som kode 5, men med en oplysning om, at der for samme debitor er indgået en ny gældseftergivelse i samme låneforhold i indkomståret.  Oplysningen er indkomstårsbestemt. Næste år vendes der tilbage til kode 5, såfremt der i dette år ikke er indgået en ny gældseftergivelse.   7: Eftergivelse er ophørt. Indberettes kun om forhold, hvorom der tidligere er indberettet markering for gældseftergivelse.  Kode 7 skal kun indberettes i afslutningsåret, dvs. at ved næste års indberetning er feltet klar til en markering for restance eller for ny gældseftergivelse.   En gældseftergivelsesmarkering har fortrin frem for en eventuel restancemarkering. Hvis der er gældseftergivelse og samtidig er restance, skal koden for gældseftergivelse benyttes.  </xs:documentation>
-		</xs:annotation>
-	</xs:element>
-	<xs:element name="LånForholdKalkuleretPræmie" type="ekap2016:BeløbType">
-		<xs:annotation>
-			<xs:documentation>Beløb angivet som decimaltal, fx. 1500,00</xs:documentation>
-		</xs:annotation>
-	</xs:element>
-</xs:schema>
+      <xs:schema xmlns:skat2012="http://skat.dk/begrebsmodel/2012/01/01/"
+                 xmlns:xs="http://www.w3.org/2001/XMLSchema"
+                 targetNamespace="http://skat.dk/begrebsmodel/2012/01/01/"
+                 elementFormDefault="qualified"
+                 attributeFormDefault="unqualified"
+                 version="1.0">
+         <xs:include schemaLocation="../types/MarkeringType.xsd"/>
+         <xs:include schemaLocation="../types/Tekst1Type.xsd"/>
+         <xs:include schemaLocation="../types/BeloebType.xsd"/>
+         <xs:element name="LånForholdRestanceMarkering" type="skat2012:MarkeringType">
+               
+               <xs:annotation>
+                  <xs:documentation>Der skal indberettes en særlig markering af renter i låneforhold, hvor der er ubetalte forfaldne renter vedrørende det kalenderår, der går forud for det kalenderår, som indberetningen i øvrigt omfatter. Den ubetalte rente fra året før er en opsummeret rente også fra tidligere indkomstår.  Parterne har i den forbindelse aftalefrihed ved afgørelse af dækningsrækkefølge for á conto indbetalinger. Disse anses derfor som udgangspunkt at dække, hvad parterne har aftalt. Findes der ingen aftale mellem parterne, anlægges der normalt den praksis, at á conto indbetalinger forlods dækker ikke betalte forfaldne renter.  Restancemarkering  En af følgende værdier skal udfyldes   SAND: Ingen restance eller betingelser i øvrigt for restancemarkering opfyldt, jf. nedenfor.   FALSK: Ved udgangen af det kalenderår, indberetning omfatter, er der registreret restancer på samme låneforhold, som er forfaldne senest ved udgangen af det foregående kalenderår.  NB: Der skal ikke opsættes restancemarkering for studielån i studietiden.  </xs:documentation>
+               </xs:annotation>
+            </xs:element>
+         <xs:element name="LånForholdGældEftergivelseKode" type="skat2012:Tekst1Type">
+               
+               <xs:annotation>
+                  <xs:documentation>Gældseftergivelse Der foretages markering af låneforhold, hvor der er givet gældseftergivelse. Markeringen skal foretages for låneforhold, hvor gældseftergivelse er aftalt efter lovens ikrafttræden den 1. juni 1995.  Markeringen skal foretages i feltet for restancemarkering med følgende værdier:   4: Eftergivelsen er led i en offentlig gældseftergivelse.  5: Eftergivelsen er led i en privat (betinget) gældseftergivelse.   6: Som kode 5, men med en oplysning om, at der for samme debitor er indgået en ny gældseftergivelse i samme låneforhold i indkomståret.  Oplysningen er indkomstårsbestemt. Næste år vendes der tilbage til kode 5, såfremt der i dette år ikke er indgået en ny gældseftergivelse.   7: Eftergivelse er ophørt. Indberettes kun om forhold, hvorom der tidligere er indberettet markering for gældseftergivelse.  Kode 7 skal kun indberettes i afslutningsåret, dvs. at ved næste års indberetning er feltet klar til en markering for restance eller for ny gældseftergivelse.   En gældseftergivelsesmarkering har fortrin frem for en eventuel restancemarkering. Hvis der er gældseftergivelse og samtidig er restance, skal koden for gældseftergivelse benyttes.  </xs:documentation>
+               </xs:annotation>
+            </xs:element>
+         <xs:element name="LånForholdKalkuleretPræmie" type="skat2012:BeløbType">
+               
+               <xs:annotation>
+                  <xs:documentation>Beløb angivet som decimaltal, fx. 1500,00</xs:documentation>
+               </xs:annotation>
+            </xs:element>
+      </xs:schema>

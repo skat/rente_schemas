@@ -1,12 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xs:schema xmlns:ekap2016="http://skat.dk/ekapital/2016/01/01" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://skat.dk/ekapital/2016/01/01" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0">
-	<xs:annotation>
-		<xs:documentation>Ejerforhold om vedrører ejerskifte.</xs:documentation>
-	</xs:annotation>
-	<xs:include schemaLocation="../types/EjerskifteKodeType.xsd"/>
-	<xs:element name="EjerskifteKode" type="ekap2016:EjerskifteKodeType">
-		<xs:annotation>
-			<xs:documentation>Der indberettes følgende værdier:  0 = Ejerforholdet har bestået hele året. 1 = Den pantsatte ejendom er købt eller solgt i løbet af året.</xs:documentation>
-		</xs:annotation>
-	</xs:element>
-</xs:schema>
+      <xs:schema xmlns:skat2012="http://skat.dk/begrebsmodel/2012/01/01/"
+                 xmlns:xs="http://www.w3.org/2001/XMLSchema"
+                 targetNamespace="http://skat.dk/begrebsmodel/2012/01/01/"
+                 elementFormDefault="qualified"
+                 attributeFormDefault="unqualified"
+                 version="1.0">
+         <xs:annotation>
+               <xs:documentation>Ejerforhold om vedrører ejerskifte.</xs:documentation>
+            </xs:annotation>
+         <xs:include schemaLocation="../types/EjerskifteKodeType.xsd"/>
+         <xs:include schemaLocation="../types/DatoType.xsd"/>
+         <xs:element name="EjerskifteKode" type="skat2012:EjerskifteKodeType">
+               
+               <xs:annotation>
+                  <xs:documentation>Der indberettes følgende værdier:  0 = Ejerforholdet har bestået hele året. 1 = Den pantsatte ejendom er købt eller solgt i løbet af året.</xs:documentation>
+               </xs:annotation>
+            </xs:element>
+         <xs:element name="EjerskifteOpstartDato" type="skat2012:DatoType">
+               
+               <xs:annotation>
+                  <xs:documentation>Dato på hvornår en kontohaver indtræder i en eksisterende konto. Feltet skal ikke udfyldes, hvis kontohaver indtræder i en ny oprettet konto.</xs:documentation>
+               </xs:annotation>
+            </xs:element>
+         <xs:element name="EjerskifteOphørDato" type="skat2012:DatoType">
+               
+               <xs:annotation>
+                  <xs:documentation>Dato på hvornår en kontohaver udtræder af en konto der fortsætter. Feltet skal ikke udfyldes, hvis kontohaver udtræder af en konto der ophører.</xs:documentation>
+               </xs:annotation>
+            </xs:element>
+      </xs:schema>

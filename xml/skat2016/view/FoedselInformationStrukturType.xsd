@@ -1,23 +1,55 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xs:schema xmlns:ekap2016="http://skat.dk/ekapital/2016/01/01" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://skat.dk/ekapital/2016/01/01" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0">
-	<xs:annotation>
-		<xs:documentation/>
-		<xs:documentation>r14900</xs:documentation>
-	</xs:annotation>
-	<xs:include schemaLocation="../class/Person.xsd"/>
-	<xs:include schemaLocation="../class/Land.xsd"/>
-	<xs:element name="FødselInformationStruktur" type="ekap2016:FødselInformationStrukturType"/>
-	<xs:complexType name="FødselInformationStrukturType">
-		<xs:sequence>
-			<xs:element ref="ekap2016:PersonFødselDato" minOccurs="0"/>
-			<xs:element name="FødeStat" minOccurs="0">
-				<xs:complexType>
-					<xs:sequence>
-						<xs:element ref="ekap2016:LandKode"/>
-					</xs:sequence>
-				</xs:complexType>
-			</xs:element>
-			<xs:element ref="ekap2016:PersonFødeSted" minOccurs="0"/>
-		</xs:sequence>
-	</xs:complexType>
-</xs:schema>
+      <xs:schema xmlns:skat2012="http://skat.dk/begrebsmodel/2012/01/01/"
+                 xmlns:xs="http://www.w3.org/2001/XMLSchema"
+                 targetNamespace="http://skat.dk/begrebsmodel/2012/01/01/"
+                 elementFormDefault="qualified"
+                 attributeFormDefault="unqualified"
+                 version="1.0">
+         
+         <xs:annotation>
+            <xs:documentation/>
+            <xs:documentation>r14929</xs:documentation>
+         </xs:annotation>
+         <xs:include schemaLocation="../class/Person.xsd"/>
+         <xs:include schemaLocation="../class/Land.xsd"/>
+         <xs:element name="FødselInformationStruktur" type="skat2012:FødselInformationStrukturType"/>
+         <xs:complexType name="FødselInformationStrukturType">
+         
+         
+         
+         
+         
+         
+         
+         
+            
+            
+            
+            
+               <xs:sequence>
+
+               <xs:element ref="skat2012:PersonFødselDato" minOccurs="0"/>
+
+
+               <!--Sequence removed-->
+
+                  <xs:element name="FødeStat" minOccurs="0">
+                     <xs:complexType>
+                        <xs:sequence>
+                           <xs:element ref="skat2012:LandKode"/>
+                        </xs:sequence>
+                     </xs:complexType>
+                  </xs:element>
+               
+
+
+               <xs:element ref="skat2012:PersonFødeSted" minOccurs="0"/>
+
+            </xs:sequence>
+            
+         
+         
+         
+         
+         </xs:complexType>
+      </xs:schema>

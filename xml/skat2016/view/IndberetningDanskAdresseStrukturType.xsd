@@ -1,25 +1,93 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xs:schema xmlns:ekap2016="http://skat.dk/ekapital/2016/01/01" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://skat.dk/ekapital/2016/01/01" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0">
-	<xs:annotation>
-		<xs:documentation/>
-		<xs:documentation>r14900</xs:documentation>
-	</xs:annotation>
-	<xs:include schemaLocation="../class/Adresse.xsd"/>
-	<xs:element name="IndberetningDanskAdresseStruktur" type="ekap2016:IndberetningDanskAdresseStrukturType"/>
-	<xs:complexType name="IndberetningDanskAdresseStrukturType">
-		<xs:sequence>
-			<xs:element ref="ekap2016:AdresseVejNavn" minOccurs="0"/>
-			<xs:element ref="ekap2016:AdresseFraHusNummer" minOccurs="0"/>
-			<xs:element ref="ekap2016:AdresseTilHusNummer" minOccurs="0"/>
-			<xs:element ref="ekap2016:AdresseFraHusBogstav" minOccurs="0"/>
-			<xs:element ref="ekap2016:AdresseTilHusBogstav" minOccurs="0"/>
-			<xs:element ref="ekap2016:AdresseEtageTekst" minOccurs="0"/>
-			<xs:element ref="ekap2016:AdresseSideDørTekst" minOccurs="0"/>
-			<xs:element ref="ekap2016:AdresseCONavn" minOccurs="0"/>
-			<xs:element ref="ekap2016:AdressePostNummer" minOccurs="0"/>
-			<xs:element ref="ekap2016:AdressePostDistrikt" minOccurs="0"/>
-			<xs:element ref="ekap2016:AdresseByNavn" minOccurs="0"/>
-			<xs:element ref="ekap2016:AdressePostBox" minOccurs="0"/>
-		</xs:sequence>
-	</xs:complexType>
-</xs:schema>
+      <xs:schema xmlns:skat2012="http://skat.dk/begrebsmodel/2012/01/01/"
+                 xmlns:xs="http://www.w3.org/2001/XMLSchema"
+                 targetNamespace="http://skat.dk/begrebsmodel/2012/01/01/"
+                 elementFormDefault="qualified"
+                 attributeFormDefault="unqualified"
+                 version="1.0">
+         
+         <xs:annotation>
+            <xs:documentation/>
+            <xs:documentation>r14929</xs:documentation>
+         </xs:annotation>
+         <xs:include schemaLocation="../class/Adresse.xsd"/>
+         <xs:element name="IndberetningDanskAdresseStruktur"
+                     type="skat2012:IndberetningDanskAdresseStrukturType"/>
+         <xs:complexType name="IndberetningDanskAdresseStrukturType">
+         
+         
+         
+         
+         
+         
+         
+         
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+               <xs:sequence>
+
+               <xs:element ref="skat2012:AdresseVejNavn" minOccurs="0"/>
+
+
+
+               <xs:element ref="skat2012:AdresseFraHusNummer" minOccurs="0"/>
+
+
+
+               <xs:element ref="skat2012:AdresseTilHusNummer" minOccurs="0"/>
+
+
+
+               <xs:element ref="skat2012:AdresseFraHusBogstav" minOccurs="0"/>
+
+
+
+               <xs:element ref="skat2012:AdresseTilHusBogstav" minOccurs="0"/>
+
+
+
+               <xs:element ref="skat2012:AdresseEtageTekst" minOccurs="0"/>
+
+
+
+               <xs:element ref="skat2012:AdresseSideDørTekst" minOccurs="0"/>
+
+
+
+               <xs:element ref="skat2012:AdresseCONavn" minOccurs="0"/>
+
+
+
+               <xs:element ref="skat2012:AdressePostNummer" minOccurs="0"/>
+
+
+
+               <xs:element ref="skat2012:AdressePostDistrikt" minOccurs="0"/>
+
+
+
+               <xs:element ref="skat2012:AdresseByNavn" minOccurs="0"/>
+
+
+
+               <xs:element ref="skat2012:AdressePostBox" minOccurs="0"/>
+
+            </xs:sequence>
+            
+         
+         
+         
+         
+         </xs:complexType>
+      </xs:schema>
