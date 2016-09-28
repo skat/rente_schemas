@@ -8,7 +8,7 @@
          
          <xs:annotation>
             <xs:documentation/>
-            <xs:documentation>r14929</xs:documentation>
+            <xs:documentation>r14931</xs:documentation>
          </xs:annotation>
          <xs:include schemaLocation="../class/Adresse.xsd"/>
          <xs:element name="IndberetningDanskAdresseStruktur"

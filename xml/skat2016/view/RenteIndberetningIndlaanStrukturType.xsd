@@ -8,7 +8,7 @@
          
          <xs:annotation>
             <xs:documentation/>
-            <xs:documentation>r14929</xs:documentation>
+            <xs:documentation>r14931</xs:documentation>
          </xs:annotation>
          <xs:include schemaLocation="../class/Indkomst.xsd"/>
          <xs:include schemaLocation="../class/Virksomhed.xsd"/>
@@ -25,7 +25,7 @@
          <xs:include schemaLocation="../view/IndberetningIdentifikatorStrukturType.xsd"/>
 				     
 				     
-         <xs:include schemaLocation="../view/KontohaverListeStrukturType.xsd"/>
+         <xs:include schemaLocation="../view/KontohaverListeAArsUltimoStrukturType.xsd"/>
 				     
          <xs:element name="RenteIndberetningIndlånStruktur"
                      type="skat2012:RenteIndberetningIndlånStrukturType"/>
@@ -135,7 +135,7 @@
                                              </xs:sequence>
                                           </xs:complexType>
                                        </xs:element>
-                                       <xs:element ref="skat2012:KontohaverListeStruktur"/>
+                                       <xs:element ref="skat2012:KontohaverListeÅrsUltimoStruktur"/>
                                     </xs:sequence>
                                  </xs:complexType>
                               </xs:element>
