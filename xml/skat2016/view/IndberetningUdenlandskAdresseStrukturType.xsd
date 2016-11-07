@@ -1,200 +1,81 @@
 <?xml version="1.0" encoding="UTF-8"?>
-      <xs:schema xmlns:skat2012="http://skat.dk/begrebsmodel/2012/01/01/"
-                 xmlns:xs="http://www.w3.org/2001/XMLSchema"
-                 targetNamespace="http://skat.dk/begrebsmodel/2012/01/01/"
-                 elementFormDefault="qualified"
-                 attributeFormDefault="unqualified"
-                 version="1.0">
-         
-         <xs:annotation>
-            <xs:documentation/>
-            <xs:documentation>r14931</xs:documentation>
-         </xs:annotation>
-         <xs:include schemaLocation="../class/Land.xsd"/>
-         <xs:include schemaLocation="../class/AlternativAdresse.xsd"/>
-         <xs:include schemaLocation="../class/IndberetningUdenlandskAdresse.xsd"/>
-         <xs:include schemaLocation="../class/Note.xsd"/>
-         <xs:element name="IndberetningUdenlandskAdresseStruktur"
-                     type="skat2012:IndberetningUdenlandskAdresseStrukturType"/>
-         <xs:complexType name="IndberetningUdenlandskAdresseStrukturType">
-            <xs:sequence>
-         
-         
-         
-         
-         
-         
-         
-         
-         
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-               <!--Sequence removed-->
-                  <xs:element ref="skat2012:LandKode"/>
-                  <xs:element name="AdresseValg">
-                     <xs:complexType>
-                        <xs:choice>
-                           <xs:sequence>
-                              <xs:element name="AdresseUstruktureret">
-                                 <xs:complexType>
-                                    <xs:sequence>
-                                       <xs:element ref="skat2012:AlternativAdresseAdresseLinie1"/>
-
-                                       <xs:element ref="skat2012:AlternativAdresseAdresseLinie2" minOccurs="0"/>
-
-
-
-                                       <xs:element ref="skat2012:AlternativAdresseAdresseLinie3" minOccurs="0"/>
-
-
-
-                                       <xs:element ref="skat2012:AlternativAdresseAdresseLinie4" minOccurs="0"/>
-
-
-
-                                       <xs:element ref="skat2012:AlternativAdresseAdresseLinie5" minOccurs="0"/>
-
-
-
-                                       <xs:element ref="skat2012:AlternativAdresseAdresseLinie6" minOccurs="0"/>
-
-
-
-                                       <xs:element ref="skat2012:AlternativAdresseAdresseLinie7" minOccurs="0"/>
-
-
-                                    </xs:sequence>
-                                 </xs:complexType>
-                              </xs:element>
-				
-				                       </xs:sequence>
-                           <xs:sequence>
-				
-                              <xs:element name="AdresseStruktureret">
-                                 <xs:complexType>
-                                    <xs:sequence>
-                                       <xs:element name="AdresseStruktureretFelter">
-                                          <xs:complexType>
-                                             <xs:sequence>
-
-                                                <xs:element ref="skat2012:IndberetningUdenlandskAdresseVejNavn" minOccurs="0"/>
-
-
-
-                                                <xs:element ref="skat2012:IndberetningUdenlandskAdresseHusNummer" minOccurs="0"/>
-
-
-
-                                                <xs:element ref="skat2012:IndberetningUdenlandskAdresseSideDørTekst" minOccurs="0"/>
-
-
-
-                                                <xs:element ref="skat2012:IndberetningUdenlandskAdresseEtageTekst" minOccurs="0"/>
-
-
-
-                                                <xs:element ref="skat2012:IndberetningUdenlandskAdressePostDistrikt" minOccurs="0"/>
-
-
-
-                                                <xs:element ref="skat2012:IndberetningUdenlandskAdressePostBoksNummer" minOccurs="0"/>
-
-
-
-                                                <xs:element ref="skat2012:IndberetningUdenlandskAdressePostNummer" minOccurs="0"/>
-
-                                                <xs:element ref="skat2012:IndberetningUdenlandskAdresseBy"/>
-
-                                                <xs:element ref="skat2012:IndberetningUdenlandskAdresseLandsdel" minOccurs="0"/>
-
-
-                                                <!--Sequence removed-->
-
-                                                   <xs:element name="AndenLokalIDListe" minOccurs="0">
-                                                      <xs:complexType>
-                                                         <xs:sequence>
-                                                            <xs:element ref="skat2012:NoteTekst" minOccurs="1" maxOccurs="10"/>
-                                                         </xs:sequence>
-                                                      </xs:complexType>
-                                                   </xs:element>
-
-                                                
-
-                                             </xs:sequence>
-                                          </xs:complexType>
-                                       </xs:element>
-                                       <!--Sequence removed-->
-
-                                          <xs:element name="AdresseUstruktureret" minOccurs="0">
-                                             <xs:complexType>
-                                                <xs:sequence>
-                                                   <xs:element ref="skat2012:AlternativAdresseAdresseLinie1"/>
-
-                                                   <xs:element ref="skat2012:AlternativAdresseAdresseLinie2" minOccurs="0"/>
-
-
-
-                                                   <xs:element ref="skat2012:AlternativAdresseAdresseLinie3" minOccurs="0"/>
-
-
-
-                                                   <xs:element ref="skat2012:AlternativAdresseAdresseLinie4" minOccurs="0"/>
-
-
-
-                                                   <xs:element ref="skat2012:AlternativAdresseAdresseLinie5" minOccurs="0"/>
-
-
-
-                                                   <xs:element ref="skat2012:AlternativAdresseAdresseLinie6" minOccurs="0"/>
-
-
-
-                                                   <xs:element ref="skat2012:AlternativAdresseAdresseLinie7" minOccurs="0"/>
-
-
-                                                </xs:sequence>
-                                             </xs:complexType>
-                                          </xs:element>
-                                       
-
-                                    </xs:sequence>
-                                 </xs:complexType>
-                              </xs:element>
-                           </xs:sequence>
-                        </xs:choice>
-                     </xs:complexType>
-                  </xs:element>
-               
-            
-         
-         
-         
-         
-            </xs:sequence>
-         </xs:complexType>
-      </xs:schema>
+<xs:schema xmlns:ekap2016="http://skat.dk/ekapital/2016/01/01" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://skat.dk/ekapital/2016/01/01" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0">
+	<xs:annotation>
+		<xs:documentation/>
+		<xs:documentation>r15155</xs:documentation>
+	</xs:annotation>
+	<xs:include schemaLocation="../class/Land.xsd"/>
+	<xs:include schemaLocation="../class/AlternativAdresse.xsd"/>
+	<xs:include schemaLocation="../class/IndberetningUdenlandskAdresse.xsd"/>
+	<xs:include schemaLocation="../class/Note.xsd"/>
+	<xs:element name="IndberetningUdenlandskAdresseStruktur" type="ekap2016:IndberetningUdenlandskAdresseStrukturType"/>
+	<xs:complexType name="IndberetningUdenlandskAdresseStrukturType">
+		<xs:sequence>
+			<xs:element ref="ekap2016:LandKode"/>
+			<xs:element name="AdresseValg">
+				<xs:complexType>
+					<xs:choice>
+						<xs:sequence>
+							<xs:element name="AdresseUstruktureret">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element ref="ekap2016:AlternativAdresseAdresseLinie1"/>
+										<xs:element ref="ekap2016:AlternativAdresseAdresseLinie2" minOccurs="0"/>
+										<xs:element ref="ekap2016:AlternativAdresseAdresseLinie3" minOccurs="0"/>
+										<xs:element ref="ekap2016:AlternativAdresseAdresseLinie4" minOccurs="0"/>
+										<xs:element ref="ekap2016:AlternativAdresseAdresseLinie5" minOccurs="0"/>
+										<xs:element ref="ekap2016:AlternativAdresseAdresseLinie6" minOccurs="0"/>
+										<xs:element ref="ekap2016:AlternativAdresseAdresseLinie7" minOccurs="0"/>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+						<xs:sequence>
+							<xs:element name="AdresseStruktureret">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="AdresseStruktureretFelter">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element ref="ekap2016:IndberetningUdenlandskAdresseVejNavn" minOccurs="0"/>
+													<xs:element ref="ekap2016:IndberetningUdenlandskAdresseHusNummer" minOccurs="0"/>
+													<xs:element ref="ekap2016:IndberetningUdenlandskAdresseSideDørTekst" minOccurs="0"/>
+													<xs:element ref="ekap2016:IndberetningUdenlandskAdresseEtageTekst" minOccurs="0"/>
+													<xs:element ref="ekap2016:IndberetningUdenlandskAdressePostDistrikt" minOccurs="0"/>
+													<xs:element ref="ekap2016:IndberetningUdenlandskAdressePostBoksNummer" minOccurs="0"/>
+													<xs:element ref="ekap2016:IndberetningUdenlandskAdressePostNummer" minOccurs="0"/>
+													<xs:element ref="ekap2016:IndberetningUdenlandskAdresseBy"/>
+													<xs:element ref="ekap2016:IndberetningUdenlandskAdresseLandsdel" minOccurs="0"/>
+													<xs:element name="AndenLokalIDListe" minOccurs="0">
+														<xs:complexType>
+															<xs:sequence>
+																<xs:element ref="ekap2016:NoteTekst" minOccurs="1" maxOccurs="10"/>
+															</xs:sequence>
+														</xs:complexType>
+													</xs:element>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="AdresseUstruktureret" minOccurs="0">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element ref="ekap2016:AlternativAdresseAdresseLinie1"/>
+													<xs:element ref="ekap2016:AlternativAdresseAdresseLinie2" minOccurs="0"/>
+													<xs:element ref="ekap2016:AlternativAdresseAdresseLinie3" minOccurs="0"/>
+													<xs:element ref="ekap2016:AlternativAdresseAdresseLinie4" minOccurs="0"/>
+													<xs:element ref="ekap2016:AlternativAdresseAdresseLinie5" minOccurs="0"/>
+													<xs:element ref="ekap2016:AlternativAdresseAdresseLinie6" minOccurs="0"/>
+													<xs:element ref="ekap2016:AlternativAdresseAdresseLinie7" minOccurs="0"/>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:choice>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

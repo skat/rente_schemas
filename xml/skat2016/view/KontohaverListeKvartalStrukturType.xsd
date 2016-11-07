@@ -1,148 +1,82 @@
 <?xml version="1.0" encoding="UTF-8"?>
-      <xs:schema xmlns:skat2012="http://skat.dk/begrebsmodel/2012/01/01/"
-                 xmlns:xs="http://www.w3.org/2001/XMLSchema"
-                 targetNamespace="http://skat.dk/begrebsmodel/2012/01/01/"
-                 elementFormDefault="qualified"
-                 attributeFormDefault="unqualified"
-                 version="1.0">
-         
-         <xs:annotation>
-            <xs:documentation/>
-            <xs:documentation>r14931</xs:documentation>
-         </xs:annotation>
-         <xs:include schemaLocation="../class/Rente.xsd"/>
-         <xs:include schemaLocation="../class/Ejerskifte.xsd"/>
-         <xs:include schemaLocation="../class/KontoEjerstatus.xsd"/>
-         <xs:include schemaLocation="../class/Person.xsd"/>
-         <xs:include schemaLocation="../class/Virksomhed.xsd"/>
-         <xs:include schemaLocation="../class/Kontohaver.xsd"/>
-         <xs:element name="KontohaverListeKvartalStruktur"
-                     type="skat2012:KontohaverListeKvartalStrukturType"/>
-         <xs:complexType name="KontohaverListeKvartalStrukturType">
-         
-         
-         
-         
-         
-         
-         
-         
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-               <xs:sequence>
-               <xs:element name="KontohaverPeriodeListe">
-                  <xs:complexType>
-                     <xs:sequence>
-
-                        <xs:element name="KontohaverPeriode" minOccurs="1" maxOccurs="unbounded">
-                           <xs:complexType>
-                              <xs:sequence>
-                                 <xs:element ref="skat2012:RenteBeløb"/>
-
-                                 <xs:element ref="skat2012:EjerskifteOpstartDato" minOccurs="0"/>
-
-
-
-                                 <xs:element ref="skat2012:EjerskifteOphørDato" minOccurs="0"/>
-
-                                 <xs:element ref="skat2012:KontoEjerstatusAntalKontohavere"/>
-                                 <xs:element name="KontohaverListe">
-                                    <xs:complexType>
-                                       <xs:sequence>
-
-                                          <xs:element name="KontohaverOplysninger" minOccurs="1" maxOccurs="unbounded">
-                                             <xs:complexType>
-                                                <xs:sequence>
-                                                   <xs:element name="KontohaverValg">
-                                                      <xs:complexType>
-                                                         <xs:choice>
-                                                            <xs:sequence>
-                                                               <xs:element name="IndlændingValg">
-                                                                  <xs:complexType>
-                                                                     <xs:choice>
-                                                                        <xs:element ref="skat2012:PersonCPRNummer"/>
-				
-				
-				                                                                    <xs:element ref="skat2012:VirksomhedSENummer"/>
-                                                                     </xs:choice>
-                                                                  </xs:complexType>
-                                                               </xs:element>
-				
-				                                                        </xs:sequence>
-                                                            <xs:sequence>
-				
-                                                               <xs:element name="ValutariskUdlændingValg">
-                                                                  <xs:complexType>
-                                                                     <xs:choice>
-                                                                        <xs:element ref="skat2012:PersonCPRNummer"/>
-				
-				
-				                                                                    <xs:element ref="skat2012:VirksomhedSENummer"/>
-                                                                     </xs:choice>
-                                                                  </xs:complexType>
-                                                               </xs:element>
-				
-				                                                        </xs:sequence>
-                                                            <xs:sequence>
-				
-                                                               <xs:element name="KontohaverUdenCPRSENummerValg">
-                                                                  <xs:complexType>
-                                                                     <xs:choice>
-                                                                        <xs:sequence>
-                                                                           <xs:element name="PersonUkendt">
-                                                                              <xs:complexType>
-                                                                                 <xs:sequence>
-                                                                                    <xs:element ref="skat2012:KontohaverUkendt"/>
-                                                                                 </xs:sequence>
-                                                                              </xs:complexType>
-                                                                           </xs:element>
-				
-				                                                                    </xs:sequence>
-                                                                        <xs:sequence>
-				
-                                                                           <xs:element name="VirksomhedIrrelevant">
-                                                                              <xs:complexType>
-                                                                                 <xs:sequence>
-                                                                                    <xs:element ref="skat2012:KontohaverUkendt"/>
-                                                                                 </xs:sequence>
-                                                                              </xs:complexType>
-                                                                           </xs:element>
-                                                                        </xs:sequence>
-                                                                     </xs:choice>
-                                                                  </xs:complexType>
-                                                               </xs:element>
-                                                            </xs:sequence>
-                                                         </xs:choice>
-                                                      </xs:complexType>
-                                                   </xs:element>
-                                                </xs:sequence>
-                                             </xs:complexType>
-                                          </xs:element>
-                                       </xs:sequence>
-                                    </xs:complexType>
-                                 </xs:element>
-
-                              </xs:sequence>
-                           </xs:complexType>
-                        </xs:element>
-                     </xs:sequence>
-                  </xs:complexType>
-               </xs:element>
-
-               </xs:sequence>
-            
-         
-         
-         
-         
-         </xs:complexType>
-      </xs:schema>
+<xs:schema xmlns:ekap2016="http://skat.dk/ekapital/2016/01/01" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://skat.dk/ekapital/2016/01/01" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0">
+	<xs:annotation>
+		<xs:documentation/>
+		<xs:documentation>r15155</xs:documentation>
+	</xs:annotation>
+	<xs:include schemaLocation="../class/Rente.xsd"/>
+	<xs:include schemaLocation="../class/Ejerskifte.xsd"/>
+	<xs:include schemaLocation="../operational/FlereEndToKontohavereIkkeAlleOplyst.xsd"/>
+	<xs:include schemaLocation="../class/Person.xsd"/>
+	<xs:include schemaLocation="../class/Virksomhed.xsd"/>
+	<xs:include schemaLocation="../class/Kontohaver.xsd"/>
+	<xs:element name="KontohaverListeKvartalStruktur" type="ekap2016:KontohaverListeKvartalStrukturType"/>
+	<xs:complexType name="KontohaverListeKvartalStrukturType">
+		<xs:sequence>
+			<xs:element name="KontohaverPeriodeListe">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="KontohaverPeriode" minOccurs="1" maxOccurs="unbounded">
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element ref="ekap2016:RenteBeløb"/>
+									<xs:element ref="ekap2016:EjerskifteOpstartDato" minOccurs="0"/>
+									<xs:element ref="ekap2016:EjerskifteOphørDato" minOccurs="0"/>
+									<xs:element ref="ekap2016:FlereEndToKontohavereIkkeAlleOplyst"/>
+									<xs:element name="KontohaverListe">
+										<xs:complexType>
+											<xs:sequence>
+												<xs:element name="KontohaverOplysninger" minOccurs="1" maxOccurs="unbounded">
+													<xs:complexType>
+														<xs:sequence>
+															<xs:element name="KontohaverValg">
+																<xs:complexType>
+																	<xs:choice>
+																		<xs:sequence>
+																			<xs:element name="IndlændingValg">
+																				<xs:complexType>
+																					<xs:choice>
+																						<xs:element ref="ekap2016:PersonCPRNummer"/>
+																						<xs:element ref="ekap2016:VirksomhedSENummer"/>
+																					</xs:choice>
+																				</xs:complexType>
+																			</xs:element>
+																		</xs:sequence>
+																		<xs:sequence>
+																			<xs:element name="ValutariskUdlændingValg">
+																				<xs:complexType>
+																					<xs:choice>
+																						<xs:element ref="ekap2016:PersonCPRNummer"/>
+																						<xs:element ref="ekap2016:VirksomhedSENummer"/>
+																					</xs:choice>
+																				</xs:complexType>
+																			</xs:element>
+																		</xs:sequence>
+																		<xs:element ref="ekap2016:KontohaverUkendt"/>
+																		<xs:sequence>
+																			<xs:element name="VirksomhedIrrelevant">
+																				<xs:complexType>
+																					<xs:sequence>
+																						<xs:element ref="ekap2016:KontohaverUkendt"/>
+																					</xs:sequence>
+																				</xs:complexType>
+																			</xs:element>
+																		</xs:sequence>
+																	</xs:choice>
+																</xs:complexType>
+															</xs:element>
+														</xs:sequence>
+													</xs:complexType>
+												</xs:element>
+											</xs:sequence>
+										</xs:complexType>
+									</xs:element>
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:ekap2016="http://skat.dk/ekapital/2016/01/01" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://skat.dk/ekapital/2016/01/01" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0">
+	<xs:annotation>
+		<xs:documentation/>
+		<xs:documentation>r15155</xs:documentation>
+	</xs:annotation>
+	<xs:include schemaLocation="../operational/MasseindleveringReference.xsd"/>
+	<xs:include schemaLocation="../view/RenteIndberetningUdlaanOptaellingStrukturType.xsd"/>
+	<xs:element name="RenteIndberetningUdlånKvitteringSumStruktur" type="ekap2016:RenteIndberetningUdlånKvitteringSumStrukturType"/>
+	<xs:complexType name="RenteIndberetningUdlånKvitteringSumStrukturType">
+		<xs:sequence>
+			<xs:element ref="ekap2016:MasseindleveringReference"/>
+			<xs:element ref="ekap2016:RenteIndberetningUdlånOptællingStruktur"/>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

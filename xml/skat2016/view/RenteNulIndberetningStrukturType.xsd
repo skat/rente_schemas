@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:ekap2016="http://skat.dk/ekapital/2016/01/01" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://skat.dk/ekapital/2016/01/01" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0">
+	<xs:annotation>
+		<xs:documentation/>
+		<xs:documentation>r15155</xs:documentation>
+	</xs:annotation>
+	<xs:include schemaLocation="../class/Virksomhed.xsd"/>
+	<xs:include schemaLocation="../class/Indkomst.xsd"/>
+	<xs:include schemaLocation="../class/RenteIndberetningKategori.xsd"/>
+	<xs:element name="RenteNulIndberetningStruktur" type="ekap2016:RenteNulIndberetningStrukturType"/>
+	<xs:complexType name="RenteNulIndberetningStrukturType">
+		<xs:sequence>
+			<xs:element name="Indberetningspligtig">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element ref="ekap2016:VirksomhedCVRNummer"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="IndkomstPeriode">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element ref="ekap2016:IndkomstÅr"/>
+						<xs:element ref="ekap2016:IndkomstPeriodeTil" minOccurs="0"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element ref="ekap2016:RenteIndberetningKategoriNavn"/>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

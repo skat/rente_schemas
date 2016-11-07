@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:ekap2016="http://skat.dk/ekapital/2016/01/01" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://skat.dk/ekapital/2016/01/01" elementFormDefault="qualified" version="1.0">
+	<xs:include schemaLocation="../types/MarkeringType.xsd"/>
+	<xs:element name="FlereEndToKontohavereIkkeAlleOplyst" type="ekap2016:MarkeringType">
+		<xs:annotation>
+			<xs:documentation>Angiver om en konto har flere end to ejere, hvor ikke alle er oplyst. Hvis en konto har flere end to ejere, hvor alle ejere ER oplyst sættes feltet til false.</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+</xs:schema>

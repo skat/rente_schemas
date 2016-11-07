@@ -1,205 +1,110 @@
 <?xml version="1.0" encoding="UTF-8"?>
-      <xs:schema xmlns:skat2012="http://skat.dk/begrebsmodel/2012/01/01/"
-                 xmlns:xs="http://www.w3.org/2001/XMLSchema"
-                 targetNamespace="http://skat.dk/begrebsmodel/2012/01/01/"
-                 elementFormDefault="qualified"
-                 attributeFormDefault="unqualified"
-                 version="1.0">
-         
-         <xs:annotation>
-            <xs:documentation/>
-            <xs:documentation>r14931</xs:documentation>
-         </xs:annotation>
-         <xs:include schemaLocation="../class/Indkomst.xsd"/>
-         <xs:include schemaLocation="../class/Virksomhed.xsd"/>
-         <xs:include schemaLocation="../class/Konto.xsd"/>
-				     
-				     
-         <xs:include schemaLocation="../class/Note.xsd"/>
-         <xs:include schemaLocation="../class/PantIdentifikation.xsd"/>
-         <xs:include schemaLocation="../class/KontoType.xsd"/>
-         <xs:include schemaLocation="../class/Kommune.xsd"/>
-         <xs:include schemaLocation="../class/Ejendom.xsd"/>
-         <xs:include schemaLocation="../class/Land.xsd"/>
-         <xs:include schemaLocation="../class/Kontantlaan.xsd"/>
-         <xs:include schemaLocation="../class/LaanForhold.xsd"/>
-         <xs:include schemaLocation="../class/Rente.xsd"/>
-         <xs:include schemaLocation="../class/Laan.xsd"/>
-				     
-				     
-         <xs:include schemaLocation="../view/IndberetningIdentifikatorStrukturType.xsd"/>
-				     
-				     
-         <xs:include schemaLocation="../view/KontohaverListeAArsUltimoStrukturType.xsd"/>
-				     
-         <xs:include schemaLocation="../view/KontohaverListeKvartalStrukturType.xsd"/>
-				     
-         <xs:element name="RenteIndberetningPrioritetslånStruktur"
-                     type="skat2012:RenteIndberetningPrioritetslånStrukturType"/>
-         <xs:complexType name="RenteIndberetningPrioritetslånStrukturType">
-            <xs:sequence>
-         
-         
-         
-         
-         
-         
-         
-         
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-               <!--Sequence removed-->
-                  <xs:element name="Indkomstperiode">
-                     <xs:complexType>
-                        <xs:sequence>
-                           <xs:element ref="skat2012:IndkomstÅr"/>
-
-                           <xs:element ref="skat2012:IndkomstPeriodeTil" minOccurs="0"/>
-
-
-                        </xs:sequence>
-                     </xs:complexType>
-                  </xs:element>
-                  <xs:element name="Indberetningspligtig">
-                     <xs:complexType>
-                        <xs:sequence>
-                           <xs:element ref="skat2012:VirksomhedSENummer"/>
-                        </xs:sequence>
-                     </xs:complexType>
-                  </xs:element>
-                  <xs:element ref="skat2012:KontoID"/>
-                  <xs:element name="IndberetningValg">
-                     <xs:complexType>
-                        <xs:choice>
-                           <xs:sequence>
-                              <xs:element name="Invalidering">
-                                 <xs:complexType>
-                                    <xs:sequence>
-                                       <xs:element ref="skat2012:IndberetningIdentifikatorStruktur"/>
-                                    </xs:sequence>
-                                 </xs:complexType>
-                              </xs:element>
-				
-				                       </xs:sequence>
-                           <xs:sequence>
-				
-                              <xs:element name="RetbarPrioritetslånKontoOplysninger">
-                                 <xs:complexType>
-                                    <xs:sequence>
-                                       <xs:element ref="skat2012:IndberetningIdentifikatorStruktur"/>
-
-                                       <xs:element ref="skat2012:NoteTekst" minOccurs="0"/>
-
-
-                                       <xs:element name="KontoDetaljer">
-                                          <xs:complexType>
-                                             <xs:sequence>
-                                                <xs:element ref="skat2012:PantIdentifikationNummer"/>
-                  
-                                                <xs:element ref="skat2012:KontoTypeKode"/>
-
-                                                <xs:element ref="skat2012:KommuneNummer" minOccurs="0"/>
-
-
-
-                                                <xs:element ref="skat2012:EjendomNummer" minOccurs="0"/>
-
-
-                                                <!--Sequence removed-->
-
-                                                   <xs:element name="EjendomLand" minOccurs="0">
-                                                      <xs:complexType>
-                                                         <xs:sequence>
-                                                            <xs:element ref="skat2012:LandKode"/>
-                                                         </xs:sequence>
-                                                      </xs:complexType>
-                                                   </xs:element>
-                                                
-
-
-                                                <xs:element ref="skat2012:KontantlånIndfriKode" minOccurs="0"/>
-
-
-
-                                                <xs:element ref="skat2012:LånForholdRestanceMarkering" minOccurs="0"/>
-
-
-
-                                                <xs:element ref="skat2012:LånForholdGældEftergivelseKode" minOccurs="0"/>
-
-                                                <xs:element ref="skat2012:KontoStartDato"/>
-
-                                                <xs:element ref="skat2012:KontoOphørDato" minOccurs="0"/>
-
-                                                <xs:element ref="skat2012:RenteValutaStatusKode"/>
-                                             </xs:sequence>
-                                          </xs:complexType>
-                                       </xs:element>
-                                       <xs:element name="Beløb">
-                                          <xs:complexType>
-                                             <xs:sequence>
-                                                <xs:element ref="skat2012:RenteBeløb"/>
-
-                                                <xs:element ref="skat2012:LånRestgældBeløb" minOccurs="0"/>
-
-
-
-                                                <xs:element ref="skat2012:LånKursværdi" minOccurs="0"/>
-
-
-
-                                                <xs:element ref="skat2012:KontantlånKurstab" minOccurs="0"/>
-
-
-                                             </xs:sequence>
-                                          </xs:complexType>
-                                       </xs:element>
-                                       <xs:element name="KontohaverIndkomstperiodeValg">
-                                          <xs:complexType>
-                                             <xs:choice>
-                                                <xs:element ref="skat2012:KontohaverListeÅrsUltimoStruktur"/>
-				
-				
-				                                            <xs:element ref="skat2012:KontohaverListeKvartalStruktur"/>
-                                             </xs:choice>
-                                          </xs:complexType>
-                                       </xs:element>
-                                    </xs:sequence>
-                                 </xs:complexType>
-                              </xs:element>
-                           </xs:sequence>
-                        </xs:choice>
-                     </xs:complexType>
-                  </xs:element>
-               
-            
-         
-         
-         
-         
-            </xs:sequence>
-         </xs:complexType>
-      </xs:schema>
+<xs:schema xmlns:ekap2016="http://skat.dk/ekapital/2016/01/01" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://skat.dk/ekapital/2016/01/01" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0">
+	<xs:annotation>
+		<xs:documentation/>
+		<xs:documentation>r15155</xs:documentation>
+	</xs:annotation>
+	<xs:include schemaLocation="../class/Indkomst.xsd"/>
+	<xs:include schemaLocation="../class/Virksomhed.xsd"/>
+	<xs:include schemaLocation="../class/Konto.xsd"/>
+	<xs:include schemaLocation="../class/Note.xsd"/>
+	<xs:include schemaLocation="../class/PantIdentifikation.xsd"/>
+	<xs:include schemaLocation="../class/KontoType.xsd"/>
+	<xs:include schemaLocation="../class/Kommune.xsd"/>
+	<xs:include schemaLocation="../class/Ejendom.xsd"/>
+	<xs:include schemaLocation="../class/Land.xsd"/>
+	<xs:include schemaLocation="../class/Kontantlaan.xsd"/>
+	<xs:include schemaLocation="../class/LaanForhold.xsd"/>
+	<xs:include schemaLocation="../class/Rente.xsd"/>
+	<xs:include schemaLocation="../class/Laan.xsd"/>
+	<xs:include schemaLocation="../view/IndberetningIdentifikatorStrukturType.xsd"/>
+	<xs:include schemaLocation="../view/KontohaverListeAArsUltimoStrukturType.xsd"/>
+	<xs:include schemaLocation="../view/KontohaverListeKvartalStrukturType.xsd"/>
+	<xs:element name="RenteIndberetningPrioritetslånStruktur" type="ekap2016:RenteIndberetningPrioritetslånStrukturType"/>
+	<xs:complexType name="RenteIndberetningPrioritetslånStrukturType">
+		<xs:sequence>
+			<xs:element name="Indkomstperiode">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element ref="ekap2016:IndkomstÅr"/>
+						<xs:element ref="ekap2016:IndkomstPeriodeTil" minOccurs="0"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="Indberetningspligtig">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element ref="ekap2016:VirksomhedSENummer"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element ref="ekap2016:KontoID"/>
+			<xs:element name="IndberetningValg">
+				<xs:complexType>
+					<xs:choice>
+						<xs:sequence>
+							<xs:element name="Invalidering">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element ref="ekap2016:IndberetningIdentifikatorStruktur"/>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+						<xs:sequence>
+							<xs:element name="RetbarPrioritetslånKontoOplysninger">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element ref="ekap2016:IndberetningIdentifikatorStruktur"/>
+										<xs:element ref="ekap2016:NoteTekst" minOccurs="0"/>
+										<xs:element name="KontoDetaljer">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element ref="ekap2016:PantIdentifikationNummer"/>
+													<xs:element ref="ekap2016:KontoTypeKode"/>
+													<xs:element ref="ekap2016:KommuneNummer" minOccurs="0"/>
+													<xs:element ref="ekap2016:EjendomNummer" minOccurs="0"/>
+													<xs:element name="EjendomLand" minOccurs="0">
+														<xs:complexType>
+															<xs:sequence>
+																<xs:element ref="ekap2016:LandKode"/>
+															</xs:sequence>
+														</xs:complexType>
+													</xs:element>
+													<xs:element ref="ekap2016:KontantlånIndfriKode" minOccurs="0"/>
+													<xs:element ref="ekap2016:LånForholdRestanceMarkering" minOccurs="0"/>
+													<xs:element ref="ekap2016:LånForholdGældEftergivelseKode" minOccurs="0"/>
+													<xs:element ref="ekap2016:KontoStartDato"/>
+													<xs:element ref="ekap2016:KontoOphørDato" minOccurs="0"/>
+													<xs:element ref="ekap2016:RenteValutaStatusKode"/>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="Beløb">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element ref="ekap2016:RenteBeløb"/>
+													<xs:element ref="ekap2016:LånRestgældBeløb" minOccurs="0"/>
+													<xs:element ref="ekap2016:LånKursværdi" minOccurs="0"/>
+													<xs:element ref="ekap2016:KontantlånKurstab" minOccurs="0"/>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="KontohaverIndkomstperiodeValg">
+											<xs:complexType>
+												<xs:choice>
+													<xs:element ref="ekap2016:KontohaverListeÅrsUltimoStruktur"/>
+													<xs:element ref="ekap2016:KontohaverListeKvartalStruktur"/>
+												</xs:choice>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:choice>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

@@ -1,15 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-      <xs:schema xmlns:skat2012="http://skat.dk/begrebsmodel/2012/01/01/"
-                 xmlns:xs="http://www.w3.org/2001/XMLSchema"
-                 targetNamespace="http://skat.dk/begrebsmodel/2012/01/01/"
-                 elementFormDefault="qualified"
-                 attributeFormDefault="unqualified"
-                 version="1.0">
-         <xs:include schemaLocation="../types/Tekst0Type.xsd"/>
-         <xs:element name="KontohaverUkendt" type="skat2012:Tekst0Type">
-               
-               <xs:annotation>
-                  <xs:documentation>Angiver at der er en kontohaver, som ikke kan identificeres. Angives ved at indsætte tomt tag.</xs:documentation>
-               </xs:annotation>
-            </xs:element>
-      </xs:schema>
+<xs:schema xmlns:ekap2016="http://skat.dk/ekapital/2016/01/01" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://skat.dk/ekapital/2016/01/01" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0">
+	<xs:include schemaLocation="../types/TekstLangType.xsd"/>
+	<xs:element name="KontohaverUkendt" type="ekap2016:TekstLangType">
+		<xs:annotation>
+			<xs:documentation>Angiver at der er en kontohaver, som ikke kan identificeres. Hvis man har nogle oplysninger om kontohaveren, men ikke nok til at udfylde de krævede felter kan de angives her som fritekst. Feltet kan også opsættes som tomt tag, hvis der ikke er nogen oplysninger om kontohaver.</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+</xs:schema>

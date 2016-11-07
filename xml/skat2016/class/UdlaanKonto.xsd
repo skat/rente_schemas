@@ -1,15 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-      <xs:schema xmlns:skat2012="http://skat.dk/begrebsmodel/2012/01/01/"
-                 xmlns:xs="http://www.w3.org/2001/XMLSchema"
-                 targetNamespace="http://skat.dk/begrebsmodel/2012/01/01/"
-                 elementFormDefault="qualified"
-                 attributeFormDefault="unqualified"
-                 version="1.0">
-         <xs:include schemaLocation="../types/Tekst15Type.xsd"/>
-         <xs:element name="UdlånKontoNummer" type="skat2012:Tekst15Type">
-               
-               <xs:annotation>
-                  <xs:documentation>Det hos kontoførende registrerede nummer for kontoen. Som kontonummer kan bl.a. benyttes sags-/journalnummer.</xs:documentation>
-               </xs:annotation>
-            </xs:element>
-      </xs:schema>
+<xs:schema xmlns:ekap2016="http://skat.dk/ekapital/2016/01/01" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://skat.dk/ekapital/2016/01/01" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0">
+	<xs:include schemaLocation="../types/Tekst15Type.xsd"/>
+	<xs:element name="UdlånKontoNummer" type="ekap2016:Tekst15Type">
+		<xs:annotation>
+			<xs:documentation>Det hos kontoførende registrerede nummer for kontoen. Som kontonummer kan bl.a. benyttes sags-/journalnummer.</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+</xs:schema>
