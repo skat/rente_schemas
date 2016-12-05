@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:ekap2016="http://skat.dk/ekapital/2016/01/01" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://skat.dk/ekapital/2016/01/01" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0">
+	<xs:include schemaLocation="../types/DatoType.xsd"/>
+	<xs:element name="DeponeringStartDato" type="ekap2016:DatoType">
+		<xs:annotation>
+			<xs:documentation>Dato for hvornår pantebrev førstegang er i depot (renteindberetningspligt til Pantebreve fra denne dato)</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:element name="DeponeringOphørDato" type="ekap2016:DatoType">
+		<xs:annotation>
+			<xs:documentation>Dato for hvornår et pantebrev ikke længere er i depot (renteindberetning overgår fra Pantebreve til Udlån)</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+</xs:schema>

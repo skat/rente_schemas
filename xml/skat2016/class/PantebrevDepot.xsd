@@ -6,4 +6,9 @@
 			<xs:documentation>Identifikation af pantebrevsdepotet.</xs:documentation>
 		</xs:annotation>
 	</xs:element>
+	<xs:element name="PantebrevDepotID" type="ekap2016:Tekst15Type">
+		<xs:annotation>
+			<xs:documentation>Den unikke revisionsmæssige nøgle til et pantebrevdepot (den reelle identifikation).</xs:documentation>
+		</xs:annotation>
+	</xs:element>
 </xs:schema>
