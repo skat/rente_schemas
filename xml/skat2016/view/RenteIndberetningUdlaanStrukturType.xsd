@@ -2,7 +2,7 @@
 <xs:schema xmlns:ekap2016="http://skat.dk/ekapital/2016/01/01" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://skat.dk/ekapital/2016/01/01" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0">
 	<xs:annotation>
 		<xs:documentation/>
-		<xs:documentation>r15322</xs:documentation>
+		<xs:documentation>r15330</xs:documentation>
 	</xs:annotation>
 	<xs:include schemaLocation="../class/Indkomst.xsd"/>
 	<xs:include schemaLocation="../class/Virksomhed.xsd"/>
@@ -231,12 +231,11 @@
 																														</xs:element>
 																													</xs:sequence>
 																													<xs:sequence>
-																														<xs:element name="ValutariskUdlændingValg">
+																														<xs:element name="ValutariskUdlænding">
 																															<xs:complexType>
-																																<xs:choice>
+																																<xs:sequence>
 																																	<xs:element ref="ekap2016:PersonCPRNummer"/>
-																																	<xs:element ref="ekap2016:VirksomhedSENummer"/>
-																																</xs:choice>
+																																</xs:sequence>
 																															</xs:complexType>
 																														</xs:element>
 																													</xs:sequence>
