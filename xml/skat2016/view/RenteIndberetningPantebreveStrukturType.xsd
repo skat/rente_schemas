@@ -89,7 +89,7 @@
 												</xs:sequence>
 											</xs:complexType>
 										</xs:element>
-										<xs:element name="KontohaverIndkomtperiodeVlag">
+										<xs:element name="KontohaverIndkomstperiodeValg">
 											<xs:complexType>
 												<xs:choice>
 													<xs:sequence>
