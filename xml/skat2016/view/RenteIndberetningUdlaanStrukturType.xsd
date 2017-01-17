@@ -106,7 +106,7 @@
 																		<xs:complexType>
 																			<xs:sequence>
 																				<xs:element ref="ekap2016:RenteBeløb"/>
-																				<xs:element ref="ekap2016:LånForholdRestanceMarkering" minOccurs="0"/>
+																				<xs:element ref="ekap2016:LånForholdRestanceMarkering"/>
 																				<xs:element ref="ekap2016:LånForholdGældEftergivelseKode" minOccurs="0"/>
 																				<xs:element ref="ekap2016:EjerkredsOpstartDato" minOccurs="0"/>
 																				<xs:element ref="ekap2016:EjerkredsOphørDato" minOccurs="0"/>
@@ -211,7 +211,7 @@
 																		<xs:complexType>
 																			<xs:sequence>
 																				<xs:element ref="ekap2016:RenteBeløb"/>
-																				<xs:element ref="ekap2016:LånForholdRestanceMarkering" minOccurs="0"/>
+																				<xs:element ref="ekap2016:LånForholdRestanceMarkering"/>
 																				<xs:element ref="ekap2016:EjerkredsOpstartDato" minOccurs="0"/>
 																				<xs:element ref="ekap2016:EjerkredsOphørDato" minOccurs="0"/>
 																				<xs:element name="KontohaverListe" minOccurs="0">
