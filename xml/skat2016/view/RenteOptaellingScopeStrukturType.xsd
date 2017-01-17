@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:ekap2016="http://skat.dk/ekapital/2016/01/01" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://skat.dk/ekapital/2016/01/01" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0">
+	<xs:annotation>
+		<xs:documentation/>
+		<xs:documentation>r15587</xs:documentation>
+	</xs:annotation>
+	<xs:include schemaLocation="../operational/MasseindleveringReference.xsd"/>
+	<xs:include schemaLocation="../class/Indkomst.xsd"/>
+	<xs:include schemaLocation="../class/Virksomhed.xsd"/>
+	<xs:element name="RenteOptællingScopeStruktur" type="ekap2016:RenteOptællingScopeStrukturType"/>
+	<xs:complexType name="RenteOptællingScopeStrukturType">
+		<xs:sequence>
+			<xs:element ref="ekap2016:MasseindleveringReference" minOccurs="0"/>
+			<xs:element name="Indkomstperiode" minOccurs="0">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element ref="ekap2016:IndkomstÅr"/>
+						<xs:element ref="ekap2016:IndkomstPeriodeTil" minOccurs="0"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="Indberetningspligtig" minOccurs="0">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element ref="ekap2016:VirksomhedSENummer"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:ekap2016="http://skat.dk/ekapital/2016/01/01" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://skat.dk/ekapital/2016/01/01" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0">
+	<xs:annotation>
+		<xs:documentation>Angiver den valuta (ISO-møntkoden) som en given konto er ført i. </xs:documentation>
+	</xs:annotation>
+	<xs:include schemaLocation="../types/ValutaType.xsd"/>
+	<xs:element name="KontoValutaKode" type="ekap2016:ValutaType">
+		<xs:annotation>
+			<xs:documentation>Angiver valuta enheden (ISO-møntkoden) for et beløb.</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+</xs:schema>

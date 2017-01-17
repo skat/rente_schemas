@@ -2,7 +2,7 @@
 <xs:schema xmlns:ekap2016="http://skat.dk/ekapital/2016/01/01" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://skat.dk/ekapital/2016/01/01" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0">
 	<xs:annotation>
 		<xs:documentation/>
-		<xs:documentation>r15330</xs:documentation>
+		<xs:documentation>r15587</xs:documentation>
 	</xs:annotation>
 	<xs:include schemaLocation="../class/Indkomst.xsd"/>
 	<xs:include schemaLocation="../class/Virksomhed.xsd"/>
@@ -13,6 +13,7 @@
 	<xs:include schemaLocation="../class/Kommune.xsd"/>
 	<xs:include schemaLocation="../class/Ejendom.xsd"/>
 	<xs:include schemaLocation="../class/Land.xsd"/>
+	<xs:include schemaLocation="../class/KontoValuta.xsd"/>
 	<xs:include schemaLocation="../class/Rente.xsd"/>
 	<xs:include schemaLocation="../class/Laan.xsd"/>
 	<xs:include schemaLocation="../class/Kontantlaan.xsd"/>
@@ -22,6 +23,7 @@
 	<xs:include schemaLocation="../class/Person.xsd"/>
 	<xs:include schemaLocation="../class/PersonNavn.xsd"/>
 	<xs:include schemaLocation="../operational/VirksomhedFormandAdministrator.xsd"/>
+	<xs:include schemaLocation="../operational/KontohaverIdentifikationMulig.xsd"/>
 	<xs:include schemaLocation="../class/VirksomhedNavn.xsd"/>
 	<xs:include schemaLocation="../operational/KontohaverUkendt.xsd"/>
 	<xs:include schemaLocation="../operational/KontohaverIrrelevant.xsd"/>
@@ -105,7 +107,7 @@
 													</xs:element>
 													<xs:element ref="ekap2016:KontoStartDato"/>
 													<xs:element ref="ekap2016:KontoOphørDato" minOccurs="0"/>
-													<xs:element ref="ekap2016:RenteValutaStatusKode"/>
+													<xs:element ref="ekap2016:KontoValutaKode" minOccurs="0"/>
 												</xs:sequence>
 											</xs:complexType>
 										</xs:element>
@@ -198,6 +200,7 @@
 																																					<xs:element ref="ekap2016:FødselInformationStruktur"/>
 																																					<xs:element ref="ekap2016:TINNummerStruktur" minOccurs="0"/>
 																																					<xs:element ref="ekap2016:VirksomhedFormandAdministrator"/>
+																																					<xs:element ref="ekap2016:KontohaverIdentifikationMulig"/>
 																																				</xs:sequence>
 																																			</xs:complexType>
 																																		</xs:element>
@@ -246,10 +249,10 @@
 																				<xs:element ref="ekap2016:LånForholdRestanceMarkering" minOccurs="0"/>
 																				<xs:element ref="ekap2016:EjerkredsOpstartDato" minOccurs="0"/>
 																				<xs:element ref="ekap2016:EjerkredsOphørDato" minOccurs="0"/>
-																				<xs:element name="KontohaverListe">
+																				<xs:element name="KontohaverListe" minOccurs="0">
 																					<xs:complexType>
 																						<xs:sequence>
-																							<xs:element name="KontohaverOplysninger" minOccurs="1" maxOccurs="unbounded">
+																							<xs:element name="KontohaverOplysninger" minOccurs="1" maxOccurs="2">
 																								<xs:complexType>
 																									<xs:sequence>
 																										<xs:element name="UdenlandskEjendom" minOccurs="0">

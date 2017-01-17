@@ -29,7 +29,7 @@
 	</xs:element>
 	<xs:element name="BankRegistreringsnummer" type="ekap2016:BankRegistreringNummerType">
 		<xs:annotation>
-			<xs:documentation>Bankens registeringsnummer (kun danske)</xs:documentation>
+			<xs:documentation>Bankens registreringsnummer (kun danske)</xs:documentation>
 		</xs:annotation>
 	</xs:element>
 </xs:schema>

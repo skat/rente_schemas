@@ -17,17 +17,17 @@
 	</xs:element>
 	<xs:element name="IndberetningUdenlandskAdresseVejNavn" type="ekap2016:AdresseLinieType">
 		<xs:annotation>
-			<xs:documentation>Vej/gadenavn. Svarer til OECD-elementet Street.</xs:documentation>
+			<xs:documentation>Vej/gadenavn. Svarer til OECD-definitionen Street.</xs:documentation>
 		</xs:annotation>
 	</xs:element>
 	<xs:element name="IndberetningUdenlandskAdresseHusNummer" type="ekap2016:KodeType">
 		<xs:annotation>
-			<xs:documentation>Husnummer. Svarer til OECD-element BuildingIdentifier.</xs:documentation>
+			<xs:documentation>Husnummer. Svarer til OECD-definitionen BuildingIdentifier.</xs:documentation>
 		</xs:annotation>
 	</xs:element>
 	<xs:element name="IndberetningUdenlandskAdresseEtageTekst" type="ekap2016:EtageType">
 		<xs:annotation>
-			<xs:documentation>Etageangivelse i ejendommen. Svarer til OECD-element FloorIdentifier.</xs:documentation>
+			<xs:documentation>Etageangivelse i ejendommen. Svarer til OECD-definitionen FloorIdentifier.</xs:documentation>
 		</xs:annotation>
 	</xs:element>
 	<xs:element name="IndberetningUdenlandskAdresseSideDørTekst" type="ekap2016:KodeType">
@@ -47,7 +47,7 @@
 	</xs:element>
 	<xs:element name="IndberetningUdenlandskAdresseLandsdel" type="ekap2016:AdresseLinieType">
 		<xs:annotation>
-			<xs:documentation>Landsdel eller delstat. Svarer til OECD-elementet CountrySubentity.</xs:documentation>
+			<xs:documentation>Landsdel eller delstat. Svarer til OECD-definitionen CountrySubentity.</xs:documentation>
 		</xs:annotation>
 	</xs:element>
 	<xs:element name="IndberetningUdenlandskAdressePostBoksNummer" type="ekap2016:UdenlandskPostBoksNummerType">
@@ -57,7 +57,7 @@
 	</xs:element>
 	<xs:element name="IndberetningUdenlandskAdressePostNummer" type="ekap2016:UdenlandskPostNummerType">
 		<xs:annotation>
-			<xs:documentation>Postnummer. Svarer til OECD-elementet PostCode.</xs:documentation>
+			<xs:documentation>Postnummer. Svarer til OECD-definitionen PostCode.</xs:documentation>
 		</xs:annotation>
 	</xs:element>
 	<xs:element name="IndberetningUdenlandskAdressePostDistrikt" type="ekap2016:AdresseLinieType">

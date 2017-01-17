@@ -3,7 +3,7 @@
 	<xs:include schemaLocation="../types/Tekst15Type.xsd"/>
 	<xs:element name="PantebrevDepotNummer" type="ekap2016:Tekst15Type">
 		<xs:annotation>
-			<xs:documentation>Identifikation af pantebrevsdepotet.</xs:documentation>
+			<xs:documentation>Identifikation af pantebrevsdepotet. Angives med depotnummer, evt. i kombination med lånenummer.</xs:documentation>
 		</xs:annotation>
 	</xs:element>
 	<xs:element name="PantebrevDepotID" type="ekap2016:Tekst15Type">
