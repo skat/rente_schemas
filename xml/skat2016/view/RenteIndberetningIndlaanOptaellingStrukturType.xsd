@@ -2,7 +2,7 @@
 <xs:schema xmlns:ekap2016="http://skat.dk/ekapital/2016/01/01" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://skat.dk/ekapital/2016/01/01" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0">
 	<xs:annotation>
 		<xs:documentation/>
-		<xs:documentation>r15587</xs:documentation>
+		<xs:documentation>r15601</xs:documentation>
 	</xs:annotation>
 	<xs:include schemaLocation="../operational/OptaellingAntal.xsd"/>
 	<xs:include schemaLocation="../class/Rente.xsd"/>
@@ -57,8 +57,8 @@
 						<xs:element name="GodkendtKontoOgAdvis" minOccurs="0">
 							<xs:complexType>
 								<xs:sequence>
-									<xs:element ref="ekap2016:RenteBeløb"/>
-									<xs:element ref="ekap2016:IndlånKontoIndestående"/>
+									<xs:element ref="ekap2016:RenteBeløb" minOccurs="0"/>
+									<xs:element ref="ekap2016:IndlånKontoIndestående" minOccurs="0"/>
 									<xs:element ref="ekap2016:RenteKalkuleretPræmieBeløb" minOccurs="0"/>
 								</xs:sequence>
 							</xs:complexType>
@@ -66,8 +66,8 @@
 						<xs:element name="FejlKontohaver" minOccurs="0">
 							<xs:complexType>
 								<xs:sequence>
-									<xs:element ref="ekap2016:RenteBeløb"/>
-									<xs:element ref="ekap2016:IndlånKontoIndestående"/>
+									<xs:element ref="ekap2016:RenteBeløb" minOccurs="0"/>
+									<xs:element ref="ekap2016:IndlånKontoIndestående" minOccurs="0"/>
 									<xs:element ref="ekap2016:RenteKalkuleretPræmieBeløb" minOccurs="0"/>
 								</xs:sequence>
 							</xs:complexType>

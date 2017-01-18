@@ -2,7 +2,7 @@
 <xs:schema xmlns:ekap2016="http://skat.dk/ekapital/2016/01/01" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://skat.dk/ekapital/2016/01/01" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0">
 	<xs:annotation>
 		<xs:documentation/>
-		<xs:documentation>r15587</xs:documentation>
+		<xs:documentation>r15601</xs:documentation>
 	</xs:annotation>
 	<xs:include schemaLocation="../operational/OptaellingAntal.xsd"/>
 	<xs:include schemaLocation="../class/Rente.xsd"/>
@@ -59,8 +59,8 @@
 							<xs:complexType>
 								<xs:sequence>
 									<xs:element ref="ekap2016:RenteBeløb"/>
-									<xs:element ref="ekap2016:LånRestgældBeløb"/>
-									<xs:element ref="ekap2016:LånKursværdi"/>
+									<xs:element ref="ekap2016:LånRestgældBeløb" minOccurs="0"/>
+									<xs:element ref="ekap2016:LånKursværdi" minOccurs="0"/>
 									<xs:element ref="ekap2016:KontantlånKurstab" minOccurs="0"/>
 								</xs:sequence>
 							</xs:complexType>
@@ -69,8 +69,8 @@
 							<xs:complexType>
 								<xs:sequence>
 									<xs:element ref="ekap2016:RenteBeløb"/>
-									<xs:element ref="ekap2016:LånRestgældBeløb"/>
-									<xs:element ref="ekap2016:LånKursværdi"/>
+									<xs:element ref="ekap2016:LånRestgældBeløb" minOccurs="0"/>
+									<xs:element ref="ekap2016:LånKursværdi" minOccurs="0"/>
 									<xs:element ref="ekap2016:KontantlånKurstab" minOccurs="0"/>
 								</xs:sequence>
 							</xs:complexType>
