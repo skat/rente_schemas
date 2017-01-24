@@ -56,7 +56,7 @@
 						<xs:element name="GodkendtKontoOgAdvis" minOccurs="0">
 							<xs:complexType>
 								<xs:sequence>
-									<xs:element name="RenteBeløbUDGÅET">
+									<xs:element name="RenteBeløb">
 										<xs:complexType>
 											<xs:sequence>
 												<xs:element ref="ekap2016:SumAfvigelseProcent"/>
@@ -94,7 +94,7 @@
 						<xs:element name="FejlKontohaver" minOccurs="0">
 							<xs:complexType>
 								<xs:sequence>
-									<xs:element name="RenteBeløbUDGÅET">
+									<xs:element name="RenteBeløb">
 										<xs:complexType>
 											<xs:sequence>
 												<xs:element ref="ekap2016:SumAfvigelseProcent"/>
