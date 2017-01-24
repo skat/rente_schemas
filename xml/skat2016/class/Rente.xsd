@@ -3,10 +3,15 @@
 	<xs:annotation>
 		<xs:documentation>Generisk begreb, som dækker over alle typer renter, som anvendes i SKAT, fx ifm med skatteberegning.</xs:documentation>
 	</xs:annotation>
+	<xs:include schemaLocation="../types/BeloebUDGAAETType.xsd"/>
 	<xs:include schemaLocation="../types/BeloebType.xsd"/>
 	<xs:include schemaLocation="../types/Tekst1Type.xsd"/>
-	<xs:include schemaLocation="../types/BeloebPositivNegativ13Decimaler2Type.xsd"/>
 	<xs:include schemaLocation="../types/DatoType.xsd"/>
+	<xs:element name="RenteBeløbUDGÅET" type="ekap2016:BeløbTypeUDGÅET">
+		<xs:annotation>
+			<xs:documentation>Angiver et givent rentebeløb.</xs:documentation>
+		</xs:annotation>
+	</xs:element>
 	<xs:element name="RenteBeløb" type="ekap2016:BeløbType">
 		<xs:annotation>
 			<xs:documentation>Angiver et givent rentebeløb.</xs:documentation>
@@ -17,9 +22,9 @@
 			<xs:documentation>Feltet skal være udfyldt med en af følgende værdier:  0 = Fordringen er udstedt i danske kr.  1= Fordringen er udstedt i fremmed valuta inkl. EURO </xs:documentation>
 		</xs:annotation>
 	</xs:element>
-	<xs:element name="RenteKalkuleretPræmieBeløb" type="ekap2016:BeløbPositivNegativ13Decimaler2Type">
+	<xs:element name="RenteKalkuleretPræmieBeløb" type="ekap2016:BeløbType">
 		<xs:annotation>
-			<xs:documentation>For såvel boligsparekonti (kontotypekode 15) som for uddannelseskonti (kontotypekode 16) indberettes beregnet samlet (ikke tilskrevet) præmie pr. 31. december 1993 for de enkelte konti.</xs:documentation>
+			<xs:documentation>Angiver det kalkulerede præmiebeløb for boligsparekontrakter og uddannelseskonti.  For såvel boligsparekonti (kontotypekode 15) som for uddannelseskonti (kontotypekode 16) indberettes beregnet samlet (ikke tilskrevet) præmie pr. 31. december 1993 for de enkelte konti.</xs:documentation>
 		</xs:annotation>
 	</xs:element>
 	<xs:element name="RenteTilskrivningDato" type="ekap2016:DatoType">

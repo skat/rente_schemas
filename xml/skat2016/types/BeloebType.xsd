@@ -2,11 +2,11 @@
 <xs:schema xmlns:ekap2016="http://skat.dk/ekapital/2016/01/01" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://skat.dk/ekapital/2016/01/01" elementFormDefault="qualified" version="1.0">
 	<xs:simpleType name="BeløbType">
 		<xs:annotation>
-			<xs:documentation>Beløb angivet som decimaltal, fx. 1500,00</xs:documentation>
+			<xs:documentation>Positive/negative beløb med dansk notation.   Fx. -1.234.567,89</xs:documentation>
 		</xs:annotation>
-		<xs:restriction base="xs:decimal">
-			<xs:totalDigits value="13"/>
-			<xs:fractionDigits value="2"/>
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="19"/>
+			<xs:pattern value="([\-\+]){0,1}([0-9]{0,3}[.]){0,1}([0-9]{3}[.]){0,4}[0-9]{1,3}([,][0-9]{1,2}){0,1}"/>
 		</xs:restriction>
 	</xs:simpleType>
 </xs:schema>
