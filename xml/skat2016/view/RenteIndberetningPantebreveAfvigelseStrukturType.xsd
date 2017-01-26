@@ -2,7 +2,7 @@
 <xs:schema xmlns:ekap2016="http://skat.dk/ekapital/2016/01/01" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://skat.dk/ekapital/2016/01/01" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0">
 	<xs:annotation>
 		<xs:documentation/>
-		<xs:documentation>r15629</xs:documentation>
+		<xs:documentation>r15646</xs:documentation>
 	</xs:annotation>
 	<xs:include schemaLocation="../operational/SumAfvigelseProcent.xsd"/>
 	<xs:include schemaLocation="../operational/SumAfvigelseBeloeb.xsd"/>
@@ -56,7 +56,7 @@
 						<xs:element name="GodkendtKontoOgAdvis" minOccurs="0">
 							<xs:complexType>
 								<xs:sequence>
-									<xs:element name="RenteBeløb">
+									<xs:element name="RenteBeløbUDGÅET">
 										<xs:complexType>
 											<xs:sequence>
 												<xs:element ref="ekap2016:SumAfvigelseProcent"/>
@@ -78,7 +78,7 @@
 						<xs:element name="FejlKontohaver" minOccurs="0">
 							<xs:complexType>
 								<xs:sequence>
-									<xs:element name="RenteBeløb">
+									<xs:element name="RenteBeløbUDGÅET">
 										<xs:complexType>
 											<xs:sequence>
 												<xs:element ref="ekap2016:SumAfvigelseProcent"/>
@@ -106,7 +106,7 @@
 						<xs:element name="GodkendtKontoOgAdvis" minOccurs="0">
 							<xs:complexType>
 								<xs:sequence>
-									<xs:element name="RenteBeløb">
+									<xs:element name="RenteBeløbUDGÅET">
 										<xs:complexType>
 											<xs:sequence>
 												<xs:element ref="ekap2016:SumAfvigelseProcent"/>
@@ -128,7 +128,7 @@
 						<xs:element name="FejlKontohaver" minOccurs="0">
 							<xs:complexType>
 								<xs:sequence>
-									<xs:element name="RenteBeløb">
+									<xs:element name="RenteBeløbUDGÅET">
 										<xs:complexType>
 											<xs:sequence>
 												<xs:element ref="ekap2016:SumAfvigelseProcent"/>
