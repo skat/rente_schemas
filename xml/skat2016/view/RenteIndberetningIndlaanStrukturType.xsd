@@ -2,7 +2,7 @@
 <xs:schema xmlns:ekap2016="http://skat.dk/ekapital/2016/01/01" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://skat.dk/ekapital/2016/01/01" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0">
 	<xs:annotation>
 		<xs:documentation/>
-		<xs:documentation>r15629</xs:documentation>
+		<xs:documentation>r15646</xs:documentation>
 	</xs:annotation>
 	<xs:include schemaLocation="../class/Indkomst.xsd"/>
 	<xs:include schemaLocation="../class/Virksomhed.xsd"/>
@@ -22,6 +22,7 @@
 	<xs:include schemaLocation="../operational/KontohaverIdentifikationMulig.xsd"/>
 	<xs:include schemaLocation="../class/VirksomhedNavn.xsd"/>
 	<xs:include schemaLocation="../operational/KontohaverUkendt.xsd"/>
+	<xs:include schemaLocation="../operational/KontohaverDiplomat.xsd"/>
 	<xs:include schemaLocation="../view/IndberetningIdentifikatorStrukturType.xsd"/>
 	<xs:include schemaLocation="../view/FoedselInformationStrukturType.xsd"/>
 	<xs:include schemaLocation="../view/IndberetningDanskAdresseStrukturType.xsd"/>
@@ -177,6 +178,7 @@
 																										</xs:element>
 																									</xs:sequence>
 																									<xs:element ref="ekap2016:KontohaverUkendt"/>
+																									<xs:element ref="ekap2016:KontohaverDiplomat"/>
 																								</xs:choice>
 																							</xs:complexType>
 																						</xs:element>
