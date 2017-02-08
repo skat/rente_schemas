@@ -9,7 +9,7 @@
 	</xs:element>
 	<xs:element name="IndlånKontoIndestående" type="ekap2016:BeløbType">
 		<xs:annotation>
-			<xs:documentation>Kontoens saldo pr. 31. december.</xs:documentation>
+			<xs:documentation>Kontoens saldo pr. 31. december. Angivet i danske kroner uagtet hvilken valuta kontoen er ført i.</xs:documentation>
 		</xs:annotation>
 	</xs:element>
 </xs:schema>

@@ -20,7 +20,7 @@
 	</xs:element>
 	<xs:element name="LånRestgældBeløb" type="ekap2016:BeløbType">
 		<xs:annotation>
-			<xs:documentation>Restgæld pr. 31. december.</xs:documentation>
+			<xs:documentation>Restgæld pr. 31. december. Angivet i danske kroner uagtet hvilken valuta kontoen er ført i.</xs:documentation>
 		</xs:annotation>
 	</xs:element>
 	<xs:element name="LånRestløbetid" type="ekap2016:TalHel2Type">
@@ -35,7 +35,7 @@
 	</xs:element>
 	<xs:element name="LånKursværdi" type="ekap2016:BeløbType">
 		<xs:annotation>
-			<xs:documentation>Restgældens kursværdi pr. 31. december i det pågældende år.</xs:documentation>
+			<xs:documentation>Restgældens kursværdi pr. 31. december i det pågældende år.  Angivet i danske kroner uagtet hvilken valuta kontoen er ført i.</xs:documentation>
 		</xs:annotation>
 	</xs:element>
 	<xs:element name="LånIndeståendeBeløb" type="ekap2016:BeløbType">

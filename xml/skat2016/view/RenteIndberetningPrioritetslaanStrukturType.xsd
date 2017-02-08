@@ -2,7 +2,7 @@
 <xs:schema xmlns:ekap2016="http://skat.dk/ekapital/2016/01/01" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://skat.dk/ekapital/2016/01/01" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0">
 	<xs:annotation>
 		<xs:documentation/>
-		<xs:documentation>r15646</xs:documentation>
+		<xs:documentation>r15750</xs:documentation>
 	</xs:annotation>
 	<xs:include schemaLocation="../class/Indkomst.xsd"/>
 	<xs:include schemaLocation="../class/Virksomhed.xsd"/>
@@ -74,15 +74,15 @@
 												<xs:sequence>
 													<xs:element ref="ekap2016:PantIdentifikationNummer"/>
 													<xs:element ref="ekap2016:KontoTypeKode"/>
-													<xs:element name="EjendomIdentifikationValg">
+													<xs:element name="EjendomIdentifikationValg" minOccurs="0">
 														<xs:complexType>
 															<xs:choice>
 																<xs:sequence>
 																	<xs:element name="IndenlandskEjendom">
 																		<xs:complexType>
 																			<xs:sequence>
-																				<xs:element ref="ekap2016:KommuneNummer" minOccurs="0"/>
-																				<xs:element ref="ekap2016:EjendomNummer" minOccurs="0"/>
+																				<xs:element ref="ekap2016:KommuneNummer"/>
+																				<xs:element ref="ekap2016:EjendomNummer"/>
 																			</xs:sequence>
 																		</xs:complexType>
 																	</xs:element>

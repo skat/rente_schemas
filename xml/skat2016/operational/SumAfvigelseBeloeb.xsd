@@ -3,7 +3,7 @@
 	<xs:include schemaLocation="../types/BeloebType.xsd"/>
 	<xs:element name="SumAfvigelseBeløb" type="ekap2016:BeløbType">
 		<xs:annotation>
-			<xs:documentation>Angiver afvigelsen mellem to summerede beløb, som en absolut værdi.</xs:documentation>
+			<xs:documentation>Angiver afvigelsen mellem to summerede beløb, som en absolut værdi. Angivet i danske kroner uagtet hvilken valuta kontoen er ført i.</xs:documentation>
 		</xs:annotation>
 	</xs:element>
 </xs:schema>

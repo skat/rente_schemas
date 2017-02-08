@@ -4,7 +4,7 @@
 	<xs:include schemaLocation="../types/Tekst1Type.xsd"/>
 	<xs:element name="KontantlånKurstab" type="ekap2016:BeløbType">
 		<xs:annotation>
-			<xs:documentation>Fradragsberettiget kurstab ved indfrielse af kontantlån optaget i realkreditinstitutter før 19. maj 1993.  Kurstabet ved indfrielsen fordeles med lige store beløb pr. termin over det nye låns samlede antal terminer.  Indberettes kun af realkreditinstitutter.</xs:documentation>
+			<xs:documentation>Fradragsberettiget kurstab ved indfrielse af kontantlån optaget i realkreditinstitutter før 19. maj 1993.  Kurstabet ved indfrielsen fordeles med lige store beløb pr. termin over det nye låns samlede antal terminer.  Indberettes kun af realkreditinstitutter.  Angivet i danske kroner uagtet hvilken valuta kontoen er ført i.</xs:documentation>
 		</xs:annotation>
 	</xs:element>
 	<xs:element name="KontantlånIndfriKode" type="ekap2016:Tekst1Type">
