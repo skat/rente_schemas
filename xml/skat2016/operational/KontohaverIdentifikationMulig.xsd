@@ -3,7 +3,7 @@
 	<xs:include schemaLocation="../types/MarkeringType.xsd"/>
 	<xs:element name="KontohaverIdentifikationMulig" type="ekap2016:MarkeringType">
 		<xs:annotation>
-			<xs:documentation>TRUE: Indberetter tilkendegiver at tilstrækkelige identifikationsoplysninger for kontohaver haves.  FALSE: Indberetningspligtig tilkendegiver at det trods rimelige anstrengelser ikke har været muligt at indhente alle de krævede identifikationsoplysninger for kontohaver, som er valutarisk udlænding.</xs:documentation>
+			<xs:documentation>true: Indberetter tilkendegiver at tilstrækkelige identifikationsoplysninger for kontohaver haves.  false: Indberetningspligtig tilkendegiver at det trods rimelige anstrengelser ikke har været muligt at indhente alle de krævede identifikationsoplysninger for kontohaver, som er valutarisk udlænding.</xs:documentation>
 		</xs:annotation>
 	</xs:element>
 </xs:schema>
