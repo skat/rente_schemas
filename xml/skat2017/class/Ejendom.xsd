@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:ekap2017="http://skat.dk/ekapital/2017/01/01" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://skat.dk/ekapital/2017/01/01" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0">
+	<xs:annotation>
+		<xs:documentation>I lovgivningen defineret som vurderingsejendom (Vurderingsloven). Kan bestå af samlet fast ejendom, umatrikuleret ejendom, ejerlejlighed, bygning på lejet grund, bygning på søterritoriet, fraskilt andel i fælleslod mv.</xs:documentation>
+	</xs:annotation>
+	<xs:include schemaLocation="../types/EjendomNummerType.xsd"/>
+	<xs:include schemaLocation="../types/TalHel2Type.xsd"/>
+	<xs:include schemaLocation="../types/MarkeringType.xsd"/>
+	<xs:include schemaLocation="../types/Tekst1Type.xsd"/>
+	<xs:element name="EjendomNummer" type="ekap2017:EjendomNummerType">
+		<xs:annotation>
+			<xs:documentation>6-cifret identifikation af en ejendom i BBR-registreret</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:element name="EjendomBenyttelseKode" type="ekap2017:TalHel2Type">
+		<xs:annotation>
+			<xs:documentation>To-cifret benyttelseskode for fast ejendom. (Som angivet i Vurderingsvejledningen afs. D)</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:element name="EjendomSletMarkering" type="ekap2017:MarkeringType">
+		<xs:annotation>
+			<xs:documentation>Angiver at det pågældende ejendomsnummer er blevet slettet (ja=true).</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:element name="EjendomTypeKode" type="ekap2017:Tekst1Type">
+		<xs:annotation>
+			<xs:documentation>Angiver ejendommens benyttelse (jfr. felt 705)</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+</xs:schema>

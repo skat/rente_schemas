@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:ekap2017="http://skat.dk/ekapital/2017/01/01" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://skat.dk/ekapital/2017/01/01" elementFormDefault="qualified" version="1.0">
+	<xs:include schemaLocation="../types/KontohaverUkendtMarkeringType.xsd"/>
+	<xs:element name="KontohaverUkendt" type="ekap2017:KontohaverUkendtMarkeringType">
+		<xs:annotation>
+			<xs:documentation>Angiver at der er en kontohaver, som ikke kan identificeres. Feltet opsættes som tomt tag.</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+</xs:schema>

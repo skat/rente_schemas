@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:ekap2017="http://skat.dk/ekapital/2017/01/01" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://skat.dk/ekapital/2017/01/01" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0">
+	<xs:include schemaLocation="../types/Tekst15Type.xsd"/>
+	<xs:element name="PantebrevDepotNummer" type="ekap2017:Tekst15Type">
+		<xs:annotation>
+			<xs:documentation>Identifikation af pantebrevsdepotet. Angives med depotnummer, evt. i kombination med lånenummer.</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:element name="PantebrevDepotID" type="ekap2017:Tekst15Type">
+		<xs:annotation>
+			<xs:documentation>Den unikke revisionsmæssige nøgle til et pantebrevdepot (den reelle identifikation).</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+</xs:schema>

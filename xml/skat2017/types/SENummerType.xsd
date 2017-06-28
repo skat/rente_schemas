@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:ekap2017="http://skat.dk/ekapital/2017/01/01" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://skat.dk/ekapital/2017/01/01" elementFormDefault="qualified" version="1.0">
+	<xs:simpleType name="SENummerType">
+		<xs:annotation>
+			<xs:documentation>8-cifret nummer,  der entydigt identificerer en registreret virksomhed i SKAT.</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:pattern value="[1-9][0-9]{7}"/>
+		</xs:restriction>
+	</xs:simpleType>
+</xs:schema>
