@@ -8,7 +8,7 @@
 	<xs:include schemaLocation="../types/TekstLangType.xsd"/>
 	<xs:element name="IndberetningValideringStatus" type="ekap2017:TekstKortType">
 		<xs:annotation>
-			<xs:documentation>Angiver status for validering af en indberetning.   GodkendtKonto: Indberetning er modtaget uden valideringsfejl. Oplysningerne vil blive brugt af SKAT.   GodkendtKontoAdvis:  Indberetning er modtaget uden valideringsfejl. SKAT har opsat advis vedrørende en eller flere oplysninger i indberetningen for kontoen. Adviset kræver eventuelt rettelse i grundregistreringen.   FejlKontohaver:  For en konto med flere kontohavere er der fejl eller mangler i oplysningerne om mindst én kontohaver. Fejlen skal rettes inden 14 dage. Oplysningerne om eventuelle øvrige kontohavere, der er modtaget uden valideringsfejl, vil blive brugt af SKAT.   FejlKonto:  Der er fejl og mangler i oplysningerne om selve kontoen og/eller alle kontohavere og/eller en eller flere kontohaverperioder. Oplysningerne kan ikke bruges af SKAT. Indberetningen skal rettes inden 14 dage.  FejlIndberetning: Fil ikke genkendt som XML. Fejl ved XML validering. Fejl i ikke ret-bare felter. Rettelsesprincip ikke overholdt.  Invalideret: Indberetning for kontoen er invalideret.</xs:documentation>
+			<xs:documentation>Angiver status for validering af en indberetning: - GodkendtKonto - GodkendtKontoAdvis - FejlKontohaver - FejlKonto - FejlIndberetning - Invalideret   Se uddybning af statuskoderne i den for forretningsområdet relevante vejledning på SKAT.dk.</xs:documentation>
 		</xs:annotation>
 	</xs:element>
 	<xs:element name="IndberetningValideringIdentifikation" type="ekap2017:Tekst2000Type">
