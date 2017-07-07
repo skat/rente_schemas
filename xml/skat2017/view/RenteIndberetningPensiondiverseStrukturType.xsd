@@ -2,7 +2,7 @@
 <xs:schema xmlns:ekap2017="http://skat.dk/ekapital/2017/01/01" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://skat.dk/ekapital/2017/01/01" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0">
 	<xs:annotation>
 		<xs:documentation/>
-		<xs:documentation>r16593</xs:documentation>
+		<xs:documentation>r16596</xs:documentation>
 	</xs:annotation>
 	<xs:include schemaLocation="../class/Indkomst.xsd"/>
 	<xs:include schemaLocation="../class/Virksomhed.xsd"/>
@@ -23,8 +23,8 @@
 	<xs:include schemaLocation="../view/IndberetningUdenlandskAdresseStrukturType.xsd"/>
 	<xs:include schemaLocation="../view/FoedselInformationStrukturType.xsd"/>
 	<xs:include schemaLocation="../view/TINNummerStrukturType.xsd"/>
-	<xs:element name="PensionIndberetningDiverseStruktur" type="ekap2017:PensionIndberetningDiverseStrukturType"/>
-	<xs:complexType name="PensionIndberetningDiverseStrukturType">
+	<xs:element name="RenteIndberetningPensiondiverseStruktur" type="ekap2017:RenteIndberetningPensiondiverseStrukturType"/>
+	<xs:complexType name="RenteIndberetningPensiondiverseStrukturType">
 		<xs:sequence>
 			<xs:element name="Indberetningsperiode">
 				<xs:complexType>
@@ -85,10 +85,10 @@
 												</xs:sequence>
 											</xs:complexType>
 										</xs:element>
-										<xs:element name="KontoPeriodeÅrsUltimoListe">
+										<xs:element name="KontoperiodeÅrsUltimoListe">
 											<xs:complexType>
 												<xs:sequence>
-													<xs:element name="KontoPeriode" minOccurs="1" maxOccurs="unbounded">
+													<xs:element name="Kontoperiode" minOccurs="1" maxOccurs="unbounded">
 														<xs:complexType>
 															<xs:sequence>
 																<xs:element name="BeløbValg">

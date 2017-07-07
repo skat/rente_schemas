@@ -2,22 +2,22 @@
 <xs:schema xmlns:ekap2017="http://skat.dk/ekapital/2017/01/01" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://skat.dk/ekapital/2017/01/01" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0">
 	<xs:annotation>
 		<xs:documentation/>
-		<xs:documentation>r16593</xs:documentation>
+		<xs:documentation>r16596</xs:documentation>
 	</xs:annotation>
 	<xs:include schemaLocation="../view/RapportOptaellingScopeStrukturType.xsd"/>
-	<xs:include schemaLocation="../view/PensionIndberetningDiverseOptaellingStrukturType.xsd"/>
-	<xs:include schemaLocation="../view/PensionIndberetningDiverseAfvigelseStrukturType.xsd"/>
-	<xs:element name="PensionIndberetningDiverseRapportStruktur" type="ekap2017:PensionIndberetningDiverseRapportStrukturType"/>
-	<xs:complexType name="PensionIndberetningDiverseRapportStrukturType">
+	<xs:include schemaLocation="../view/RenteIndberetningPensiondiverseOptaellingStrukturType.xsd"/>
+	<xs:include schemaLocation="../view/RenteIndberetningPensiondiverseAfvigelseStrukturType.xsd"/>
+	<xs:element name="RenteIndberetningPensiondiverseRapportStruktur" type="ekap2017:RenteIndberetningPensiondiverseRapportStrukturType"/>
+	<xs:complexType name="RenteIndberetningPensiondiverseRapportStrukturType">
 		<xs:sequence>
 			<xs:element ref="ekap2017:RapportOptællingScopeStruktur"/>
-			<xs:element ref="ekap2017:PensionIndberetningDiverseOptællingStruktur"/>
+			<xs:element ref="ekap2017:RenteIndberetningPensiondiverseOptællingStruktur"/>
 			<xs:element name="Sammenligning" minOccurs="0">
 				<xs:complexType>
 					<xs:sequence>
 						<xs:element ref="ekap2017:RapportOptællingScopeStruktur"/>
-						<xs:element ref="ekap2017:PensionIndberetningDiverseOptællingStruktur"/>
-						<xs:element ref="ekap2017:PensionIndberetningDiverseAfvigelseStruktur"/>
+						<xs:element ref="ekap2017:RenteIndberetningPensiondiverseOptællingStruktur"/>
+						<xs:element ref="ekap2017:RenteIndberetningPensiondiverseAfvigelseStruktur"/>
 					</xs:sequence>
 				</xs:complexType>
 			</xs:element>

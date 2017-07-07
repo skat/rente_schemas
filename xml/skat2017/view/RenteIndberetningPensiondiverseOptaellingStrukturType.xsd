@@ -2,13 +2,13 @@
 <xs:schema xmlns:ekap2017="http://skat.dk/ekapital/2017/01/01" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://skat.dk/ekapital/2017/01/01" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0">
 	<xs:annotation>
 		<xs:documentation/>
-		<xs:documentation>r16593</xs:documentation>
+		<xs:documentation>r16596</xs:documentation>
 	</xs:annotation>
 	<xs:include schemaLocation="../operational/OptaellingAntal.xsd"/>
 	<xs:include schemaLocation="../class/Pension.xsd"/>
 	<xs:include schemaLocation="../class/PensionsordningBeloeb.xsd"/>
-	<xs:element name="PensionIndberetningDiverseOptællingStruktur" type="ekap2017:PensionIndberetningDiverseOptællingStrukturType"/>
-	<xs:complexType name="PensionIndberetningDiverseOptællingStrukturType">
+	<xs:element name="RenteIndberetningPensiondiverseOptællingStruktur" type="ekap2017:RenteIndberetningPensiondiverseOptællingStrukturType"/>
+	<xs:complexType name="RenteIndberetningPensiondiverseOptællingStrukturType">
 		<xs:sequence>
 			<xs:element name="AntalKonti">
 				<xs:complexType>
