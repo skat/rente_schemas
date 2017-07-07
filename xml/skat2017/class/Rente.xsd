@@ -19,7 +19,7 @@
 	</xs:element>
 	<xs:element name="RenteKalkuleretPræmieBeløb" type="ekap2017:BeløbType">
 		<xs:annotation>
-			<xs:documentation>Angiver det kalkulerede præmiebeløb for boligsparekontrakter og uddannelseskonti. Angivet i danske kroner uagtet hvilken valuta kontoen er ført i.  For såvel boligsparekonti (kontotypekode 15) som for uddannelseskonti (kontotypekode 16) indberettes beregnet samlet (ikke tilskrevet) præmie pr. 31. december 1993 for de enkelte konti.</xs:documentation>
+			<xs:documentation>Angiver det kalkulerede præmiebeløb for boligsparekontrakter og uddannelseskonti. Angivet i danske kroner uagtet hvilken valuta kontoen er ført i.</xs:documentation>
 		</xs:annotation>
 	</xs:element>
 	<xs:element name="RenteTilskrivningDato" type="ekap2017:DatoType">

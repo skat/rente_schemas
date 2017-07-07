@@ -5,19 +5,19 @@
 		<xs:documentation>r16593</xs:documentation>
 	</xs:annotation>
 	<xs:include schemaLocation="../view/RapportOptaellingScopeStrukturType.xsd"/>
-	<xs:include schemaLocation="../view/RenteIndberetningUdlaanOptaellingStrukturType.xsd"/>
-	<xs:include schemaLocation="../view/RenteIndberetningUdlaanAfvigelseStrukturType.xsd"/>
-	<xs:element name="RenteIndberetningUdlånRapportStruktur" type="ekap2017:RenteIndberetningUdlånRapportStrukturType"/>
-	<xs:complexType name="RenteIndberetningUdlånRapportStrukturType">
+	<xs:include schemaLocation="../view/PensionIndberetningDiverseOptaellingStrukturType.xsd"/>
+	<xs:include schemaLocation="../view/PensionIndberetningDiverseAfvigelseStrukturType.xsd"/>
+	<xs:element name="PensionIndberetningDiverseRapportStruktur" type="ekap2017:PensionIndberetningDiverseRapportStrukturType"/>
+	<xs:complexType name="PensionIndberetningDiverseRapportStrukturType">
 		<xs:sequence>
 			<xs:element ref="ekap2017:RapportOptællingScopeStruktur"/>
-			<xs:element ref="ekap2017:RenteIndberetningUdlånOptællingStruktur"/>
+			<xs:element ref="ekap2017:PensionIndberetningDiverseOptællingStruktur"/>
 			<xs:element name="Sammenligning" minOccurs="0">
 				<xs:complexType>
 					<xs:sequence>
 						<xs:element ref="ekap2017:RapportOptællingScopeStruktur"/>
-						<xs:element ref="ekap2017:RenteIndberetningUdlånOptællingStruktur"/>
-						<xs:element ref="ekap2017:RenteIndberetningUdlånAfvigelseStruktur"/>
+						<xs:element ref="ekap2017:PensionIndberetningDiverseOptællingStruktur"/>
+						<xs:element ref="ekap2017:PensionIndberetningDiverseAfvigelseStruktur"/>
 					</xs:sequence>
 				</xs:complexType>
 			</xs:element>

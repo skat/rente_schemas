@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:ekap2017="http://skat.dk/ekapital/2017/01/01" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://skat.dk/ekapital/2017/01/01" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0">
+	<xs:annotation>
+		<xs:documentation>Beskriver forskellige beløbs typer tilknyttet en pensionsordning.</xs:documentation>
+	</xs:annotation>
+	<xs:include schemaLocation="../types/BeloebType.xsd"/>
+	<xs:element name="PensionsordningBeløbAfkast" type="ekap2017:BeløbType">
+		<xs:annotation>
+			<xs:documentation>Afkast på pensionsordning</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:element name="PensionsordningBeløbVærdistigning" type="ekap2017:BeløbType">
+		<xs:annotation>
+			<xs:documentation>Værdistigning for en pensionsordning</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:element name="PensionsordningBeløbYdelse" type="ekap2017:BeløbType">
+		<xs:annotation>
+			<xs:documentation>Ydelse for en pensionsordning</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+</xs:schema>

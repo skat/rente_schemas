@@ -2,14 +2,14 @@
 <xs:schema xmlns:ekap2017="http://skat.dk/ekapital/2017/01/01" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://skat.dk/ekapital/2017/01/01" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0">
 	<xs:annotation>
 		<xs:documentation/>
-		<xs:documentation>r16554</xs:documentation>
+		<xs:documentation>r16593</xs:documentation>
 	</xs:annotation>
 	<xs:include schemaLocation="../class/Land.xsd"/>
 	<xs:include schemaLocation="../class/IndberetningUdenlandskAdresse.xsd"/>
 	<xs:include schemaLocation="../class/Note.xsd"/>
 	<xs:include schemaLocation="../class/AlternativAdresse.xsd"/>
-	<xs:element name="RenteIndberetningUdenlandskAdresseStruktur" type="ekap2017:RenteIndberetningUdenlandskAdresseStrukturType"/>
-	<xs:complexType name="RenteIndberetningUdenlandskAdresseStrukturType">
+	<xs:element name="IndberetningUdenlandskAdresseStruktur" type="ekap2017:IndberetningUdenlandskAdresseStrukturType"/>
+	<xs:complexType name="IndberetningUdenlandskAdresseStrukturType">
 		<xs:sequence>
 			<xs:element ref="ekap2017:LandKode" minOccurs="0"/>
 			<xs:element name="AdresseStruktureret" minOccurs="0">

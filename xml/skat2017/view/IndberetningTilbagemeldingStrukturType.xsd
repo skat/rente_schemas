@@ -2,7 +2,7 @@
 <xs:schema xmlns:ekap2017="http://skat.dk/ekapital/2017/01/01" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://skat.dk/ekapital/2017/01/01" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0">
 	<xs:annotation>
 		<xs:documentation/>
-		<xs:documentation>r16554</xs:documentation>
+		<xs:documentation>r16593</xs:documentation>
 	</xs:annotation>
 	<xs:include schemaLocation="../class/Indkomst.xsd"/>
 	<xs:include schemaLocation="../class/Virksomhed.xsd"/>
@@ -13,8 +13,8 @@
 	<xs:include schemaLocation="../operational/OptaellingAntal.xsd"/>
 	<xs:include schemaLocation="../class/IndberetningFejl.xsd"/>
 	<xs:include schemaLocation="../class/IndberetningAdvis.xsd"/>
-	<xs:element name="RenteIndberetningTilbagemeldingStruktur" type="ekap2017:RenteIndberetningTilbagemeldingStrukturType"/>
-	<xs:complexType name="RenteIndberetningTilbagemeldingStrukturType">
+	<xs:element name="IndberetningTilbagemeldingStruktur" type="ekap2017:IndberetningTilbagemeldingStrukturType"/>
+	<xs:complexType name="IndberetningTilbagemeldingStrukturType">
 		<xs:sequence>
 			<xs:element name="Indberetningsperiode">
 				<xs:complexType>
@@ -100,7 +100,7 @@
 																<xs:complexType>
 																	<xs:sequence>
 																		<xs:element ref="ekap2017:IndberetningValideringIdentifikation"/>
-																		<xs:element ref="ekap2017:IndberetningValideringIdentifikationVærdi"/>
+																		<xs:element ref="ekap2017:IndberetningValideringIdentifikationVærdi" minOccurs="0"/>
 																	</xs:sequence>
 																</xs:complexType>
 															</xs:element>
@@ -128,7 +128,7 @@
 																<xs:complexType>
 																	<xs:sequence>
 																		<xs:element ref="ekap2017:IndberetningValideringIdentifikation"/>
-																		<xs:element ref="ekap2017:IndberetningValideringIdentifikationVærdi"/>
+																		<xs:element ref="ekap2017:IndberetningValideringIdentifikationVærdi" minOccurs="0"/>
 																	</xs:sequence>
 																</xs:complexType>
 															</xs:element>

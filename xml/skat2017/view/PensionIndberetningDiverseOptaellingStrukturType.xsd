@@ -5,10 +5,10 @@
 		<xs:documentation>r16593</xs:documentation>
 	</xs:annotation>
 	<xs:include schemaLocation="../operational/OptaellingAntal.xsd"/>
-	<xs:include schemaLocation="../class/Rente.xsd"/>
-	<xs:include schemaLocation="../class/Laan.xsd"/>
-	<xs:element name="RenteIndberetningPantebreveOptællingStruktur" type="ekap2017:RenteIndberetningPantebreveOptællingStrukturType"/>
-	<xs:complexType name="RenteIndberetningPantebreveOptællingStrukturType">
+	<xs:include schemaLocation="../class/Pension.xsd"/>
+	<xs:include schemaLocation="../class/PensionsordningBeloeb.xsd"/>
+	<xs:element name="PensionIndberetningDiverseOptællingStruktur" type="ekap2017:PensionIndberetningDiverseOptællingStrukturType"/>
+	<xs:complexType name="PensionIndberetningDiverseOptællingStrukturType">
 		<xs:sequence>
 			<xs:element name="AntalKonti">
 				<xs:complexType>
@@ -71,16 +71,20 @@
 						<xs:element name="GodkendtKontoOgAdvis" minOccurs="0">
 							<xs:complexType>
 								<xs:sequence>
-									<xs:element ref="ekap2017:RenteBeløb"/>
-									<xs:element ref="ekap2017:LånRestgældBeløb" minOccurs="0"/>
+									<xs:element ref="ekap2017:PensionKapitalværdi"/>
+									<xs:element ref="ekap2017:PensionsordningBeløbAfkast" minOccurs="0"/>
+									<xs:element ref="ekap2017:PensionsordningBeløbVærdistigning" minOccurs="0"/>
+									<xs:element ref="ekap2017:PensionsordningBeløbYdelse" minOccurs="0"/>
 								</xs:sequence>
 							</xs:complexType>
 						</xs:element>
 						<xs:element name="FejlKontohaver" minOccurs="0">
 							<xs:complexType>
 								<xs:sequence>
-									<xs:element ref="ekap2017:RenteBeløb"/>
-									<xs:element ref="ekap2017:LånRestgældBeløb" minOccurs="0"/>
+									<xs:element ref="ekap2017:PensionKapitalværdi"/>
+									<xs:element ref="ekap2017:PensionsordningBeløbAfkast" minOccurs="0"/>
+									<xs:element ref="ekap2017:PensionsordningBeløbVærdistigning" minOccurs="0"/>
+									<xs:element ref="ekap2017:PensionsordningBeløbYdelse" minOccurs="0"/>
 								</xs:sequence>
 							</xs:complexType>
 						</xs:element>
