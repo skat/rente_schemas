@@ -5,7 +5,7 @@
 			<xs:documentation>Angiver en ejendoms nummer i BBR</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:integer">
-			<xs:totalDigits value="7"/>
+			<xs:totalDigits value="6"/>
 		</xs:restriction>
 	</xs:simpleType>
 </xs:schema>

@@ -5,8 +5,7 @@
 			<xs:documentation>Positive/negative beløb med dansk notation.   Fx.  -1234567,89 +1234567,89 1234567,89</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:string">
-			<xs:maxLength value="19"/>
-			<xs:pattern value="([\-\+]){0,1}[0-9]{1,15}([,][0-9]{1,2}){0,1}"/>
+			<xs:pattern value="([\-\+]){0,1}[0-9]{1,11}([,][0-9]{1,2}){0,1}"/>
 		</xs:restriction>
 	</xs:simpleType>
 </xs:schema>

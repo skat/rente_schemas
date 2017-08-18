@@ -5,7 +5,7 @@
 			<xs:documentation>Alle gyldige årstal i den danske kalender.</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:integer">
-			<xs:totalDigits value="4"/>
+			<xs:pattern value="[0-9]{4}"/>
 		</xs:restriction>
 	</xs:simpleType>
 </xs:schema>

@@ -5,6 +5,7 @@
 			<xs:documentation>Angiver retmæssig ejers fødested.</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:string">
+			<xs:minLength value="1"/>
 			<xs:maxLength value="35"/>
 		</xs:restriction>
 	</xs:simpleType>

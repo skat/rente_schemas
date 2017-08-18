@@ -5,7 +5,7 @@
 			<xs:documentation>En mindre tekst - typisk et eller få ord - som unikt giver mulighed for identifikationen af et givet begreb.  I nogle sammenhænge er det også brugt til mindre forklaringer (sætningsniveau)</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:string">
-			<xs:minLength value="0"/>
+			<xs:minLength value="1"/>
 			<xs:maxLength value="100"/>
 			<xs:whiteSpace value="preserve"/>
 		</xs:restriction>

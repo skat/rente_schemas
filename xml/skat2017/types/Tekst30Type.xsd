@@ -5,7 +5,7 @@
 			<xs:documentation>Angiver en tekst på max. 30 karakterer.</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:string">
-			<xs:maxLength value="30"/>
+			<xs:pattern value="[^!\\*'();:@&amp;=+$,/;?:#\[\]]{1,30}"/>
 		</xs:restriction>
 	</xs:simpleType>
 </xs:schema>

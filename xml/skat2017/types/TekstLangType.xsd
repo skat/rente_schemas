@@ -5,6 +5,7 @@
 			<xs:documentation>Dette er en lang tekst.</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:string">
+			<xs:minLength value="1"/>
 			<xs:maxLength value="500"/>
 		</xs:restriction>
 	</xs:simpleType>

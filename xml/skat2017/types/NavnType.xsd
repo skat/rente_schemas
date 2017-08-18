@@ -5,6 +5,7 @@
 			<xs:documentation>Generisk navnefelt. Bruges til personnavne og virksomhedsnavne m.m.</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:string">
+			<xs:minLength value="1"/>
 			<xs:maxLength value="300"/>
 		</xs:restriction>
 	</xs:simpleType>

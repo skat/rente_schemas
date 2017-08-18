@@ -5,7 +5,6 @@
 	</xs:annotation>
 	<xs:include schemaLocation="../types/BeloebType.xsd"/>
 	<xs:include schemaLocation="../types/Tekst1Type.xsd"/>
-	<xs:include schemaLocation="../types/BeloebType.xsd"/>
 	<xs:include schemaLocation="../types/DatoType.xsd"/>
 	<xs:element name="RenteBeløb" type="ekap2017:BeløbType">
 		<xs:annotation>

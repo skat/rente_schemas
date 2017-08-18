@@ -5,8 +5,7 @@
 			<xs:documentation>Angiver bogstav tilknyttet husnummeret</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:string">
-			<xs:maxLength value="1"/>
-			<xs:pattern value="[a-zA-Z]"/>
+			<xs:pattern value="[a-zA-Z]{1}"/>
 		</xs:restriction>
 	</xs:simpleType>
 </xs:schema>

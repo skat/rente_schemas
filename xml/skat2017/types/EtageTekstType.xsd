@@ -5,6 +5,7 @@
 			<xs:documentation>Angiver etagen tilknyttet husnummer/husbogstav</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:string">
+			<xs:minLength value="1"/>
 			<xs:maxLength value="2"/>
 		</xs:restriction>
 	</xs:simpleType>

@@ -5,8 +5,7 @@
 			<xs:documentation>Angiver postnummer (4-cifre)</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:integer">
-			<xs:minInclusive value="1"/>
-			<xs:totalDigits value="4"/>
+			<xs:pattern value="[0-9]{4}"/>
 		</xs:restriction>
 	</xs:simpleType>
 </xs:schema>

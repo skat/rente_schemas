@@ -5,6 +5,7 @@
 			<xs:documentation>Beskriver etage - stuen, 1, 2, 3. Oprettet i forbindelse med CPS og udenlandsk pension.</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:string">
+			<xs:minLength value="1"/>
 			<xs:maxLength value="5"/>
 		</xs:restriction>
 	</xs:simpleType>

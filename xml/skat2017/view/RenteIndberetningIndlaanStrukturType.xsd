@@ -2,7 +2,7 @@
 <xs:schema xmlns:ekap2017="http://skat.dk/ekapital/2017/01/01" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://skat.dk/ekapital/2017/01/01" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0">
 	<xs:annotation>
 		<xs:documentation/>
-		<xs:documentation>r16596</xs:documentation>
+		<xs:documentation>r16825</xs:documentation>
 	</xs:annotation>
 	<xs:include schemaLocation="../class/Indkomst.xsd"/>
 	<xs:include schemaLocation="../class/Virksomhed.xsd"/>
@@ -12,7 +12,6 @@
 	<xs:include schemaLocation="../class/BankKonto.xsd"/>
 	<xs:include schemaLocation="../class/IndlaanKonto.xsd"/>
 	<xs:include schemaLocation="../class/KontoValuta.xsd"/>
-	<xs:include schemaLocation="../class/Rente.xsd"/>
 	<xs:include schemaLocation="../class/Rente.xsd"/>
 	<xs:include schemaLocation="../class/Kontoperiode.xsd"/>
 	<xs:include schemaLocation="../class/KontoType.xsd"/>
@@ -128,8 +127,8 @@
 																																				<xs:sequence>
 																																					<xs:element ref="ekap2017:PersonNavnForNavn"/>
 																																					<xs:element ref="ekap2017:PersonNavnEfterNavn"/>
-																																					<xs:element ref="ekap2017:FødselInformationStruktur"/>
-																																					<xs:element ref="ekap2017:IndberetningDanskAdresseStruktur"/>
+																																					<xs:element ref="ekap2017:FødselInformationStruktur" minOccurs="0"/>
+																																					<xs:element ref="ekap2017:IndberetningDanskAdresseStruktur" minOccurs="0"/>
 																																				</xs:sequence>
 																																			</xs:complexType>
 																																		</xs:element>
@@ -154,8 +153,8 @@
 																																	<xs:element ref="ekap2017:PersonCPRNummer" minOccurs="0"/>
 																																	<xs:element ref="ekap2017:PersonNavnForNavn"/>
 																																	<xs:element ref="ekap2017:PersonNavnEfterNavn"/>
-																																	<xs:element ref="ekap2017:IndberetningUdenlandskAdresseStruktur"/>
-																																	<xs:element ref="ekap2017:FødselInformationStruktur"/>
+																																	<xs:element ref="ekap2017:IndberetningUdenlandskAdresseStruktur" minOccurs="0"/>
+																																	<xs:element ref="ekap2017:FødselInformationStruktur" minOccurs="0"/>
 																																	<xs:element ref="ekap2017:TINNummerStruktur" minOccurs="0"/>
 																																	<xs:element ref="ekap2017:VirksomhedFormandAdministrator"/>
 																																	<xs:element ref="ekap2017:KontohaverIdentifikationMulig"/>
@@ -169,7 +168,7 @@
 																																<xs:sequence>
 																																	<xs:element ref="ekap2017:VirksomhedSENummer" minOccurs="0"/>
 																																	<xs:element ref="ekap2017:VirksomhedNavnFirmaNavn"/>
-																																	<xs:element ref="ekap2017:IndberetningUdenlandskAdresseStruktur"/>
+																																	<xs:element ref="ekap2017:IndberetningUdenlandskAdresseStruktur" minOccurs="0"/>
 																																	<xs:element ref="ekap2017:TINNummerStruktur" minOccurs="0"/>
 																																</xs:sequence>
 																															</xs:complexType>

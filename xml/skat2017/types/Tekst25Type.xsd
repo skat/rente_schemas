@@ -5,6 +5,7 @@
 			<xs:documentation>En tekststreng med op til 25 alfanummeriske karakterer.</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:string">
+			<xs:minLength value="1"/>
 			<xs:maxLength value="25"/>
 		</xs:restriction>
 	</xs:simpleType>

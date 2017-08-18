@@ -5,6 +5,7 @@
 			<xs:documentation>Angiver en tekst på max. 15 alfanummeriske karakterer</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:string">
+			<xs:minLength value="1"/>
 			<xs:maxLength value="15"/>
 		</xs:restriction>
 	</xs:simpleType>
