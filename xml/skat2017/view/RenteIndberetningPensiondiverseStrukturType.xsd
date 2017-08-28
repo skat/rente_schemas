@@ -2,7 +2,7 @@
 <xs:schema xmlns:ekap2017="http://skat.dk/ekapital/2017/01/01" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://skat.dk/ekapital/2017/01/01" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0">
 	<xs:annotation>
 		<xs:documentation/>
-		<xs:documentation>r16825</xs:documentation>
+		<xs:documentation>r16859</xs:documentation>
 	</xs:annotation>
 	<xs:include schemaLocation="../class/Indkomst.xsd"/>
 	<xs:include schemaLocation="../class/Virksomhed.xsd"/>
@@ -10,7 +10,7 @@
 	<xs:include schemaLocation="../class/Note.xsd"/>
 	<xs:include schemaLocation="../class/Pension.xsd"/>
 	<xs:include schemaLocation="../class/KontoValuta.xsd"/>
-	<xs:include schemaLocation="../class/PensionsordningBeloeb.xsd"/>
+	<xs:include schemaLocation="../operational/PensionsordningBeloeb.xsd"/>
 	<xs:include schemaLocation="../class/Kontoperiode.xsd"/>
 	<xs:include schemaLocation="../class/KontoType.xsd"/>
 	<xs:include schemaLocation="../operational/FlereEndToKontohavereIkkeAlleOplyst.xsd"/>
@@ -72,15 +72,7 @@
 										<xs:element name="Beløb">
 											<xs:complexType>
 												<xs:sequence>
-													<xs:element name="BeløbValg">
-														<xs:complexType>
-															<xs:choice>
-																<xs:element ref="ekap2017:PensionsordningBeløbAfkast"/>
-																<xs:element ref="ekap2017:PensionsordningBeløbVærdistigning"/>
-																<xs:element ref="ekap2017:PensionsordningBeløbYdelse"/>
-															</xs:choice>
-														</xs:complexType>
-													</xs:element>
+													<xs:element ref="ekap2017:PensionsordningBeløb"/>
 													<xs:element ref="ekap2017:PensionKapitalværdi"/>
 												</xs:sequence>
 											</xs:complexType>
@@ -91,15 +83,7 @@
 													<xs:element name="Kontoperiode" minOccurs="1" maxOccurs="unbounded">
 														<xs:complexType>
 															<xs:sequence>
-																<xs:element name="BeløbValg">
-																	<xs:complexType>
-																		<xs:choice>
-																			<xs:element ref="ekap2017:PensionsordningBeløbAfkast"/>
-																			<xs:element ref="ekap2017:PensionsordningBeløbVærdistigning"/>
-																			<xs:element ref="ekap2017:PensionsordningBeløbYdelse"/>
-																		</xs:choice>
-																	</xs:complexType>
-																</xs:element>
+																<xs:element ref="ekap2017:PensionsordningBeløb"/>
 																<xs:element ref="ekap2017:KontoperiodeOpstartDato" minOccurs="0"/>
 																<xs:element ref="ekap2017:KontoperiodeOphørDato" minOccurs="0"/>
 																<xs:element ref="ekap2017:KontoTypeKode"/>
