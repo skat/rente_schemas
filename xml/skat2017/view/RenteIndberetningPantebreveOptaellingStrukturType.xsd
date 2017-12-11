@@ -5,8 +5,13 @@
 		<xs:documentation>r16873</xs:documentation>
 	</xs:annotation>
 	<xs:include schemaLocation="../operational/OptaellingAntal.xsd"/>
-	<xs:include schemaLocation="../class/Rente.xsd"/>
-	<xs:include schemaLocation="../class/Laan.xsd"/>
+	<xs:include schemaLocation="../types/Beloeb20Type.xsd"/>
+	<xs:complexType name="RenteIndberetningPantebreveSummeringType">
+		<xs:sequence>
+			<xs:element name="RenteBeløb" type="ekap2017:Beløb20Type"/>
+			<xs:element name="LånRestgældBeløb" type="ekap2017:Beløb20Type" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
 	<xs:element name="RenteIndberetningPantebreveOptællingStruktur" type="ekap2017:RenteIndberetningPantebreveOptællingStrukturType"/>
 	<xs:complexType name="RenteIndberetningPantebreveOptællingStrukturType">
 		<xs:sequence>
@@ -68,22 +73,8 @@
 			<xs:element name="AnvendtTotalSummering">
 				<xs:complexType>
 					<xs:sequence>
-						<xs:element name="GodkendtKontoOgAdvis" minOccurs="0">
-							<xs:complexType>
-								<xs:sequence>
-									<xs:element ref="ekap2017:RenteBeløb"/>
-									<xs:element ref="ekap2017:LånRestgældBeløb" minOccurs="0"/>
-								</xs:sequence>
-							</xs:complexType>
-						</xs:element>
-						<xs:element name="FejlKontohaver" minOccurs="0">
-							<xs:complexType>
-								<xs:sequence>
-									<xs:element ref="ekap2017:RenteBeløb"/>
-									<xs:element ref="ekap2017:LånRestgældBeløb" minOccurs="0"/>
-								</xs:sequence>
-							</xs:complexType>
-						</xs:element>
+						<xs:element name="GodkendtKontoOgAdvis" type="ekap2017:RenteIndberetningPantebreveSummeringType" minOccurs="0"/>
+						<xs:element name="FejlKontohaver" type="ekap2017:RenteIndberetningPantebreveSummeringType" minOccurs="0"/>
 					</xs:sequence>
 				</xs:complexType>
 			</xs:element>
