@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xs:schema xmlns:ekap2017="http://skat.dk/ekapital/2017/01/01" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://skat.dk/ekapital/2017/01/01" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0">
+<xs:schema xmlns:ekap2018="http://skat.dk/ekapital/2018/01/01" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://skat.dk/ekapital/2018/01/01" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0">
 	<xs:annotation>
 		<xs:documentation/>
 		<xs:documentation>r17702</xs:documentation>
 	</xs:annotation>
 	<xs:include schemaLocation="../class/Indberetning.xsd"/>
-	<xs:element name="IndberetningIdentifikatorStruktur" type="ekap2017:IndberetningIdentifikatorStrukturType"/>
+	<xs:element name="IndberetningIdentifikatorStruktur" type="ekap2018:IndberetningIdentifikatorStrukturType"/>
 	<xs:complexType name="IndberetningIdentifikatorStrukturType">
 		<xs:sequence>
-			<xs:element ref="ekap2017:IndberetningID"/>
+			<xs:element ref="ekap2018:IndberetningID"/>
 			<xs:element name="RettelseID" minOccurs="0">
 				<xs:complexType>
 					<xs:sequence>
-						<xs:element ref="ekap2017:IndberetningID"/>
+						<xs:element ref="ekap2018:IndberetningID"/>
 					</xs:sequence>
 				</xs:complexType>
 			</xs:element>

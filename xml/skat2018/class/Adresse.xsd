@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xs:schema xmlns:ekap2017="http://skat.dk/ekapital/2017/01/01" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://skat.dk/ekapital/2017/01/01" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0">
+<xs:schema xmlns:ekap2018="http://skat.dk/ekapital/2018/01/01" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://skat.dk/ekapital/2018/01/01" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0">
 	<xs:annotation>
 		<xs:documentation>En superklasse i forhold til de specialiserede klasser: VirksomhedAdresse og PersonAdresse. Indeholder ordnede adresselagringer, hvor hvert adresseelement udfyldes særskilt. Fritekst-adresser benyttes i stedet for, klassen AlternativeAdresse.</xs:documentation>
 	</xs:annotation>
@@ -19,117 +19,117 @@
 	<xs:include schemaLocation="../types/LandsDelType.xsd"/>
 	<xs:include schemaLocation="../types/PostBoksNummerType.xsd"/>
 	<xs:include schemaLocation="../types/DatoType.xsd"/>
-	<xs:element name="AdresseFortløbendeNummer" type="ekap2017:VirksomhedAdresseLøbeNummerType">
+	<xs:element name="AdresseFortløbendeNummer" type="ekap2018:VirksomhedAdresseLøbeNummerType">
 		<xs:annotation>
 			<xs:documentation>Angiver fortløbende nummerering ved flere adresser af samme type og på samme tidspunkt.</xs:documentation>
 		</xs:annotation>
 	</xs:element>
-	<xs:element name="AdresseAnvendelseKode" type="ekap2017:AdresseAnvendelseKodeType">
+	<xs:element name="AdresseAnvendelseKode" type="ekap2018:AdresseAnvendelseKodeType">
 		<xs:annotation>
 			<xs:documentation>Kode som angiver adresseringsmuligheder. 0 = Adressen kan anvendes til direkte adressering 1 = Adressen kan ikke anvendes til direkte adressering 8 = Adressen består kun af navn 9 = Ingen adresse pga. nyt personnummer</xs:documentation>
 		</xs:annotation>
 	</xs:element>
-	<xs:element name="AdresseVejNavn" type="ekap2017:TekstKortType">
+	<xs:element name="AdresseVejNavn" type="ekap2018:TekstKortType">
 		<xs:annotation>
 			<xs:documentation>Angiver navnet  på en vej/gade  i Danmark</xs:documentation>
 		</xs:annotation>
 	</xs:element>
-	<xs:element name="AdresseVejKode" type="ekap2017:VejKodeType">
+	<xs:element name="AdresseVejKode" type="ekap2018:VejKodeType">
 		<xs:annotation>
 			<xs:documentation>Kode der sammen med kommunenummer entydigt identificerer en vej eller en del af en vej i Danmark.</xs:documentation>
 		</xs:annotation>
 	</xs:element>
-	<xs:element name="AdresseFraHusNummer" type="ekap2017:HusNummerType">
+	<xs:element name="AdresseFraHusNummer" type="ekap2018:HusNummerType">
 		<xs:annotation>
 			<xs:documentation>Angiver 1. husnummer i et vejafsnit i gaden eller på vejen.</xs:documentation>
 		</xs:annotation>
 	</xs:element>
-	<xs:element name="AdresseFraHusBogstav" type="ekap2017:HusBogstavType">
+	<xs:element name="AdresseFraHusBogstav" type="ekap2018:HusBogstavType">
 		<xs:annotation>
 			<xs:documentation>Angiver bogstav tilknyttet husnummeret.  Ifølge bekendtgørelse om vejnavne og adresser må kun værdierne A-Z benyttes. På grund af risikoen for forveksling bør bogstaverne I, J, O og Q dog ikke benyttes</xs:documentation>
 		</xs:annotation>
 	</xs:element>
-	<xs:element name="AdresseTilHusNummer" type="ekap2017:HusNummerType">
+	<xs:element name="AdresseTilHusNummer" type="ekap2018:HusNummerType">
 		<xs:annotation>
 			<xs:documentation>Angiver sidste lige husnummer i et vejafsnit i gaden eller på vejen.</xs:documentation>
 		</xs:annotation>
 	</xs:element>
-	<xs:element name="AdresseTilHusBogstav" type="ekap2017:HusBogstavType">
+	<xs:element name="AdresseTilHusBogstav" type="ekap2018:HusBogstavType">
 		<xs:annotation>
 			<xs:documentation>Angiver bogstav tilknyttet husnummeret.  Ifølge bekendtgørelse om vejnavne og adresser må kun værdierne A-Z benyttes. På grund af risikoen for forveksling bør bogstaverne I, J, O og Q dog ikke benyttes</xs:documentation>
 		</xs:annotation>
 	</xs:element>
-	<xs:element name="AdresseLigeUlige" type="ekap2017:LigeUligeType">
+	<xs:element name="AdresseLigeUlige" type="ekap2018:LigeUligeType">
 		<xs:annotation>
 			<xs:documentation>Angivelse om tal er lige eller ulige.</xs:documentation>
 		</xs:annotation>
 	</xs:element>
-	<xs:element name="AdresseLejlighedNummer" type="ekap2017:HusNummerType">
+	<xs:element name="AdresseLejlighedNummer" type="ekap2018:HusNummerType">
 		<xs:annotation>
 			<xs:documentation>BØR IKKE ANVENDES! Dækkes af AdresseSIdeDørTekst</xs:documentation>
 		</xs:annotation>
 	</xs:element>
-	<xs:element name="AdresseHusNavn" type="ekap2017:NavnType">
+	<xs:element name="AdresseHusNavn" type="ekap2018:NavnType">
 		<xs:annotation>
 			<xs:documentation>Navn på en bygning - fx Christiansborg, Sølyst osv.</xs:documentation>
 		</xs:annotation>
 	</xs:element>
-	<xs:element name="AdresseEtage" type="ekap2017:EtageType">
+	<xs:element name="AdresseEtage" type="ekap2018:EtageType">
 		<xs:annotation>
 			<xs:documentation>BØR IKKE ANVENDES! Dækker det samme som AdresseEtageTekst </xs:documentation>
 		</xs:annotation>
 	</xs:element>
-	<xs:element name="AdresseEtageTekst" type="ekap2017:EtageTekstType">
+	<xs:element name="AdresseEtageTekst" type="ekap2018:EtageTekstType">
 		<xs:annotation>
 			<xs:documentation>Angiver etagen tilknyttet husnummer/husbogstav</xs:documentation>
 		</xs:annotation>
 	</xs:element>
-	<xs:element name="AdresseSideDørTekst" type="ekap2017:SideDørTekstType">
+	<xs:element name="AdresseSideDørTekst" type="ekap2018:SideDørTekstType">
 		<xs:annotation>
 			<xs:documentation>Angiver side/dør tilknyttet husnummer/husbogstav</xs:documentation>
 		</xs:annotation>
 	</xs:element>
-	<xs:element name="AdresseCONavn" type="ekap2017:NavnType">
+	<xs:element name="AdresseCONavn" type="ekap2018:NavnType">
 		<xs:annotation>
 			<xs:documentation>Angiver navn for en CO-adresse (for virksomheder)</xs:documentation>
 		</xs:annotation>
 	</xs:element>
-	<xs:element name="AdressePostNummer" type="ekap2017:PostNummerType">
+	<xs:element name="AdressePostNummer" type="ekap2018:PostNummerType">
 		<xs:annotation>
 			<xs:documentation>Angiver postnummer (4-cifre)</xs:documentation>
 		</xs:annotation>
 	</xs:element>
-	<xs:element name="AdressePostDistrikt" type="ekap2017:PostDistriktType">
+	<xs:element name="AdressePostDistrikt" type="ekap2018:PostDistriktType">
 		<xs:annotation>
 			<xs:documentation>Angiver postdistriktnavn for postnummer</xs:documentation>
 		</xs:annotation>
 	</xs:element>
-	<xs:element name="AdresseLandsBy" type="ekap2017:NavnType">
+	<xs:element name="AdresseLandsBy" type="ekap2018:NavnType">
 		<xs:annotation>
 			<xs:documentation>BØR IKKE ANVENDES! Dækker det samme som ByNavn</xs:documentation>
 		</xs:annotation>
 	</xs:element>
-	<xs:element name="AdresseByNavn" type="ekap2017:NavnType">
+	<xs:element name="AdresseByNavn" type="ekap2018:NavnType">
 		<xs:annotation>
 			<xs:documentation>Angiver bynavn (lokalt stednavn)</xs:documentation>
 		</xs:annotation>
 	</xs:element>
-	<xs:element name="AdresseLandsDel" type="ekap2017:LandsDelType">
+	<xs:element name="AdresseLandsDel" type="ekap2018:LandsDelType">
 		<xs:annotation>
 			<xs:documentation>del af et land, som i geografisk ell. administrativ henseende udgør en enhed</xs:documentation>
 		</xs:annotation>
 	</xs:element>
-	<xs:element name="AdressePostBox" type="ekap2017:PostBoksNummerType">
+	<xs:element name="AdressePostBox" type="ekap2018:PostBoksNummerType">
 		<xs:annotation>
 			<xs:documentation>Angiver postboksnummer</xs:documentation>
 		</xs:annotation>
 	</xs:element>
-	<xs:element name="AdresseGyldigFra" type="ekap2017:DatoType">
+	<xs:element name="AdresseGyldigFra" type="ekap2018:DatoType">
 		<xs:annotation>
 			<xs:documentation>Angiver startdato for adresse (år md dg)</xs:documentation>
 		</xs:annotation>
 	</xs:element>
-	<xs:element name="AdresseGyldigTil" type="ekap2017:DatoType">
+	<xs:element name="AdresseGyldigTil" type="ekap2018:DatoType">
 		<xs:annotation>
 			<xs:documentation>Angiver slutdato for adressen (år md dg)</xs:documentation>
 		</xs:annotation>

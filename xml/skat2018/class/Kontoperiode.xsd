@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xs:schema xmlns:ekap2017="http://skat.dk/ekapital/2017/01/01" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://skat.dk/ekapital/2017/01/01" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0">
+<xs:schema xmlns:ekap2018="http://skat.dk/ekapital/2018/01/01" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://skat.dk/ekapital/2018/01/01" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0">
 	<xs:annotation>
 		<xs:documentation>En periode, hvor centrale dele af en konto ændres, uden at kontoen ophører. Dette kan fx. være ejerskifte eller ændring af kontotype.</xs:documentation>
 	</xs:annotation>
 	<xs:include schemaLocation="../types/DatoType.xsd"/>
-	<xs:element name="KontoperiodeOpstartDato" type="ekap2017:DatoType">
+	<xs:element name="KontoperiodeOpstartDato" type="ekap2018:DatoType">
 		<xs:annotation>
 			<xs:documentation>Dato for hvornår en kontoperiode er påbegyndt. Feltet skal ikke udfyldes ved oprettelse af kontoen. Angives i formen YYYY-MM-DD.</xs:documentation>
 		</xs:annotation>
 	</xs:element>
-	<xs:element name="KontoperiodeOphørDato" type="ekap2017:DatoType">
+	<xs:element name="KontoperiodeOphørDato" type="ekap2018:DatoType">
 		<xs:annotation>
 			<xs:documentation>Dato for hvornår en kontoperiode ophører. Feltet skal ikke udfyldes ved ophør af kontoen. Angives i formen YYYY-MM-DD.</xs:documentation>
 		</xs:annotation>

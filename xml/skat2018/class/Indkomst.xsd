@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xs:schema xmlns:ekap2017="http://skat.dk/ekapital/2017/01/01" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://skat.dk/ekapital/2017/01/01" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0">
+<xs:schema xmlns:ekap2018="http://skat.dk/ekapital/2018/01/01" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://skat.dk/ekapital/2018/01/01" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0">
 	<xs:annotation>
 		<xs:documentation>Begrebet dækker over en indkomst i en given periode inden for et indkomstår.</xs:documentation>
 	</xs:annotation>
 	<xs:include schemaLocation="../types/AarType.xsd"/>
 	<xs:include schemaLocation="../types/DatoType.xsd"/>
-	<xs:element name="IndkomstÅr" type="ekap2017:AarType">
+	<xs:element name="IndkomstÅr" type="ekap2018:AarType">
 		<xs:annotation>
 			<xs:documentation>Det år, hvor den indkomst, der er lagt til grund for skatteberegningen, er indtjent.</xs:documentation>
 		</xs:annotation>
 	</xs:element>
-	<xs:element name="IndkomstPeriodeFra" type="ekap2017:DatoType">
+	<xs:element name="IndkomstPeriodeFra" type="ekap2018:DatoType">
 		<xs:annotation>
 			<xs:documentation>Startdato for den indkomstperiode, der ligger til grund for en potentiel skatteberegning:  Perioden skal altid refererer til et IndkomstÅr.  Perioden kan godt være sammenfaldende med et IndkomstÅr.  Perioden kan godt være være mindre end et IndkomstÅr.  Perioden må IKKE være længere end et IndkomstÅr.</xs:documentation>
 		</xs:annotation>
 	</xs:element>
-	<xs:element name="IndkomstPeriodeTil" type="ekap2017:DatoType">
+	<xs:element name="IndkomstPeriodeTil" type="ekap2018:DatoType">
 		<xs:annotation>
 			<xs:documentation>Slutdato for den indkomstperiode, der ligger til grund for en potentiel skatteberegning:  Perioden skal altid refererer til et IndkomstÅr.  Perioden kan godt være sammenfaldende med et IndkomstÅr.  Perioden kan godt være mindre end et IndkomstÅr.  Perioden må IKKE være længere end et IndkomstÅr.</xs:documentation>
 		</xs:annotation>

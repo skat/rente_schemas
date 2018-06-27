@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xs:schema xmlns:ekap2017="http://skat.dk/ekapital/2017/01/01" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://skat.dk/ekapital/2017/01/01" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0">
+<xs:schema xmlns:ekap2018="http://skat.dk/ekapital/2018/01/01" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://skat.dk/ekapital/2018/01/01" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0">
 	<xs:annotation>
 		<xs:documentation>Abstrakt kontobegreb, som dækker over alle slags konti eller kontilignende typer.</xs:documentation>
 	</xs:annotation>
 	<xs:include schemaLocation="../types/DatoType.xsd"/>
 	<xs:include schemaLocation="../types/Tekst30Type.xsd"/>
-	<xs:element name="KontoStartDato" type="ekap2017:DatoType">
+	<xs:element name="KontoStartDato" type="ekap2018:DatoType">
 		<xs:annotation>
 			<xs:documentation>KontoStartDato angives i formen YYYY-MM-DD og skal altid indberettes. Angiver dato for kontoens oprettelse.</xs:documentation>
 		</xs:annotation>
 	</xs:element>
-	<xs:element name="KontoOphørDato" type="ekap2017:DatoType">
+	<xs:element name="KontoOphørDato" type="ekap2018:DatoType">
 		<xs:annotation>
 			<xs:documentation>KontoOphørDato angives i formen YYYY-MM-DD og angiver dato for kontoens ophør.</xs:documentation>
 		</xs:annotation>
 	</xs:element>
-	<xs:element name="KontoID" type="ekap2017:Tekst30Type">
+	<xs:element name="KontoID" type="ekap2018:Tekst30Type">
 		<xs:annotation>
 			<xs:documentation>KontoID er den unikke revisionsmæssige nøgle til en konto (indenfor et SE-/CVRnummer). På en bankkonto kan dette fx. være kombinationen af registrerings- og kontonummer, hos en advokat kan det fx være sagsnummer etc.</xs:documentation>
 		</xs:annotation>

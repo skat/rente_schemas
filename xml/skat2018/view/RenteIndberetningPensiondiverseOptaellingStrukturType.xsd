@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xs:schema xmlns:ekap2017="http://skat.dk/ekapital/2017/01/01" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://skat.dk/ekapital/2017/01/01" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0">
+<xs:schema xmlns:ekap2018="http://skat.dk/ekapital/2018/01/01" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://skat.dk/ekapital/2018/01/01" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0">
 	<xs:annotation>
 		<xs:documentation/>
 		<xs:documentation>r17702</xs:documentation>
@@ -8,11 +8,11 @@
 	<xs:include schemaLocation="../types/BeloebPositivNegativ20Decimaler2Type.xsd"/>
 	<xs:complexType name="RenteIndberetningPensiondiverseSummeringType">
 		<xs:sequence>
-			<xs:element name="PensionKapitalværdi" type="ekap2017:BeløbPositivNegativ20Decimaler2Type"/>
-			<xs:element name="PensionsordningBeløb" type="ekap2017:BeløbPositivNegativ20Decimaler2Type"/>
+			<xs:element name="PensionKapitalværdi" type="ekap2018:BeløbPositivNegativ20Decimaler2Type"/>
+			<xs:element name="PensionsordningBeløb" type="ekap2018:BeløbPositivNegativ20Decimaler2Type"/>
 		</xs:sequence>
 	</xs:complexType>
-	<xs:element name="RenteIndberetningPensiondiverseOptællingStruktur" type="ekap2017:RenteIndberetningPensiondiverseOptællingStrukturType"/>
+	<xs:element name="RenteIndberetningPensiondiverseOptællingStruktur" type="ekap2018:RenteIndberetningPensiondiverseOptællingStrukturType"/>
 	<xs:complexType name="RenteIndberetningPensiondiverseOptællingStrukturType">
 		<xs:sequence>
 			<xs:element name="AntalKonti">
@@ -21,56 +21,56 @@
 						<xs:element name="Total">
 							<xs:complexType>
 								<xs:sequence>
-									<xs:element ref="ekap2017:OptællingAntal"/>
+									<xs:element ref="ekap2018:OptællingAntal"/>
 								</xs:sequence>
 							</xs:complexType>
 						</xs:element>
 						<xs:element name="GodkendtKonto">
 							<xs:complexType>
 								<xs:sequence>
-									<xs:element ref="ekap2017:OptællingAntal"/>
+									<xs:element ref="ekap2018:OptællingAntal"/>
 								</xs:sequence>
 							</xs:complexType>
 						</xs:element>
 						<xs:element name="GodkendtKontoAdvis">
 							<xs:complexType>
 								<xs:sequence>
-									<xs:element ref="ekap2017:OptællingAntal"/>
+									<xs:element ref="ekap2018:OptællingAntal"/>
 								</xs:sequence>
 							</xs:complexType>
 						</xs:element>
 						<xs:element name="FejlKontohaver">
 							<xs:complexType>
 								<xs:sequence>
-									<xs:element ref="ekap2017:OptællingAntal"/>
+									<xs:element ref="ekap2018:OptællingAntal"/>
 								</xs:sequence>
 							</xs:complexType>
 						</xs:element>
 						<xs:element name="FejlKonto">
 							<xs:complexType>
 								<xs:sequence>
-									<xs:element ref="ekap2017:OptællingAntal"/>
+									<xs:element ref="ekap2018:OptællingAntal"/>
 								</xs:sequence>
 							</xs:complexType>
 						</xs:element>
 						<xs:element name="FejlIndberetning">
 							<xs:complexType>
 								<xs:sequence>
-									<xs:element ref="ekap2017:OptællingAntal"/>
+									<xs:element ref="ekap2018:OptællingAntal"/>
 								</xs:sequence>
 							</xs:complexType>
 						</xs:element>
 						<xs:element name="FejlFormat">
 							<xs:complexType>
 								<xs:sequence>
-									<xs:element ref="ekap2017:OptællingAntal"/>
+									<xs:element ref="ekap2018:OptællingAntal"/>
 								</xs:sequence>
 							</xs:complexType>
 						</xs:element>
 						<xs:element name="Invalideret">
 							<xs:complexType>
 								<xs:sequence>
-									<xs:element ref="ekap2017:OptællingAntal"/>
+									<xs:element ref="ekap2018:OptællingAntal"/>
 								</xs:sequence>
 							</xs:complexType>
 						</xs:element>
@@ -80,8 +80,8 @@
 			<xs:element name="AnvendtTotalSummering">
 				<xs:complexType>
 					<xs:sequence>
-						<xs:element name="GodkendtKontoOgAdvis" type="ekap2017:RenteIndberetningPensiondiverseSummeringType" minOccurs="0"/>
-						<xs:element name="FejlKontohaver" type="ekap2017:RenteIndberetningPensiondiverseSummeringType" minOccurs="0"/>
+						<xs:element name="GodkendtKontoOgAdvis" type="ekap2018:RenteIndberetningPensiondiverseSummeringType" minOccurs="0"/>
+						<xs:element name="FejlKontohaver" type="ekap2018:RenteIndberetningPensiondiverseSummeringType" minOccurs="0"/>
 					</xs:sequence>
 				</xs:complexType>
 			</xs:element>

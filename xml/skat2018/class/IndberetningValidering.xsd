@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xs:schema xmlns:ekap2017="http://skat.dk/ekapital/2017/01/01" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://skat.dk/ekapital/2017/01/01" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0">
+<xs:schema xmlns:ekap2018="http://skat.dk/ekapital/2018/01/01" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://skat.dk/ekapital/2018/01/01" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0">
 	<xs:annotation>
 		<xs:documentation>Validering af en indberetning, som sendes tilbage til indberetter som del af en forretningsmæssig kvittering.</xs:documentation>
 	</xs:annotation>
 	<xs:include schemaLocation="../types/TekstKortType.xsd"/>
 	<xs:include schemaLocation="../types/Tekst2000Type.xsd"/>
 	<xs:include schemaLocation="../types/TekstLangType.xsd"/>
-	<xs:element name="IndberetningValideringStatus" type="ekap2017:TekstKortType">
+	<xs:element name="IndberetningValideringStatus" type="ekap2018:TekstKortType">
 		<xs:annotation>
 			<xs:documentation>Angiver status for validering af en indberetning: - GodkendtKonto - GodkendtKontoAdvis - FejlKontohaver - FejlKonto - FejlIndberetning - Invalideret   Se uddybning af statuskoderne i den for forretningsområdet relevante vejledning på SKAT.dk.</xs:documentation>
 		</xs:annotation>
 	</xs:element>
-	<xs:element name="IndberetningValideringIdentifikation" type="ekap2017:Tekst2000Type">
+	<xs:element name="IndberetningValideringIdentifikation" type="ekap2018:Tekst2000Type">
 		<xs:annotation>
 			<xs:documentation>Entydig identifikation af et element i en indberetning, som enten er fejlet eller har opsat advis. Kan fx indeholde en xPath.</xs:documentation>
 		</xs:annotation>
 	</xs:element>
-	<xs:element name="IndberetningValideringIdentifikationVærdi" type="ekap2017:TekstLangType">
+	<xs:element name="IndberetningValideringIdentifikationVærdi" type="ekap2018:TekstLangType">
 		<xs:annotation>
 			<xs:documentation>Indeholder værdien af et felt, fra en indberetning, som enten er fejlet eller har opsat advis.</xs:documentation>
 		</xs:annotation>

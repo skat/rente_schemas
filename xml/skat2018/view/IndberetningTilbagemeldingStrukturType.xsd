@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xs:schema xmlns:ekap2017="http://skat.dk/ekapital/2017/01/01" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://skat.dk/ekapital/2017/01/01" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0">
+<xs:schema xmlns:ekap2018="http://skat.dk/ekapital/2018/01/01" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://skat.dk/ekapital/2018/01/01" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0">
 	<xs:annotation>
 		<xs:documentation/>
 		<xs:documentation>r17702</xs:documentation>
@@ -13,45 +13,45 @@
 	<xs:include schemaLocation="../operational/OptaellingAntal.xsd"/>
 	<xs:include schemaLocation="../class/IndberetningFejl.xsd"/>
 	<xs:include schemaLocation="../class/IndberetningAdvis.xsd"/>
-	<xs:element name="IndberetningTilbagemeldingStruktur" type="ekap2017:IndberetningTilbagemeldingStrukturType"/>
+	<xs:element name="IndberetningTilbagemeldingStruktur" type="ekap2018:IndberetningTilbagemeldingStrukturType"/>
 	<xs:complexType name="IndberetningTilbagemeldingStrukturType">
 		<xs:sequence>
 			<xs:element name="Indberetningsperiode">
 				<xs:complexType>
 					<xs:sequence>
-						<xs:element ref="ekap2017:IndkomstÅr"/>
-						<xs:element ref="ekap2017:IndkomstPeriodeTil" minOccurs="0"/>
+						<xs:element ref="ekap2018:IndkomstÅr"/>
+						<xs:element ref="ekap2018:IndkomstPeriodeTil" minOccurs="0"/>
 					</xs:sequence>
 				</xs:complexType>
 			</xs:element>
 			<xs:element name="Indberetningspligtig">
 				<xs:complexType>
 					<xs:sequence>
-						<xs:element ref="ekap2017:VirksomhedSENummer"/>
+						<xs:element ref="ekap2018:VirksomhedSENummer"/>
 					</xs:sequence>
 				</xs:complexType>
 			</xs:element>
-			<xs:element ref="ekap2017:KontoID"/>
+			<xs:element ref="ekap2018:KontoID"/>
 			<xs:element name="TilbagemeldingOplysninger">
 				<xs:complexType>
 					<xs:sequence>
-						<xs:element ref="ekap2017:MasseindleveringReference" minOccurs="0"/>
-						<xs:element ref="ekap2017:IndberetningID" minOccurs="0"/>
-						<xs:element ref="ekap2017:IndberetningValideringStatus"/>
+						<xs:element ref="ekap2018:MasseindleveringReference" minOccurs="0"/>
+						<xs:element ref="ekap2018:IndberetningID" minOccurs="0"/>
+						<xs:element ref="ekap2018:IndberetningValideringStatus"/>
 						<xs:element name="AntalKontohavere">
 							<xs:complexType>
 								<xs:sequence>
 									<xs:element name="Total">
 										<xs:complexType>
 											<xs:sequence>
-												<xs:element ref="ekap2017:OptællingAntal"/>
+												<xs:element ref="ekap2018:OptællingAntal"/>
 											</xs:sequence>
 										</xs:complexType>
 									</xs:element>
 									<xs:element name="MedFejl">
 										<xs:complexType>
 											<xs:sequence>
-												<xs:element ref="ekap2017:OptællingAntal"/>
+												<xs:element ref="ekap2018:OptællingAntal"/>
 											</xs:sequence>
 										</xs:complexType>
 									</xs:element>
@@ -61,21 +61,21 @@
 												<xs:element name="Total">
 													<xs:complexType>
 														<xs:sequence>
-															<xs:element ref="ekap2017:OptællingAntal"/>
+															<xs:element ref="ekap2018:OptællingAntal"/>
 														</xs:sequence>
 													</xs:complexType>
 												</xs:element>
 												<xs:element name="UdenAdvis">
 													<xs:complexType>
 														<xs:sequence>
-															<xs:element ref="ekap2017:OptællingAntal"/>
+															<xs:element ref="ekap2018:OptællingAntal"/>
 														</xs:sequence>
 													</xs:complexType>
 												</xs:element>
 												<xs:element name="MedAdvis">
 													<xs:complexType>
 														<xs:sequence>
-															<xs:element ref="ekap2017:OptællingAntal"/>
+															<xs:element ref="ekap2018:OptællingAntal"/>
 														</xs:sequence>
 													</xs:complexType>
 												</xs:element>
@@ -91,16 +91,16 @@
 									<xs:element name="Fejl" minOccurs="0" maxOccurs="unbounded">
 										<xs:complexType>
 											<xs:sequence>
-												<xs:element ref="ekap2017:IndberetningFejlNummer"/>
-												<xs:element ref="ekap2017:IndberetningFejlTekst"/>
+												<xs:element ref="ekap2018:IndberetningFejlNummer"/>
+												<xs:element ref="ekap2018:IndberetningFejlTekst"/>
 												<xs:element name="IdentifikationFeltListe" minOccurs="0">
 													<xs:complexType>
 														<xs:sequence>
 															<xs:element name="Felt" minOccurs="1" maxOccurs="unbounded">
 																<xs:complexType>
 																	<xs:sequence>
-																		<xs:element ref="ekap2017:IndberetningValideringIdentifikation"/>
-																		<xs:element ref="ekap2017:IndberetningValideringIdentifikationVærdi" minOccurs="0"/>
+																		<xs:element ref="ekap2018:IndberetningValideringIdentifikation"/>
+																		<xs:element ref="ekap2018:IndberetningValideringIdentifikationVærdi" minOccurs="0"/>
 																	</xs:sequence>
 																</xs:complexType>
 															</xs:element>
@@ -119,16 +119,16 @@
 									<xs:element name="Advis" minOccurs="0" maxOccurs="unbounded">
 										<xs:complexType>
 											<xs:sequence>
-												<xs:element ref="ekap2017:IndberetningAdvisNummer"/>
-												<xs:element ref="ekap2017:IndberetningAdvisTekst"/>
+												<xs:element ref="ekap2018:IndberetningAdvisNummer"/>
+												<xs:element ref="ekap2018:IndberetningAdvisTekst"/>
 												<xs:element name="IdentifikationFeltListe" minOccurs="0">
 													<xs:complexType>
 														<xs:sequence>
 															<xs:element name="Felt" minOccurs="1" maxOccurs="unbounded">
 																<xs:complexType>
 																	<xs:sequence>
-																		<xs:element ref="ekap2017:IndberetningValideringIdentifikation"/>
-																		<xs:element ref="ekap2017:IndberetningValideringIdentifikationVærdi" minOccurs="0"/>
+																		<xs:element ref="ekap2018:IndberetningValideringIdentifikation"/>
+																		<xs:element ref="ekap2018:IndberetningValideringIdentifikationVærdi" minOccurs="0"/>
 																	</xs:sequence>
 																</xs:complexType>
 															</xs:element>
@@ -147,7 +147,7 @@
 									<xs:element name="IdentifikationKontohaver" minOccurs="0" maxOccurs="unbounded">
 										<xs:complexType>
 											<xs:sequence>
-												<xs:element ref="ekap2017:IndberetningValideringIdentifikation"/>
+												<xs:element ref="ekap2018:IndberetningValideringIdentifikation"/>
 											</xs:sequence>
 										</xs:complexType>
 									</xs:element>

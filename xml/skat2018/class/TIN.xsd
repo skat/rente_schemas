@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xs:schema xmlns:ekap2017="http://skat.dk/ekapital/2017/01/01" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://skat.dk/ekapital/2017/01/01" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0">
+<xs:schema xmlns:ekap2018="http://skat.dk/ekapital/2018/01/01" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://skat.dk/ekapital/2018/01/01" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0">
 	<xs:annotation>
 		<xs:documentation>Tax Identification Number - et nummer som i skatteforhold identificerer en person eller virksomhed i et givent land. Nogle lande har ingen og nogle har flere typer.</xs:documentation>
 	</xs:annotation>
 	<xs:include schemaLocation="../types/Tekst25Type.xsd"/>
 	<xs:include schemaLocation="../types/KodeType.xsd"/>
-	<xs:element name="TINNummer" type="ekap2017:Tekst25Type">
+	<xs:element name="TINNummer" type="ekap2018:Tekst25Type">
 		<xs:annotation>
 			<xs:documentation>Identifikationen Tax Identification Number (TIN).  Retmæssig ejers skattemæssige ID-nr. efter bopælslandets regler.</xs:documentation>
 		</xs:annotation>
 	</xs:element>
-	<xs:element name="TINType" type="ekap2017:KodeType">
+	<xs:element name="TINType" type="ekap2018:KodeType">
 		<xs:annotation>
 			<xs:documentation>TINType kan have numrene 1, 2 eller 3, der betyder følgende: .  TinTyoe 1 betyder, at TINNummer skal angives. TinType 2 betyder, at fødselsdato (TINNummer kendes ikke) og Fødeland skal angives.  -vælges TinTypeKode 2 ikke, er Fødeland et valgfrit felt  TinType 3 betyder. at TINNummer, fødselsdato og Fødeland ikke kræves angivet.   </xs:documentation>
 		</xs:annotation>

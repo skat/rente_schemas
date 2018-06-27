@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xs:schema xmlns:ekap2017="http://skat.dk/ekapital/2017/01/01" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://skat.dk/ekapital/2017/01/01" elementFormDefault="qualified" version="1.0">
+<xs:schema xmlns:ekap2018="http://skat.dk/ekapital/2018/01/01" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://skat.dk/ekapital/2018/01/01" elementFormDefault="qualified" version="1.0">
 	<xs:include schemaLocation="../types/BeloebPositivNegativ20Decimaler2Type.xsd"/>
-	<xs:element name="SumAfvigelseBeløb" type="ekap2017:BeløbPositivNegativ20Decimaler2Type">
+	<xs:element name="SumAfvigelseBeløb" type="ekap2018:BeløbPositivNegativ20Decimaler2Type">
 		<xs:annotation>
 			<xs:documentation>Angiver afvigelsen mellem to summerede beløb, som en absolut værdi. Angivet i danske kroner uagtet hvilken valuta kontoen er ført i.</xs:documentation>
 		</xs:annotation>

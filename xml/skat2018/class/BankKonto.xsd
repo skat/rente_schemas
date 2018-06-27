@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xs:schema xmlns:ekap2017="http://skat.dk/ekapital/2017/01/01" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://skat.dk/ekapital/2017/01/01" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0">
+<xs:schema xmlns:ekap2018="http://skat.dk/ekapital/2018/01/01" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://skat.dk/ekapital/2018/01/01" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0">
 	<xs:annotation>
 		<xs:documentation>Dansk eller udenlandsk bankkonto</xs:documentation>
 	</xs:annotation>
 	<xs:include schemaLocation="../types/IBANNummerType.xsd"/>
 	<xs:include schemaLocation="../types/KontoNummerType.xsd"/>
 	<xs:include schemaLocation="../types/TekstKortType.xsd"/>
-	<xs:element name="BankKontoIBANNummer" type="ekap2017:IBANNummerType">
+	<xs:element name="BankKontoIBANNummer" type="ekap2018:IBANNummerType">
 	</xs:element>
-	<xs:element name="BankKontoNummer" type="ekap2017:KontoNummerType">
+	<xs:element name="BankKontoNummer" type="ekap2018:KontoNummerType">
 		<xs:annotation>
 			<xs:documentation>Bankkontonummer. For danske bankkonti identificerer dette kontoen i kombination med bankens registereringsnummer. For udenlandske det fulde kontonummer som sammen med bankens BIC/SWIFT-kode identificerer kontoen.</xs:documentation>
 		</xs:annotation>
 	</xs:element>
-	<xs:element name="BankKontoOBANNummer" type="ekap2017:TekstKortType">
+	<xs:element name="BankKontoOBANNummer" type="ekap2018:TekstKortType">
 		<xs:annotation>
 			<xs:documentation>IBAN-nr (International Bank Account Number)  Bankkontonummer, hvis IBAN nummer ikke er relevant eller tilgængelig.  Udfyldes kun af pengeinstitutter, og er obligatorisk for disse. </xs:documentation>
 		</xs:annotation>

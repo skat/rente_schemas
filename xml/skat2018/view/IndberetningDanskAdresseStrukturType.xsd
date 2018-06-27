@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xs:schema xmlns:ekap2017="http://skat.dk/ekapital/2017/01/01" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://skat.dk/ekapital/2017/01/01" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0">
+<xs:schema xmlns:ekap2018="http://skat.dk/ekapital/2018/01/01" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://skat.dk/ekapital/2018/01/01" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0">
 	<xs:annotation>
 		<xs:documentation/>
 		<xs:documentation>r17702</xs:documentation>
 	</xs:annotation>
 	<xs:include schemaLocation="../class/Adresse.xsd"/>
-	<xs:element name="IndberetningDanskAdresseStruktur" type="ekap2017:IndberetningDanskAdresseStrukturType"/>
+	<xs:element name="IndberetningDanskAdresseStruktur" type="ekap2018:IndberetningDanskAdresseStrukturType"/>
 	<xs:complexType name="IndberetningDanskAdresseStrukturType">
 		<xs:sequence>
-			<xs:element ref="ekap2017:AdresseVejNavn" minOccurs="0"/>
-			<xs:element ref="ekap2017:AdresseFraHusNummer" minOccurs="0"/>
-			<xs:element ref="ekap2017:AdresseTilHusNummer" minOccurs="0"/>
-			<xs:element ref="ekap2017:AdresseFraHusBogstav" minOccurs="0"/>
-			<xs:element ref="ekap2017:AdresseTilHusBogstav" minOccurs="0"/>
-			<xs:element ref="ekap2017:AdresseEtageTekst" minOccurs="0"/>
-			<xs:element ref="ekap2017:AdresseSideDørTekst" minOccurs="0"/>
-			<xs:element ref="ekap2017:AdresseCONavn" minOccurs="0"/>
-			<xs:element ref="ekap2017:AdressePostNummer" minOccurs="0"/>
-			<xs:element ref="ekap2017:AdressePostDistrikt" minOccurs="0"/>
-			<xs:element ref="ekap2017:AdresseByNavn" minOccurs="0"/>
-			<xs:element ref="ekap2017:AdressePostBox" minOccurs="0"/>
+			<xs:element ref="ekap2018:AdresseVejNavn" minOccurs="0"/>
+			<xs:element ref="ekap2018:AdresseFraHusNummer" minOccurs="0"/>
+			<xs:element ref="ekap2018:AdresseTilHusNummer" minOccurs="0"/>
+			<xs:element ref="ekap2018:AdresseFraHusBogstav" minOccurs="0"/>
+			<xs:element ref="ekap2018:AdresseTilHusBogstav" minOccurs="0"/>
+			<xs:element ref="ekap2018:AdresseEtageTekst" minOccurs="0"/>
+			<xs:element ref="ekap2018:AdresseSideDørTekst" minOccurs="0"/>
+			<xs:element ref="ekap2018:AdresseCONavn" minOccurs="0"/>
+			<xs:element ref="ekap2018:AdressePostNummer" minOccurs="0"/>
+			<xs:element ref="ekap2018:AdressePostDistrikt" minOccurs="0"/>
+			<xs:element ref="ekap2018:AdresseByNavn" minOccurs="0"/>
+			<xs:element ref="ekap2018:AdressePostBox" minOccurs="0"/>
 		</xs:sequence>
 	</xs:complexType>
 </xs:schema>

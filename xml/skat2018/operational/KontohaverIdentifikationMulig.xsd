@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xs:schema xmlns:ekap2017="http://skat.dk/ekapital/2017/01/01" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://skat.dk/ekapital/2017/01/01" elementFormDefault="qualified" version="1.0">
+<xs:schema xmlns:ekap2018="http://skat.dk/ekapital/2018/01/01" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://skat.dk/ekapital/2018/01/01" elementFormDefault="qualified" version="1.0">
 	<xs:include schemaLocation="../types/MarkeringType.xsd"/>
-	<xs:element name="KontohaverIdentifikationMulig" type="ekap2017:MarkeringType">
+	<xs:element name="KontohaverIdentifikationMulig" type="ekap2018:MarkeringType">
 		<xs:annotation>
 			<xs:documentation>true: Indberetter tilkendegiver at tilstrækkelige identifikationsoplysninger for kontohaver haves.  false: Indberetningspligtig tilkendegiver at det trods rimelige anstrengelser ikke har været muligt at indhente alle de krævede identifikationsoplysninger for kontohaver, som er valutarisk udlænding.</xs:documentation>
 		</xs:annotation>

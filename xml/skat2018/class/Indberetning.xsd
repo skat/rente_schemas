@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xs:schema xmlns:ekap2017="http://skat.dk/ekapital/2017/01/01" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://skat.dk/ekapital/2017/01/01" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0">
+<xs:schema xmlns:ekap2018="http://skat.dk/ekapital/2018/01/01" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://skat.dk/ekapital/2018/01/01" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0">
 	<xs:annotation>
 		<xs:documentation>Omfatter de oplysninger, som en indberetningspligtig skal indberette til SKAT for hver af deres relevante kunder.  Synonymer: indberetningsenhed, række, record, individ</xs:documentation>
 	</xs:annotation>
 	<xs:include schemaLocation="../types/Tekst50Type.xsd"/>
 	<xs:include schemaLocation="../types/IndberetningFormType.xsd"/>
 	<xs:include schemaLocation="../types/Tekst255Type.xsd"/>
-	<xs:element name="IndberetningID" type="ekap2017:Tekst50Type">
+	<xs:element name="IndberetningID" type="ekap2018:Tekst50Type">
 		<xs:annotation>
 			<xs:documentation>Indberetters eget ID for en indberetning, som skal være unikt for en given indberetningstype (fx udlånsrente) og for et givet indkomstår.  Synonymer: besked-ID, reference-ID eller indberetningsnummer. </xs:documentation>
 		</xs:annotation>
 	</xs:element>
-	<xs:element name="IndberetningForm" type="ekap2017:IndberetningFormType">
+	<xs:element name="IndberetningForm" type="ekap2018:IndberetningFormType">
 		<xs:annotation>
 			<xs:documentation>Angiver hvilken indberetningstype, der er tale om:   1. Initiel: Indberetningen indeholder nye oplysninger   2. Rettelse: Indberetningen indeholder korrektioner til tidligere indberettede oplysninger   3. Sletning: Indberetningen er en invalidering af seneste indberetning inklusiv historik</xs:documentation>
 		</xs:annotation>
 	</xs:element>
-	<xs:element name="IndberetningReferenceNummer" type="ekap2017:Tekst255Type">
+	<xs:element name="IndberetningReferenceNummer" type="ekap2018:Tekst255Type">
 		<xs:annotation>
 			<xs:documentation>Indberetters egen referencenøgle. Kan anvendes hvis indberetter ønsker at kunne spore indberetninger med en anden nøgle end den der anvendes af SKAT.  Feltet kan ikke anvendes til at give meddelelse til SKAT</xs:documentation>
 		</xs:annotation>

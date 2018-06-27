@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xs:schema xmlns:ekap2017="http://skat.dk/ekapital/2017/01/01" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://skat.dk/ekapital/2017/01/01" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0">
+<xs:schema xmlns:ekap2018="http://skat.dk/ekapital/2018/01/01" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://skat.dk/ekapital/2018/01/01" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0">
 	<xs:include schemaLocation="../types/BeloebType.xsd"/>
 	<xs:include schemaLocation="../types/Tekst1Type.xsd"/>
-	<xs:element name="KontantlånKurstab" type="ekap2017:BeløbType">
+	<xs:element name="KontantlånKurstab" type="ekap2018:BeløbType">
 		<xs:annotation>
 			<xs:documentation>Fradragsberettiget kurstab ved indfrielse af kontantlån optaget i realkreditinstitutter før 19. maj 1993.  Kurstabet ved indfrielsen fordeles med lige store beløb pr. termin over det nye låns samlede antal terminer.  Indberettes kun af realkreditinstitutter.  Angivet i danske kroner uagtet hvilken valuta kontoen er ført i.</xs:documentation>
 		</xs:annotation>
 	</xs:element>
-	<xs:element name="KontantlånIndfriKode" type="ekap2017:Tekst1Type">
+	<xs:element name="KontantlånIndfriKode" type="ekap2018:Tekst1Type">
 		<xs:annotation>
 			<xs:documentation>Markeringen anvendes kun af realkreditinstitutter.  1 = Helt indfriet 2 = Delvis indfriet </xs:documentation>
 		</xs:annotation>

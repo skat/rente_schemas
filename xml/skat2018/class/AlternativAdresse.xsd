@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xs:schema xmlns:ekap2017="http://skat.dk/ekapital/2017/01/01" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://skat.dk/ekapital/2017/01/01" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0">
+<xs:schema xmlns:ekap2018="http://skat.dk/ekapital/2018/01/01" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://skat.dk/ekapital/2018/01/01" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0">
 	<xs:annotation>
 		<xs:documentation>Indeholder en ustruktureret adresse/fritekstadresse. </xs:documentation>
 	</xs:annotation>
@@ -8,62 +8,62 @@
 	<xs:include schemaLocation="../types/AdresseLinieType.xsd"/>
 	<xs:include schemaLocation="../types/DatoType.xsd"/>
 	<xs:include schemaLocation="../types/UdenlandskKundeIdentType.xsd"/>
-	<xs:element name="AlternativAdresseFortløbendeNummer" type="ekap2017:IdentifikationNummerType">
+	<xs:element name="AlternativAdresseFortløbendeNummer" type="ekap2018:IdentifikationNummerType">
 		<xs:annotation>
 			<xs:documentation>Angiver fortløbende nummerering ved flere adresser af samme type og på samme tidspunkt. Indikerer prioritet.</xs:documentation>
 		</xs:annotation>
 	</xs:element>
-	<xs:element name="AlternativAdresseAnvendelseKode" type="ekap2017:AdresseAnvendelseKodeType">
+	<xs:element name="AlternativAdresseAnvendelseKode" type="ekap2018:AdresseAnvendelseKodeType">
 		<xs:annotation>
 			<xs:documentation>Beskriver adresseringsmuligheder</xs:documentation>
 		</xs:annotation>
 	</xs:element>
-	<xs:element name="AlternativAdresseAdresseLinie1" type="ekap2017:AdresseLinieType">
+	<xs:element name="AlternativAdresseAdresseLinie1" type="ekap2018:AdresseLinieType">
 		<xs:annotation>
 			<xs:documentation>Adresselinje 1</xs:documentation>
 		</xs:annotation>
 	</xs:element>
-	<xs:element name="AlternativAdresseAdresseLinie2" type="ekap2017:AdresseLinieType">
+	<xs:element name="AlternativAdresseAdresseLinie2" type="ekap2018:AdresseLinieType">
 		<xs:annotation>
 			<xs:documentation>Adresselinie 2</xs:documentation>
 		</xs:annotation>
 	</xs:element>
-	<xs:element name="AlternativAdresseAdresseLinie3" type="ekap2017:AdresseLinieType">
+	<xs:element name="AlternativAdresseAdresseLinie3" type="ekap2018:AdresseLinieType">
 		<xs:annotation>
 			<xs:documentation>Adresselinie 3</xs:documentation>
 		</xs:annotation>
 	</xs:element>
-	<xs:element name="AlternativAdresseAdresseLinie4" type="ekap2017:AdresseLinieType">
+	<xs:element name="AlternativAdresseAdresseLinie4" type="ekap2018:AdresseLinieType">
 		<xs:annotation>
 			<xs:documentation>Adresselinie 4</xs:documentation>
 		</xs:annotation>
 	</xs:element>
-	<xs:element name="AlternativAdresseAdresseLinie5" type="ekap2017:AdresseLinieType">
+	<xs:element name="AlternativAdresseAdresseLinie5" type="ekap2018:AdresseLinieType">
 		<xs:annotation>
 			<xs:documentation>Adresselinie 5</xs:documentation>
 		</xs:annotation>
 	</xs:element>
-	<xs:element name="AlternativAdresseAdresseLinie6" type="ekap2017:AdresseLinieType">
+	<xs:element name="AlternativAdresseAdresseLinie6" type="ekap2018:AdresseLinieType">
 		<xs:annotation>
 			<xs:documentation>Adresselinie 6</xs:documentation>
 		</xs:annotation>
 	</xs:element>
-	<xs:element name="AlternativAdresseAdresseLinie7" type="ekap2017:AdresseLinieType">
+	<xs:element name="AlternativAdresseAdresseLinie7" type="ekap2018:AdresseLinieType">
 		<xs:annotation>
 			<xs:documentation>Adresselinie 7</xs:documentation>
 		</xs:annotation>
 	</xs:element>
-	<xs:element name="AlternativAdresseGyldigFra" type="ekap2017:DatoType">
+	<xs:element name="AlternativAdresseGyldigFra" type="ekap2018:DatoType">
 		<xs:annotation>
 			<xs:documentation>Specifik dato (uden start og slutangivelse).</xs:documentation>
 		</xs:annotation>
 	</xs:element>
-	<xs:element name="AlternativAdresseGyldigTil" type="ekap2017:DatoType">
+	<xs:element name="AlternativAdresseGyldigTil" type="ekap2018:DatoType">
 		<xs:annotation>
 			<xs:documentation>Specifik dato (uden start og slutangivelse).</xs:documentation>
 		</xs:annotation>
 	</xs:element>
-	<xs:element name="AlternativAdresseReferenceNummer" type="ekap2017:UdenlandskKundeIdentType">
+	<xs:element name="AlternativAdresseReferenceNummer" type="ekap2018:UdenlandskKundeIdentType">
 		<xs:annotation>
 			<xs:documentation>Anvendes kun for udenlandske kunder og er her optionel. Skal anvendes som en identifikation af kunden i forbindelse med kommunikation med udlandet. Referencenr. kan eksempelvis være et pasnummer. </xs:documentation>
 		</xs:annotation>

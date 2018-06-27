@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xs:schema xmlns:ekap2017="http://skat.dk/ekapital/2017/01/01" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://skat.dk/ekapital/2017/01/01" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0">
+<xs:schema xmlns:ekap2018="http://skat.dk/ekapital/2018/01/01" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://skat.dk/ekapital/2018/01/01" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0">
 	<xs:annotation>
 		<xs:documentation>Finansiel aftale, hvor långiver giver en låntager ret til disponere over et pengebeløb med pligt til at betale det tilbage eventuelt med renter, såkaldt pengelån.  Et lån kan teknisk rumme forskellige karakteristika. Det kan være variabelt forrentet eller have en fast rente i hele løbetiden, evt. med rentetilpasninger. Lånets tilbagebetaling (amortisering) sker almindeligvis med lige store ydelser pr. termin (annuitetslån), med lige store afdrag pr. termin (serielån) eller kun med rentebetaling, indtil lånet tilbagebetales ved udløb.  Et lån kan enten være et indlån eller et udlån.</xs:documentation>
 	</xs:annotation>
@@ -7,37 +7,37 @@
 	<xs:include schemaLocation="../types/BeloebType.xsd"/>
 	<xs:include schemaLocation="../types/TalHel2Type.xsd"/>
 	<xs:include schemaLocation="../types/ProcentType.xsd"/>
-	<xs:element name="LånStartDato" type="ekap2017:DatoType">
+	<xs:element name="LånStartDato" type="ekap2018:DatoType">
 		<xs:annotation>
 			<xs:documentation>Dato for lånets start.  Anføres med låneperiodens startdato, og kun såfremt låneforholdet vedrørende den pågældende låntager er nyt og forfaldstidspunktet for den første termin i låneforholdet er i det kalenderår, der indberettes for.  Anføres også, hvis låntager har overtaget et eksisterende lån, eksempelvis i forbindelse med ejerskifte. I så fald indberettes overtagelsesdatoen for ejendommen som startdato i indberetningen vedrørende køber. Det samme gælder for nye ejerskiftelån, oprettet eller udbetalt før overtagelsesdatoen i sælgers navn, hvor køber overtager gældsforpligtelsen.  Ved øvrige nye lån, også i forbindelse med ejerskifte, skal startdatoen være udbetalingsdatoen.</xs:documentation>
 		</xs:annotation>
 	</xs:element>
-	<xs:element name="LånOpgørelseDato" type="ekap2017:DatoType">
+	<xs:element name="LånOpgørelseDato" type="ekap2018:DatoType">
 		<xs:annotation>
 			<xs:documentation>Dato for lånets opgørelse.  Anføres med låneperiodens opgørelsesdato, og kun såfremt låneforholdet vedrørende den pågældende låntager er ophørt i det kalenderår, der indberettes for.  Anføres også, hvis låneforholdet er overtaget af en anden låntager, eksempelvis i forbindelse med ejerskifte. I så fald indberettes overtagelsesdatoen for ejendommen som opgørelsesdato i indberetningen vedrørende sælger. Det samme gælder for nye ejerskiftelån, oprettet eller udbetalt før overtagelsesdatoen i sælgers navn, hvor køber overtager gældsforpligtelsen.  Ved indfrielse af gamle lån, også i forbindelse med ejerskifte, skal opgørelsesdatoen altid være indfrielsesdatoen. Der indberettes kun de beløb for låneforholdet, der vedrører låneperioden for den pågældende låntager.  Opgørelsesdatoen skal ikke anføres, såfremt låneforholdet for den pågældende låntager ikke er ophørt i kalenderåret.</xs:documentation>
 		</xs:annotation>
 	</xs:element>
-	<xs:element name="LånRestgældBeløb" type="ekap2017:BeløbType">
+	<xs:element name="LånRestgældBeløb" type="ekap2018:BeløbType">
 		<xs:annotation>
 			<xs:documentation>Restgæld pr. 31. december. Angivet i danske kroner uagtet hvilken valuta kontoen er ført i.</xs:documentation>
 		</xs:annotation>
 	</xs:element>
-	<xs:element name="LånRestløbetid" type="ekap2017:TalHel2Type">
+	<xs:element name="LånRestløbetid" type="ekap2018:TalHel2Type">
 		<xs:annotation>
 			<xs:documentation>Restløbetid for lånet.</xs:documentation>
 		</xs:annotation>
 	</xs:element>
-	<xs:element name="LånRentefod" type="ekap2017:ProcentType">
+	<xs:element name="LånRentefod" type="ekap2018:ProcentType">
 		<xs:annotation>
 			<xs:documentation>Rentefod på lånet.</xs:documentation>
 		</xs:annotation>
 	</xs:element>
-	<xs:element name="LånKursværdi" type="ekap2017:BeløbType">
+	<xs:element name="LånKursværdi" type="ekap2018:BeløbType">
 		<xs:annotation>
 			<xs:documentation>Restgældens kursværdi pr. 31. december i det pågældende år.  Angivet i danske kroner uagtet hvilken valuta kontoen er ført i.</xs:documentation>
 		</xs:annotation>
 	</xs:element>
-	<xs:element name="LånIndeståendeBeløb" type="ekap2017:BeløbType">
+	<xs:element name="LånIndeståendeBeløb" type="ekap2018:BeløbType">
 		<xs:annotation>
 			<xs:documentation>Beløb angivet som decimaltal, fx. 1500,00</xs:documentation>
 		</xs:annotation>

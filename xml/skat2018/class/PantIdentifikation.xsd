@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xs:schema xmlns:ekap2017="http://skat.dk/ekapital/2017/01/01" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://skat.dk/ekapital/2017/01/01" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0">
+<xs:schema xmlns:ekap2018="http://skat.dk/ekapital/2018/01/01" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://skat.dk/ekapital/2018/01/01" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0">
 	<xs:annotation>
 		<xs:documentation>Institutterne bruger forskellige udtryk for pantidentifikation. Dette er en fællesbetegnelse.  Også omtalt som lånepantnummer og pantnummer.</xs:documentation>
 	</xs:annotation>
 	<xs:include schemaLocation="../types/Tekst15Type.xsd"/>
-	<xs:element name="PantIdentifikationNummer" type="ekap2017:Tekst15Type">
+	<xs:element name="PantIdentifikationNummer" type="ekap2018:Tekst15Type">
 		<xs:annotation>
 			<xs:documentation>Det hos den indberetningspligtige registrerede nummer (låne/pant- eller kontonummer) for låneforholdet. </xs:documentation>
 		</xs:annotation>

@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xs:schema xmlns:ekap2017="http://skat.dk/ekapital/2017/01/01" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://skat.dk/ekapital/2017/01/01" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0">
+<xs:schema xmlns:ekap2018="http://skat.dk/ekapital/2018/01/01" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://skat.dk/ekapital/2018/01/01" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0">
 	<xs:annotation>
 		<xs:documentation>Angiver virksomhedens primære (officielle) navn, der knytter sig til den primære (officielle) adresse (virksomhedsadressen) og identificerer virksomheden.</xs:documentation>
 	</xs:annotation>
 	<xs:include schemaLocation="../types/NavnType.xsd"/>
 	<xs:include schemaLocation="../types/FirmaNavnKortType.xsd"/>
 	<xs:include schemaLocation="../types/DatoType.xsd"/>
-	<xs:element name="VirksomhedNavnFirmaNavn" type="ekap2017:NavnType">
+	<xs:element name="VirksomhedNavnFirmaNavn" type="ekap2018:NavnType">
 		<xs:annotation>
 			<xs:documentation>Angiver virksomhedens fulde navn.</xs:documentation>
 		</xs:annotation>
 	</xs:element>
-	<xs:element name="VirksomhedNavnFirmaNavnKort" type="ekap2017:FirmaNavnKortType">
+	<xs:element name="VirksomhedNavnFirmaNavnKort" type="ekap2018:FirmaNavnKortType">
 		<xs:annotation>
 			<xs:documentation>Angiver virksomhedens forkortede navn (max 34 karakterer)</xs:documentation>
 		</xs:annotation>
 	</xs:element>
-	<xs:element name="VirksomhedNavnGyldigFra" type="ekap2017:DatoType">
+	<xs:element name="VirksomhedNavnGyldigFra" type="ekap2018:DatoType">
 		<xs:annotation>
 			<xs:documentation>Angiver startdato for virksomhedens navn (år md dg)</xs:documentation>
 		</xs:annotation>
 	</xs:element>
-	<xs:element name="VirksomhedNavnGyldigTil" type="ekap2017:DatoType">
+	<xs:element name="VirksomhedNavnGyldigTil" type="ekap2018:DatoType">
 		<xs:annotation>
 			<xs:documentation>Angiver slutdato for virksomhedens navn (år md dg)</xs:documentation>
 		</xs:annotation>

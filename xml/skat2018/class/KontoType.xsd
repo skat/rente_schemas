@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xs:schema xmlns:ekap2017="http://skat.dk/ekapital/2017/01/01" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://skat.dk/ekapital/2017/01/01" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0">
+<xs:schema xmlns:ekap2018="http://skat.dk/ekapital/2018/01/01" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://skat.dk/ekapital/2018/01/01" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0">
 	<xs:annotation>
 		<xs:documentation>Beskriver typen af bankkonto, fx  almindelig gæld til pengeinstitut, børneopsparingskonto eller prioritetslån.</xs:documentation>
 	</xs:annotation>
 	<xs:include schemaLocation="../types/KodeType.xsd"/>
-	<xs:element name="KontoTypeKode" type="ekap2017:KodeType">
+	<xs:element name="KontoTypeKode" type="ekap2018:KodeType">
 		<xs:annotation>
 			<xs:documentation>Kode, der angiver typen af en konto. </xs:documentation>
 		</xs:annotation>
