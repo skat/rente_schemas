@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:ekap2017="http://skat.dk/ekapital/2017/01/01" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://skat.dk/ekapital/2017/01/01" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0">
+	<xs:annotation>
+		<xs:documentation>En note som kan indeholde en ustrukturereret tekst. Bruges til huskesedler, information til brugere og andre uvigtige oplysninger som opfylder et krav om funktionalitet, men ikke har nogen forretningsmæssig betydning.</xs:documentation>
+	</xs:annotation>
+	<xs:include schemaLocation="../types/TekstLangType.xsd"/>
+	<xs:include schemaLocation="../types/DatoTidType.xsd"/>
+	<xs:element name="NoteTekst" type="ekap2017:TekstLangType">
+		<xs:annotation>
+			<xs:documentation>Fritekstfelt</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:element name="NoteDato" type="ekap2017:DatoTidType">
+		<xs:annotation>
+			<xs:documentation>Dato og tidspunkt for notens oprettelse</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+</xs:schema>

@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:ekap2017="http://skat.dk/ekapital/2017/01/01" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://skat.dk/ekapital/2017/01/01" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0">
+	<xs:annotation>
+		<xs:documentation/>
+		<xs:documentation>r17702</xs:documentation>
+	</xs:annotation>
+	<xs:include schemaLocation="../operational/SumAfvigelseProcent.xsd"/>
+	<xs:include schemaLocation="../operational/SumAfvigelseAntal.xsd"/>
+	<xs:include schemaLocation="../operational/SumAfvigelseBeloeb.xsd"/>
+	<xs:element name="RenteIndberetningUdlånAfvigelseStruktur" type="ekap2017:RenteIndberetningUdlånAfvigelseStrukturType"/>
+	<xs:complexType name="RenteIndberetningUdlånAfvigelseStrukturType">
+		<xs:sequence>
+			<xs:element name="AntalKonti">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="Total">
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element ref="ekap2017:SumAfvigelseProcent" minOccurs="0"/>
+									<xs:element ref="ekap2017:SumAfvigelseAntal"/>
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+						<xs:element name="GodkendtKonto">
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element ref="ekap2017:SumAfvigelseProcent" minOccurs="0"/>
+									<xs:element ref="ekap2017:SumAfvigelseAntal"/>
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+						<xs:element name="GodkendtKontoAdvis">
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element ref="ekap2017:SumAfvigelseProcent" minOccurs="0"/>
+									<xs:element ref="ekap2017:SumAfvigelseAntal"/>
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+						<xs:element name="FejlKontohaver">
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element ref="ekap2017:SumAfvigelseProcent" minOccurs="0"/>
+									<xs:element ref="ekap2017:SumAfvigelseAntal"/>
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+						<xs:element name="FejlKonto">
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element ref="ekap2017:SumAfvigelseProcent" minOccurs="0"/>
+									<xs:element ref="ekap2017:SumAfvigelseAntal"/>
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+						<xs:element name="FejlIndberetning">
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element ref="ekap2017:SumAfvigelseProcent" minOccurs="0"/>
+									<xs:element ref="ekap2017:SumAfvigelseAntal"/>
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+						<xs:element name="FejlFormat">
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element ref="ekap2017:SumAfvigelseProcent" minOccurs="0"/>
+									<xs:element ref="ekap2017:SumAfvigelseAntal"/>
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+						<xs:element name="Invalideret">
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element ref="ekap2017:SumAfvigelseProcent" minOccurs="0"/>
+									<xs:element ref="ekap2017:SumAfvigelseAntal"/>
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="AnvendtTotalSummering">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="GodkendtKontoOgAdvis" minOccurs="0">
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element name="RenteBeløb">
+										<xs:complexType>
+											<xs:sequence>
+												<xs:element ref="ekap2017:SumAfvigelseProcent" minOccurs="0"/>
+												<xs:element ref="ekap2017:SumAfvigelseBeløb"/>
+											</xs:sequence>
+										</xs:complexType>
+									</xs:element>
+									<xs:element name="LånRestgældBeløb" minOccurs="0">
+										<xs:complexType>
+											<xs:sequence>
+												<xs:element ref="ekap2017:SumAfvigelseProcent" minOccurs="0"/>
+												<xs:element ref="ekap2017:SumAfvigelseBeløb"/>
+											</xs:sequence>
+										</xs:complexType>
+									</xs:element>
+									<xs:element name="LånKursværdi" minOccurs="0">
+										<xs:complexType>
+											<xs:sequence>
+												<xs:element ref="ekap2017:SumAfvigelseProcent" minOccurs="0"/>
+												<xs:element ref="ekap2017:SumAfvigelseBeløb"/>
+											</xs:sequence>
+										</xs:complexType>
+									</xs:element>
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+						<xs:element name="FejlKontohaver" minOccurs="0">
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element name="RenteBeløb">
+										<xs:complexType>
+											<xs:sequence>
+												<xs:element ref="ekap2017:SumAfvigelseProcent" minOccurs="0"/>
+												<xs:element ref="ekap2017:SumAfvigelseBeløb"/>
+											</xs:sequence>
+										</xs:complexType>
+									</xs:element>
+									<xs:element name="LånRestgældBeløb" minOccurs="0">
+										<xs:complexType>
+											<xs:sequence>
+												<xs:element ref="ekap2017:SumAfvigelseProcent" minOccurs="0"/>
+												<xs:element ref="ekap2017:SumAfvigelseBeløb"/>
+											</xs:sequence>
+										</xs:complexType>
+									</xs:element>
+									<xs:element name="LånKursværdi" minOccurs="0">
+										<xs:complexType>
+											<xs:sequence>
+												<xs:element ref="ekap2017:SumAfvigelseProcent" minOccurs="0"/>
+												<xs:element ref="ekap2017:SumAfvigelseBeløb"/>
+											</xs:sequence>
+										</xs:complexType>
+									</xs:element>
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

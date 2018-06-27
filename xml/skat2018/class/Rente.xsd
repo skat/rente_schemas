@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:ekap2017="http://skat.dk/ekapital/2017/01/01" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://skat.dk/ekapital/2017/01/01" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0">
+	<xs:annotation>
+		<xs:documentation>Generisk begreb, som dækker over alle typer renter, som anvendes i SKAT, fx ifm med skatteberegning.</xs:documentation>
+	</xs:annotation>
+	<xs:include schemaLocation="../types/BeloebType.xsd"/>
+	<xs:include schemaLocation="../types/Tekst1Type.xsd"/>
+	<xs:include schemaLocation="../types/DatoType.xsd"/>
+	<xs:include schemaLocation="../types/BeloebPositivNegativ20Decimaler2Type.xsd"/>
+	<xs:element name="RenteBeløb" type="ekap2017:BeløbType">
+		<xs:annotation>
+			<xs:documentation>Angiver et givent rentebeløb.</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:element name="RenteValutaStatusKode" type="ekap2017:Tekst1Type">
+		<xs:annotation>
+			<xs:documentation>Feltet skal være udfyldt med en af følgende værdier:  0 = Fordringen er udstedt i danske kr.  1= Fordringen er udstedt i fremmed valuta inkl. EURO </xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:element name="RenteKalkuleretPræmieBeløb" type="ekap2017:BeløbType">
+		<xs:annotation>
+			<xs:documentation>Angiver det kalkulerede præmiebeløb for boligsparekontrakter og uddannelseskonti. Angivet i danske kroner uagtet hvilken valuta kontoen er ført i.</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:element name="RenteTilskrivningDato" type="ekap2017:DatoType">
+		<xs:annotation>
+			<xs:documentation>Dato hvor renten er tilskrevet for den givne periode. Dette er rentedatoen.</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+</xs:schema>

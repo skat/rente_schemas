@@ -1,0 +1,362 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:ekap2017="http://skat.dk/ekapital/2017/01/01" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://skat.dk/ekapital/2017/01/01" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0">
+	<xs:annotation>
+		<xs:documentation/>
+		<xs:documentation>r17702</xs:documentation>
+	</xs:annotation>
+	<xs:include schemaLocation="../class/Indkomst.xsd"/>
+	<xs:include schemaLocation="../class/Virksomhed.xsd"/>
+	<xs:include schemaLocation="../class/Konto.xsd"/>
+	<xs:include schemaLocation="../class/Note.xsd"/>
+	<xs:include schemaLocation="../class/Bank.xsd"/>
+	<xs:include schemaLocation="../class/PantIdentifikation.xsd"/>
+	<xs:include schemaLocation="../class/Deponering.xsd"/>
+	<xs:include schemaLocation="../class/KontoValuta.xsd"/>
+	<xs:include schemaLocation="../class/Rente.xsd"/>
+	<xs:include schemaLocation="../class/Laan.xsd"/>
+	<xs:include schemaLocation="../class/Kontoperiode.xsd"/>
+	<xs:include schemaLocation="../operational/FlereEndToKontohavereIkkeAlleOplyst.xsd"/>
+	<xs:include schemaLocation="../class/LaanForhold.xsd"/>
+	<xs:include schemaLocation="../class/Person.xsd"/>
+	<xs:include schemaLocation="../class/PersonNavn.xsd"/>
+	<xs:include schemaLocation="../operational/VirksomhedFormandAdministrator.xsd"/>
+	<xs:include schemaLocation="../operational/KontohaverIdentifikationMulig.xsd"/>
+	<xs:include schemaLocation="../class/VirksomhedNavn.xsd"/>
+	<xs:include schemaLocation="../operational/KontohaverUkendt.xsd"/>
+	<xs:include schemaLocation="../class/PantebrevDepot.xsd"/>
+	<xs:include schemaLocation="../operational/KontohaverIrrelevant.xsd"/>
+	<xs:include schemaLocation="../view/IndberetningIdentifikatorStrukturType.xsd"/>
+	<xs:include schemaLocation="../view/IndberetningUdenlandskAdresseStrukturType.xsd"/>
+	<xs:include schemaLocation="../view/FoedselInformationStrukturType.xsd"/>
+	<xs:include schemaLocation="../view/TINNummerStrukturType.xsd"/>
+	<xs:element name="RenteIndberetningPantebreveStruktur" type="ekap2017:RenteIndberetningPantebreveStrukturType"/>
+	<xs:complexType name="RenteIndberetningPantebreveStrukturType">
+		<xs:sequence>
+			<xs:element name="Indberetningsperiode">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element ref="ekap2017:IndkomstÅr"/>
+						<xs:element ref="ekap2017:IndkomstPeriodeTil" minOccurs="0"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="Indberetningspligtig">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element ref="ekap2017:VirksomhedSENummer"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element ref="ekap2017:KontoID"/>
+			<xs:element name="IndberetningValg">
+				<xs:complexType>
+					<xs:choice>
+						<xs:sequence>
+							<xs:element name="Invalidering">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element ref="ekap2017:IndberetningIdentifikatorStruktur"/>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+						<xs:sequence>
+							<xs:element name="RetbarKontoOplysninger">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element ref="ekap2017:IndberetningIdentifikatorStruktur"/>
+										<xs:element ref="ekap2017:NoteTekst" minOccurs="0"/>
+										<xs:element name="KontoDetaljer">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="Pengeinstitut" minOccurs="0">
+														<xs:complexType>
+															<xs:sequence>
+																<xs:element ref="ekap2017:BankRegistreringsnummer"/>
+															</xs:sequence>
+														</xs:complexType>
+													</xs:element>
+													<xs:element ref="ekap2017:PantIdentifikationNummer"/>
+													<xs:element ref="ekap2017:DeponeringStartDato"/>
+													<xs:element ref="ekap2017:DeponeringOphørDato" minOccurs="0"/>
+													<xs:element ref="ekap2017:KontoValutaKode" minOccurs="0"/>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="Beløb">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element ref="ekap2017:RenteBeløb"/>
+													<xs:element ref="ekap2017:LånRestgældBeløb" minOccurs="0"/>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="KontoperiodeValg">
+											<xs:complexType>
+												<xs:choice>
+													<xs:sequence>
+														<xs:element name="KontoperiodeÅrsUltimoListe">
+															<xs:complexType>
+																<xs:sequence>
+																	<xs:element name="LånTager">
+																		<xs:complexType>
+																			<xs:sequence>
+																				<xs:element name="KontoperiodeListe">
+																					<xs:complexType>
+																						<xs:sequence>
+																							<xs:element name="Kontoperiode" minOccurs="1" maxOccurs="unbounded">
+																								<xs:complexType>
+																									<xs:sequence>
+																										<xs:element ref="ekap2017:RenteBeløb"/>
+																										<xs:element ref="ekap2017:KontoperiodeOpstartDato" minOccurs="0"/>
+																										<xs:element ref="ekap2017:KontoperiodeOphørDato" minOccurs="0"/>
+																										<xs:element ref="ekap2017:FlereEndToKontohavereIkkeAlleOplyst"/>
+																										<xs:element name="KontohaverListe">
+																											<xs:complexType>
+																												<xs:sequence>
+																													<xs:element name="KontohaverOplysninger" minOccurs="1" maxOccurs="unbounded">
+																														<xs:complexType>
+																															<xs:sequence>
+																																<xs:element ref="ekap2017:LånForholdGældEftergivelseKode" minOccurs="0"/>
+																																<xs:element name="KontohaverValg">
+																																	<xs:complexType>
+																																		<xs:choice>
+																																			<xs:sequence>
+																																				<xs:element name="IndlændingValg">
+																																					<xs:complexType>
+																																						<xs:choice>
+																																							<xs:element ref="ekap2017:PersonCPRNummer"/>
+																																							<xs:element ref="ekap2017:VirksomhedSENummer"/>
+																																						</xs:choice>
+																																					</xs:complexType>
+																																				</xs:element>
+																																			</xs:sequence>
+																																			<xs:sequence>
+																																				<xs:element name="ValutaudlændingValg">
+																																					<xs:complexType>
+																																						<xs:choice>
+																																							<xs:sequence>
+																																								<xs:element name="Person">
+																																									<xs:complexType>
+																																										<xs:sequence>
+																																											<xs:element ref="ekap2017:PersonCPRNummer" minOccurs="0"/>
+																																											<xs:element ref="ekap2017:PersonNavnForNavn"/>
+																																											<xs:element ref="ekap2017:PersonNavnEfterNavn"/>
+																																											<xs:element ref="ekap2017:IndberetningUdenlandskAdresseStruktur" minOccurs="0"/>
+																																											<xs:element ref="ekap2017:FødselInformationStruktur" minOccurs="0"/>
+																																											<xs:element ref="ekap2017:TINNummerStruktur" minOccurs="0"/>
+																																											<xs:element ref="ekap2017:VirksomhedFormandAdministrator"/>
+																																											<xs:element ref="ekap2017:KontohaverIdentifikationMulig"/>
+																																										</xs:sequence>
+																																									</xs:complexType>
+																																								</xs:element>
+																																							</xs:sequence>
+																																							<xs:sequence>
+																																								<xs:element name="Virksomhed">
+																																									<xs:complexType>
+																																										<xs:sequence>
+																																											<xs:element ref="ekap2017:VirksomhedSENummer" minOccurs="0"/>
+																																											<xs:element ref="ekap2017:VirksomhedNavnFirmaNavn"/>
+																																											<xs:element ref="ekap2017:IndberetningUdenlandskAdresseStruktur" minOccurs="0"/>
+																																											<xs:element ref="ekap2017:TINNummerStruktur" minOccurs="0"/>
+																																										</xs:sequence>
+																																									</xs:complexType>
+																																								</xs:element>
+																																							</xs:sequence>
+																																						</xs:choice>
+																																					</xs:complexType>
+																																				</xs:element>
+																																			</xs:sequence>
+																																			<xs:element ref="ekap2017:KontohaverUkendt"/>
+																																		</xs:choice>
+																																	</xs:complexType>
+																																</xs:element>
+																															</xs:sequence>
+																														</xs:complexType>
+																													</xs:element>
+																												</xs:sequence>
+																											</xs:complexType>
+																										</xs:element>
+																									</xs:sequence>
+																								</xs:complexType>
+																							</xs:element>
+																						</xs:sequence>
+																					</xs:complexType>
+																				</xs:element>
+																			</xs:sequence>
+																		</xs:complexType>
+																	</xs:element>
+																	<xs:element name="Depothaver">
+																		<xs:complexType>
+																			<xs:sequence>
+																				<xs:element name="KontoperiodeListe">
+																					<xs:complexType>
+																						<xs:sequence>
+																							<xs:element name="Kontoperiode" minOccurs="1" maxOccurs="unbounded">
+																								<xs:complexType>
+																									<xs:sequence>
+																										<xs:element ref="ekap2017:RenteBeløb"/>
+																										<xs:element ref="ekap2017:PantebrevDepotID"/>
+																										<xs:element ref="ekap2017:PantebrevDepotNummer"/>
+																										<xs:element ref="ekap2017:KontoperiodeOpstartDato" minOccurs="0"/>
+																										<xs:element ref="ekap2017:KontoperiodeOphørDato" minOccurs="0"/>
+																										<xs:element ref="ekap2017:FlereEndToKontohavereIkkeAlleOplyst"/>
+																										<xs:element name="KontohaverListe">
+																											<xs:complexType>
+																												<xs:sequence>
+																													<xs:element name="KontohaverOplysninger" minOccurs="1" maxOccurs="unbounded">
+																														<xs:complexType>
+																															<xs:sequence>
+																																<xs:element name="KontohaverValg">
+																																	<xs:complexType>
+																																		<xs:choice>
+																																			<xs:sequence>
+																																				<xs:element name="IndlændingValg">
+																																					<xs:complexType>
+																																						<xs:choice>
+																																							<xs:element ref="ekap2017:PersonCPRNummer"/>
+																																							<xs:element ref="ekap2017:VirksomhedSENummer"/>
+																																						</xs:choice>
+																																					</xs:complexType>
+																																				</xs:element>
+																																			</xs:sequence>
+																																			<xs:sequence>
+																																				<xs:element name="ValutaudlændingValg">
+																																					<xs:complexType>
+																																						<xs:choice>
+																																							<xs:sequence>
+																																								<xs:element name="Person">
+																																									<xs:complexType>
+																																										<xs:sequence>
+																																											<xs:element ref="ekap2017:PersonCPRNummer" minOccurs="0"/>
+																																											<xs:element ref="ekap2017:PersonNavnForNavn"/>
+																																											<xs:element ref="ekap2017:PersonNavnEfterNavn"/>
+																																											<xs:element ref="ekap2017:IndberetningUdenlandskAdresseStruktur" minOccurs="0"/>
+																																											<xs:element ref="ekap2017:FødselInformationStruktur" minOccurs="0"/>
+																																											<xs:element ref="ekap2017:TINNummerStruktur" minOccurs="0"/>
+																																											<xs:element ref="ekap2017:VirksomhedFormandAdministrator"/>
+																																											<xs:element ref="ekap2017:KontohaverIdentifikationMulig"/>
+																																										</xs:sequence>
+																																									</xs:complexType>
+																																								</xs:element>
+																																							</xs:sequence>
+																																							<xs:sequence>
+																																								<xs:element name="Virksomhed">
+																																									<xs:complexType>
+																																										<xs:sequence>
+																																											<xs:element ref="ekap2017:VirksomhedSENummer" minOccurs="0"/>
+																																											<xs:element ref="ekap2017:VirksomhedNavnFirmaNavn"/>
+																																											<xs:element ref="ekap2017:IndberetningUdenlandskAdresseStruktur" minOccurs="0"/>
+																																											<xs:element ref="ekap2017:TINNummerStruktur" minOccurs="0"/>
+																																										</xs:sequence>
+																																									</xs:complexType>
+																																								</xs:element>
+																																							</xs:sequence>
+																																						</xs:choice>
+																																					</xs:complexType>
+																																				</xs:element>
+																																			</xs:sequence>
+																																			<xs:element ref="ekap2017:KontohaverUkendt"/>
+																																		</xs:choice>
+																																	</xs:complexType>
+																																</xs:element>
+																															</xs:sequence>
+																														</xs:complexType>
+																													</xs:element>
+																												</xs:sequence>
+																											</xs:complexType>
+																										</xs:element>
+																									</xs:sequence>
+																								</xs:complexType>
+																							</xs:element>
+																						</xs:sequence>
+																					</xs:complexType>
+																				</xs:element>
+																			</xs:sequence>
+																		</xs:complexType>
+																	</xs:element>
+																</xs:sequence>
+															</xs:complexType>
+														</xs:element>
+													</xs:sequence>
+													<xs:sequence>
+														<xs:element name="KontoperiodeKvartalListe">
+															<xs:complexType>
+																<xs:sequence>
+																	<xs:element name="LånTager">
+																		<xs:complexType>
+																			<xs:sequence>
+																				<xs:element name="KontoperiodeListe">
+																					<xs:complexType>
+																						<xs:sequence>
+																							<xs:element name="Kontoperiode" minOccurs="1" maxOccurs="unbounded">
+																								<xs:complexType>
+																									<xs:sequence>
+																										<xs:element ref="ekap2017:RenteBeløb"/>
+																										<xs:element ref="ekap2017:KontoperiodeOpstartDato" minOccurs="0"/>
+																										<xs:element ref="ekap2017:KontoperiodeOphørDato" minOccurs="0"/>
+																										<xs:element name="KontohaverListe" minOccurs="0">
+																											<xs:complexType>
+																												<xs:sequence>
+																													<xs:element name="KontohaverOplysninger" minOccurs="1" maxOccurs="2">
+																														<xs:complexType>
+																															<xs:sequence>
+																																<xs:element name="KontohaverValg">
+																																	<xs:complexType>
+																																		<xs:choice>
+																																			<xs:sequence>
+																																				<xs:element name="IndlændingValg">
+																																					<xs:complexType>
+																																						<xs:choice>
+																																							<xs:element ref="ekap2017:PersonCPRNummer"/>
+																																							<xs:element ref="ekap2017:VirksomhedSENummer"/>
+																																						</xs:choice>
+																																					</xs:complexType>
+																																				</xs:element>
+																																			</xs:sequence>
+																																			<xs:sequence>
+																																				<xs:element name="Valutaudlænding">
+																																					<xs:complexType>
+																																						<xs:sequence>
+																																							<xs:element ref="ekap2017:PersonCPRNummer"/>
+																																						</xs:sequence>
+																																					</xs:complexType>
+																																				</xs:element>
+																																			</xs:sequence>
+																																			<xs:element ref="ekap2017:KontohaverUkendt"/>
+																																			<xs:element ref="ekap2017:KontohaverIrrelevant"/>
+																																		</xs:choice>
+																																	</xs:complexType>
+																																</xs:element>
+																															</xs:sequence>
+																														</xs:complexType>
+																													</xs:element>
+																												</xs:sequence>
+																											</xs:complexType>
+																										</xs:element>
+																									</xs:sequence>
+																								</xs:complexType>
+																							</xs:element>
+																						</xs:sequence>
+																					</xs:complexType>
+																				</xs:element>
+																			</xs:sequence>
+																		</xs:complexType>
+																	</xs:element>
+																</xs:sequence>
+															</xs:complexType>
+														</xs:element>
+													</xs:sequence>
+												</xs:choice>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:choice>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:ekap2017="http://skat.dk/ekapital/2017/01/01" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://skat.dk/ekapital/2017/01/01" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0">
+	<xs:include schemaLocation="../types/MarkeringType.xsd"/>
+	<xs:include schemaLocation="../types/TalHel1Type.xsd"/>
+	<xs:include schemaLocation="../types/BeloebType.xsd"/>
+	<xs:element name="LånForholdRestanceMarkering" type="ekap2017:MarkeringType">
+		<xs:annotation>
+			<xs:documentation>Der skal indberettes en særlig markering af renter i låneforhold, hvor der er ubetalte forfaldne renter vedrørende det kalenderår, der går forud for det kalenderår, som indberetningen i øvrigt omfatter. Den ubetalte rente fra året før er en opsummeret rente også fra tidligere indkomstår.  Restancemarkering  En af følgende værdier skal udfyldes   'false': Ingen restance eller betingelser i øvrigt for restancemarkering opfyldt, jf. nedenfor.   'true': Ved udgangen af det kalenderår, indberetning omfatter, er der registreret restancer på samme låneforhold, som er forfaldne senest ved udgangen af det foregående kalenderår.</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:element name="LånForholdGældEftergivelseKode" type="ekap2017:TalHel1Type">
+		<xs:annotation>
+			<xs:documentation>Der foretages markering af låneforhold, hvor der er givet gældseftergivelse. Markeringen skal foretages for låneforhold, hvor gældseftergivelse er aftalt efter lovens ikrafttræden den 1. juni 1995.  Feltet kan udfyldes med følgende værdier:   4: Eftergivelsen er led i en offentlig gældseftergivelse.  5: Eftergivelsen er led i en privat (betinget) gældseftergivelse.   6: Som kode 5, men med en oplysning om, at der for samme debitor er indgået en ny gældseftergivelse i samme låneforhold i indkomståret.  7: Eftergivelse er ophørt.  </xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:element name="LånForholdKalkuleretPræmie" type="ekap2017:BeløbType">
+		<xs:annotation>
+			<xs:documentation>Beløb angivet som decimaltal, fx. 1500,00</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+</xs:schema>

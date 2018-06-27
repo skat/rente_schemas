@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:ekap2017="http://skat.dk/ekapital/2017/01/01" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://skat.dk/ekapital/2017/01/01" elementFormDefault="qualified" version="1.0">
+	<xs:include schemaLocation="../types/TalHelType.xsd"/>
+	<xs:element name="OptællingAntal" type="xs:integer">
+		<xs:annotation>
+			<xs:documentation>Generisk optælling af elementer. Anvendes bl.a. i forretningsmæssige kvitteringer for indberetninger.</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+</xs:schema>

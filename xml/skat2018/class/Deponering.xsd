@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:ekap2017="http://skat.dk/ekapital/2017/01/01" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://skat.dk/ekapital/2017/01/01" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0">
+	<xs:annotation>
+		<xs:documentation>Angiver at et pantebrev er i depot. </xs:documentation>
+	</xs:annotation>
+	<xs:include schemaLocation="../types/DatoType.xsd"/>
+	<xs:element name="DeponeringStartDato" type="ekap2017:DatoType">
+		<xs:annotation>
+			<xs:documentation>Dato for hvornår pantebrev første gang er i depot (renteindberetningspligt til Pantebreve fra denne dato). Angives i formen YYYY-MM-DD.</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:element name="DeponeringOphørDato" type="ekap2017:DatoType">
+		<xs:annotation>
+			<xs:documentation>Dato for hvornår et pantebrev ikke længere er i depot (renteindberetning overgår fra Pantebreve til Udlån). Angives i formen YYYY-MM-DD.</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+</xs:schema>

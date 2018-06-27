@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:ekap2017="http://skat.dk/ekapital/2017/01/01" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://skat.dk/ekapital/2017/01/01" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0">
+	<xs:include schemaLocation="../types/Tekst15Type.xsd"/>
+	<xs:include schemaLocation="../types/BeloebType.xsd"/>
+	<xs:include schemaLocation="../types/TekstKortType.xsd"/>
+	<xs:element name="IndlånKontoNummer" type="ekap2017:Tekst15Type">
+		<xs:annotation>
+			<xs:documentation>Det hos kontoførende registrerede nummer for kontoen. Som kontonummer kan bl.a. benyttes sags-/journalnummer.</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:element name="IndlånKontoIndestående" type="ekap2017:BeløbType">
+		<xs:annotation>
+			<xs:documentation>Kontoens saldo pr. 31. december. Angivet i danske kroner uagtet hvilken valuta kontoen er ført i.</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:element name="IndlånKontoInddragelseStatus" type="ekap2017:TekstKortType">
+		<xs:annotation>
+			<xs:documentation>Indlånskonti, hvor der ikke kan identificeres en ejer kan potentiellt inddrages af staten. Dette felt angiver status for en eventuel proces med at spærre sådan en indlånskonto.  Spærret - Det er ikke muligt at identificere mindst én ejer af kontoen og den  er spærret.   Den angivne status gælder pr 31/12 i det indkomstår der indberettes om.</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+</xs:schema>

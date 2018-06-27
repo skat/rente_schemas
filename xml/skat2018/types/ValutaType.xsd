@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:ekap2017="http://skat.dk/ekapital/2017/01/01" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://skat.dk/ekapital/2017/01/01" elementFormDefault="qualified" version="1.0">
+	<xs:simpleType name="ValutaType">
+		<xs:annotation>
+			<xs:documentation>Angiver valuta enheden (ISO-møntkoden) for et beløb. Fx den som en angivelsen er indberettet i, hvis der er tale om en angivelsestype med beløb.   På nuværende tidspunkt kan SKAT kun modtage angivelser i danske kroner.</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:pattern value="[A-Z]{3}"/>
+		</xs:restriction>
+	</xs:simpleType>
+</xs:schema>

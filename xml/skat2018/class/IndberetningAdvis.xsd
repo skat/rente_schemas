@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:ekap2017="http://skat.dk/ekapital/2017/01/01" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://skat.dk/ekapital/2017/01/01" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0">
+	<xs:annotation>
+		<xs:documentation>Advis der returneres til indberetter i forbindelse med validering af en indberetning. </xs:documentation>
+	</xs:annotation>
+	<xs:include schemaLocation="../types/FejlNummerType.xsd"/>
+	<xs:include schemaLocation="../types/TekstLangType.xsd"/>
+	<xs:element name="IndberetningAdvisNummer" type="ekap2017:FejlNummerType">
+		<xs:annotation>
+			<xs:documentation>Angiver advisnummer ved advis i en indberetning.</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:element name="IndberetningAdvisTekst" type="ekap2017:TekstLangType">
+		<xs:annotation>
+			<xs:documentation>Dette er en lang tekst.</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+</xs:schema>

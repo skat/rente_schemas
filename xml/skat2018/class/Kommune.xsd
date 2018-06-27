@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:ekap2017="http://skat.dk/ekapital/2017/01/01" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://skat.dk/ekapital/2017/01/01" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0">
+	<xs:annotation>
+		<xs:documentation>En kommune i Danmark eller Grønland</xs:documentation>
+	</xs:annotation>
+	<xs:include schemaLocation="../types/KommuneNummerType.xsd"/>
+	<xs:element name="KommuneNummer" type="ekap2017:KommuneNummerType">
+		<xs:annotation>
+			<xs:documentation>En 3-cifret kode som identificerer en kommune. (Nogle systemer tillader dog en række koder som ikke er egentlige kommuner.)</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+</xs:schema>
