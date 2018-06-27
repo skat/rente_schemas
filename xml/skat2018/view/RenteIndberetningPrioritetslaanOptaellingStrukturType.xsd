@@ -2,19 +2,14 @@
 <xs:schema xmlns:ekap2018="http://skat.dk/ekapital/2018/01/01" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://skat.dk/ekapital/2018/01/01" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0">
 	<xs:annotation>
 		<xs:documentation/>
-		<xs:documentation>r17702</xs:documentation>
+		<xs:documentation>r17853</xs:documentation>
 	</xs:annotation>
 	<xs:include schemaLocation="../operational/OptaellingAntal.xsd"/>
-	<xs:include schemaLocation="../types/BeloebPositivNegativ20Decimaler2Type.xsd"/>
-	<xs:complexType name="RenteIndberetningPrioritetslånSummeringType">
-		<xs:sequence>
-			<xs:element name="RenteBeløb" type="ekap2018:BeløbPositivNegativ20Decimaler2Type"/>
-			<xs:element name="LånRestgældBeløb" type="ekap2018:BeløbPositivNegativ20Decimaler2Type" minOccurs="0"/>
-			<xs:element name="LånKursværdi" type="ekap2018:BeløbPositivNegativ20Decimaler2Type" minOccurs="0"/>
-			<xs:element name="KontantlånKurstab" type="ekap2018:BeløbPositivNegativ20Decimaler2Type" minOccurs="0"/>
-			<xs:element name="KapitalIndkomstReserveFondsUdlodningVærdiStigning" type="ekap2018:BeløbPositivNegativ20Decimaler2Type" minOccurs="0"/>
-		</xs:sequence>
-	</xs:complexType>
+	<xs:include schemaLocation="../class/Rente.xsd"/>
+	<xs:include schemaLocation="../operational/LaanRestgaeldBeloebSummering.xsd"/>
+	<xs:include schemaLocation="../operational/LaanKursvaerdiSummering.xsd"/>
+	<xs:include schemaLocation="../operational/KontantlaanKurstabSummering.xsd"/>
+	<xs:include schemaLocation="../operational/KapitalIndkomstReserveFondsUdlodningVaerdiStigningSummering.xsd"/>
 	<xs:element name="RenteIndberetningPrioritetslånOptællingStruktur" type="ekap2018:RenteIndberetningPrioritetslånOptællingStrukturType"/>
 	<xs:complexType name="RenteIndberetningPrioritetslånOptællingStrukturType">
 		<xs:sequence>
@@ -25,6 +20,13 @@
 							<xs:complexType>
 								<xs:sequence>
 									<xs:element ref="ekap2018:OptællingAntal"/>
+									<xs:element name="LånForholdRestance">
+										<xs:complexType>
+											<xs:sequence>
+												<xs:element ref="ekap2018:OptællingAntal"/>
+											</xs:sequence>
+										</xs:complexType>
+									</xs:element>
 								</xs:sequence>
 							</xs:complexType>
 						</xs:element>
@@ -32,6 +34,13 @@
 							<xs:complexType>
 								<xs:sequence>
 									<xs:element ref="ekap2018:OptællingAntal"/>
+									<xs:element name="LånForholdRestance">
+										<xs:complexType>
+											<xs:sequence>
+												<xs:element ref="ekap2018:OptællingAntal"/>
+											</xs:sequence>
+										</xs:complexType>
+									</xs:element>
 								</xs:sequence>
 							</xs:complexType>
 						</xs:element>
@@ -39,6 +48,13 @@
 							<xs:complexType>
 								<xs:sequence>
 									<xs:element ref="ekap2018:OptællingAntal"/>
+									<xs:element name="LånForholdRestance">
+										<xs:complexType>
+											<xs:sequence>
+												<xs:element ref="ekap2018:OptællingAntal"/>
+											</xs:sequence>
+										</xs:complexType>
+									</xs:element>
 								</xs:sequence>
 							</xs:complexType>
 						</xs:element>
@@ -46,6 +62,13 @@
 							<xs:complexType>
 								<xs:sequence>
 									<xs:element ref="ekap2018:OptællingAntal"/>
+									<xs:element name="LånForholdRestance">
+										<xs:complexType>
+											<xs:sequence>
+												<xs:element ref="ekap2018:OptællingAntal"/>
+											</xs:sequence>
+										</xs:complexType>
+									</xs:element>
 								</xs:sequence>
 							</xs:complexType>
 						</xs:element>
@@ -53,6 +76,13 @@
 							<xs:complexType>
 								<xs:sequence>
 									<xs:element ref="ekap2018:OptællingAntal"/>
+									<xs:element name="LånForholdRestance">
+										<xs:complexType>
+											<xs:sequence>
+												<xs:element ref="ekap2018:OptællingAntal"/>
+											</xs:sequence>
+										</xs:complexType>
+									</xs:element>
 								</xs:sequence>
 							</xs:complexType>
 						</xs:element>
@@ -83,8 +113,50 @@
 			<xs:element name="AnvendtTotalSummering">
 				<xs:complexType>
 					<xs:sequence>
-						<xs:element name="GodkendtKontoOgAdvis" type="ekap2018:RenteIndberetningPrioritetslånSummeringType" minOccurs="0"/>
-						<xs:element name="FejlKontohaver" type="ekap2018:RenteIndberetningPrioritetslånSummeringType" minOccurs="0"/>
+						<xs:element name="Total" minOccurs="0">
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element ref="ekap2018:RenteBeløbSummering"/>
+									<xs:element ref="ekap2018:LånRestgældBeløbSummering" minOccurs="0"/>
+									<xs:element ref="ekap2018:LånKursværdiSummering" minOccurs="0"/>
+									<xs:element ref="ekap2018:KontantlånKurstabSummering" minOccurs="0"/>
+									<xs:element ref="ekap2018:KapitalIndkomstReserveFondsUdlodningVærdiStigningSummering" minOccurs="0"/>
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+						<xs:element name="GodkendtKontoOgAdvis" minOccurs="0">
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element ref="ekap2018:RenteBeløbSummering"/>
+									<xs:element ref="ekap2018:LånRestgældBeløbSummering" minOccurs="0"/>
+									<xs:element ref="ekap2018:LånKursværdiSummering" minOccurs="0"/>
+									<xs:element ref="ekap2018:KontantlånKurstabSummering" minOccurs="0"/>
+									<xs:element ref="ekap2018:KapitalIndkomstReserveFondsUdlodningVærdiStigningSummering" minOccurs="0"/>
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+						<xs:element name="FejlKontohaver" minOccurs="0">
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element ref="ekap2018:RenteBeløbSummering"/>
+									<xs:element ref="ekap2018:LånRestgældBeløbSummering" minOccurs="0"/>
+									<xs:element ref="ekap2018:LånKursværdiSummering" minOccurs="0"/>
+									<xs:element ref="ekap2018:KontantlånKurstabSummering" minOccurs="0"/>
+									<xs:element ref="ekap2018:KapitalIndkomstReserveFondsUdlodningVærdiStigningSummering" minOccurs="0"/>
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+						<xs:element name="FejlKonto" minOccurs="0">
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element ref="ekap2018:RenteBeløbSummering"/>
+									<xs:element ref="ekap2018:LånRestgældBeløbSummering" minOccurs="0"/>
+									<xs:element ref="ekap2018:LånKursværdiSummering" minOccurs="0"/>
+									<xs:element ref="ekap2018:KontantlånKurstabSummering" minOccurs="0"/>
+									<xs:element ref="ekap2018:KapitalIndkomstReserveFondsUdlodningVærdiStigningSummering" minOccurs="0"/>
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
 					</xs:sequence>
 				</xs:complexType>
 			</xs:element>

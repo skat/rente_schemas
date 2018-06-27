@@ -27,4 +27,9 @@
 			<xs:documentation>Dato hvor renten er tilskrevet for den givne periode. Dette er rentedatoen.</xs:documentation>
 		</xs:annotation>
 	</xs:element>
+	<xs:element name="RenteBeløbSummering" type="ekap2018:BeløbPositivNegativ20Decimaler2Type">
+		<xs:annotation>
+			<xs:documentation>Angiver en summation af forskellige rente beløb.</xs:documentation>
+		</xs:annotation>
+	</xs:element>
 </xs:schema>

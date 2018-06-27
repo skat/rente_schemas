@@ -2,7 +2,7 @@
 <xs:schema xmlns:ekap2018="http://skat.dk/ekapital/2018/01/01" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://skat.dk/ekapital/2018/01/01" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0">
 	<xs:annotation>
 		<xs:documentation/>
-		<xs:documentation>r17702</xs:documentation>
+		<xs:documentation>r17853</xs:documentation>
 	</xs:annotation>
 	<xs:include schemaLocation="../class/Indkomst.xsd"/>
 	<xs:include schemaLocation="../class/Virksomhed.xsd"/>
@@ -22,8 +22,8 @@
 	<xs:include schemaLocation="../class/KontoType.xsd"/>
 	<xs:include schemaLocation="../operational/FlereEndToKontohavereIkkeAlleOplyst.xsd"/>
 	<xs:include schemaLocation="../class/Person.xsd"/>
-	<xs:include schemaLocation="../class/PersonNavn.xsd"/>
 	<xs:include schemaLocation="../operational/VirksomhedFormandAdministrator.xsd"/>
+	<xs:include schemaLocation="../class/PersonNavn.xsd"/>
 	<xs:include schemaLocation="../operational/KontohaverIdentifikationMulig.xsd"/>
 	<xs:include schemaLocation="../class/VirksomhedNavn.xsd"/>
 	<xs:include schemaLocation="../operational/KontohaverUkendt.xsd"/>
@@ -161,7 +161,16 @@
 																														<xs:element name="IndlændingValg">
 																															<xs:complexType>
 																																<xs:choice>
-																																	<xs:element ref="ekap2018:PersonCPRNummer"/>
+																																	<xs:sequence>
+																																		<xs:element name="Person">
+																																			<xs:complexType>
+																																				<xs:sequence>
+																																					<xs:element ref="ekap2018:PersonCPRNummer"/>
+																																					<xs:element ref="ekap2018:VirksomhedFormandAdministrator"/>
+																																				</xs:sequence>
+																																			</xs:complexType>
+																																		</xs:element>
+																																	</xs:sequence>
 																																	<xs:element ref="ekap2018:VirksomhedSENummer"/>
 																																</xs:choice>
 																															</xs:complexType>
@@ -195,6 +204,7 @@
 																																					<xs:element ref="ekap2018:VirksomhedNavnFirmaNavn"/>
 																																					<xs:element ref="ekap2018:IndberetningUdenlandskAdresseStruktur" minOccurs="0"/>
 																																					<xs:element ref="ekap2018:TINNummerStruktur" minOccurs="0"/>
+																																					<xs:element ref="ekap2018:KontohaverIdentifikationMulig"/>
 																																				</xs:sequence>
 																																			</xs:complexType>
 																																		</xs:element>
@@ -204,6 +214,7 @@
 																														</xs:element>
 																													</xs:sequence>
 																													<xs:element ref="ekap2018:KontohaverUkendt"/>
+																													<xs:element ref="ekap2018:KontohaverIrrelevant"/>
 																												</xs:choice>
 																											</xs:complexType>
 																										</xs:element>

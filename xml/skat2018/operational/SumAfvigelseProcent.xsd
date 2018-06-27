@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns:ekap2018="http://skat.dk/ekapital/2018/01/01" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://skat.dk/ekapital/2018/01/01" elementFormDefault="qualified" version="1.0">
-	<xs:include schemaLocation="../types/ProcentType.xsd"/>
-	<xs:element name="SumAfvigelseProcent" type="ekap2018:ProcentType">
+	<xs:include schemaLocation="../types/TalHelPositivNegativ20UdenDecimalerType.xsd"/>
+	<xs:element name="SumAfvigelseProcent" type="ekap2018:TalHelPositivNegativ20UdenDecimalerType">
 		<xs:annotation>
 			<xs:documentation>Angiver hvor meget en sum afviger fra en anden i procent.</xs:documentation>
 		</xs:annotation>

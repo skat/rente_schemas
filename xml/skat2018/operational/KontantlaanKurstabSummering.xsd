@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns:ekap2018="http://skat.dk/ekapital/2018/01/01" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://skat.dk/ekapital/2018/01/01" elementFormDefault="qualified" version="1.0">
-	<xs:simpleType name="ProcentType">
+	<xs:include schemaLocation="../types/BeloebPositivNegativ20Decimaler2Type.xsd"/>
+	<xs:element name="KontantlånKurstabSummering" type="ekap2018:BeløbPositivNegativ20Decimaler2Type">
 		<xs:annotation>
-			<xs:documentation>Procentuel angivelse med to decimaler.</xs:documentation>
+			<xs:documentation>Angiver en summation af kurstab på kontantlån.</xs:documentation>
 		</xs:annotation>
-		<xs:restriction base="xs:string">
-			<xs:pattern value="(100,00)|([0-9]{1,2}([,][0-9]{1,2}){0,1})"/>
-		</xs:restriction>
-	</xs:simpleType>
+	</xs:element>
 </xs:schema>
