@@ -4,7 +4,6 @@
 		<xs:documentation/>
 		<xs:documentation>r17853</xs:documentation>
 	</xs:annotation>
-	<xs:include schemaLocation="../context/KontekstType.xsd"/>
 	<xs:include schemaLocation="../class/Indkomst.xsd"/>
 	<xs:include schemaLocation="../class/Virksomhed.xsd"/>
 	<xs:include schemaLocation="../class/Konto.xsd"/>
@@ -30,24 +29,9 @@
 	<xs:include schemaLocation="../view/IndberetningUdenlandskAdresseStrukturType.xsd"/>
 	<xs:include schemaLocation="../view/FoedselInformationStrukturType.xsd"/>
 	<xs:include schemaLocation="../view/TINNummerStrukturType.xsd"/>
-	<xs:element name="RenteIndberetningPantebreveStruktur">
-		<xs:complexType>
-			<xs:complexContent>
-				<xs:extension base="ekap2018:RenteIndberetningPantebreveStrukturType">
-					<xs:attribute name="revision">
-						<xs:simpleType>
-							<xs:restriction base="xs:string">
-								<xs:pattern value="r17853"/>
-							</xs:restriction>
-						</xs:simpleType>
-					</xs:attribute>
-				</xs:extension>
-			</xs:complexContent>
-		</xs:complexType>
-	</xs:element>
+	<xs:element name="RenteIndberetningPantebreveStruktur" type="ekap2018:RenteIndberetningPantebreveStrukturType"/>
 	<xs:complexType name="RenteIndberetningPantebreveStrukturType">
 		<xs:sequence>
-			<xs:element ref="ekap2018:Kontekst"/>
 			<xs:element name="Indberetningsperiode">
 				<xs:complexType>
 					<xs:sequence>
