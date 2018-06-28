@@ -3,7 +3,7 @@
 	<xs:include schemaLocation="../types/MarkeringType.xsd"/>
 	<xs:element name="VirksomhedFormandAdministrator" type="ekap2018:MarkeringType">
 		<xs:annotation>
-			<xs:documentation>Angiver om person er formand eller administrator for en udenlandsk virksomhed uden TINnummer og dermed indberettes på vegne af denne</xs:documentation>
+			<xs:documentation>Angiver om person er formand eller administrator for en virksomhed og dermed indberettes på vegne af denne.</xs:documentation>
 		</xs:annotation>
 	</xs:element>
 </xs:schema>

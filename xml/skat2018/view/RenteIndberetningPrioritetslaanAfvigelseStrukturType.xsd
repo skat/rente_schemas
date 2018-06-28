@@ -2,7 +2,7 @@
 <xs:schema xmlns:ekap2018="http://skat.dk/ekapital/2018/01/01" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://skat.dk/ekapital/2018/01/01" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0">
 	<xs:annotation>
 		<xs:documentation/>
-		<xs:documentation>r17853</xs:documentation>
+		<xs:documentation>r17863</xs:documentation>
 	</xs:annotation>
 	<xs:include schemaLocation="../operational/SumAfvigelseProcent.xsd"/>
 	<xs:include schemaLocation="../operational/SumAfvigelseAntal.xsd"/>
@@ -10,7 +10,7 @@
 	<xs:include schemaLocation="../operational/LaanRestgaeldBeloebSummering.xsd"/>
 	<xs:include schemaLocation="../operational/LaanKursvaerdiSummering.xsd"/>
 	<xs:include schemaLocation="../operational/KontantlaanKurstabSummering.xsd"/>
-	<xs:include schemaLocation="../operational/KapitalIndkomstReserveFondsUdlodningVaerdiStigningSummering.xsd"/>
+	<xs:include schemaLocation="../operational/ReservefondUdlodningSummering.xsd"/>
 	<xs:element name="RenteIndberetningPrioritetslånAfvigelseStruktur" type="ekap2018:RenteIndberetningPrioritetslånAfvigelseStrukturType"/>
 	<xs:complexType name="RenteIndberetningPrioritetslånAfvigelseStrukturType">
 		<xs:sequence>
@@ -162,11 +162,11 @@
 											</xs:sequence>
 										</xs:complexType>
 									</xs:element>
-									<xs:element name="KapitalIndkomstReserveFondsUdlodningVærdiStigning" minOccurs="0">
+									<xs:element name="ReservefondUdlodning" minOccurs="0">
 										<xs:complexType>
 											<xs:sequence>
 												<xs:element ref="ekap2018:SumAfvigelseProcent" minOccurs="0"/>
-												<xs:element ref="ekap2018:KapitalIndkomstReserveFondsUdlodningVærdiStigningSummering"/>
+												<xs:element ref="ekap2018:ReservefondUdlodningSummering"/>
 											</xs:sequence>
 										</xs:complexType>
 									</xs:element>
@@ -208,11 +208,11 @@
 											</xs:sequence>
 										</xs:complexType>
 									</xs:element>
-									<xs:element name="KapitalIndkomstReserveFondsUdlodningVærdiStigning" minOccurs="0">
+									<xs:element name="ReservefondUdlodning" minOccurs="0">
 										<xs:complexType>
 											<xs:sequence>
 												<xs:element ref="ekap2018:SumAfvigelseProcent" minOccurs="0"/>
-												<xs:element ref="ekap2018:KapitalIndkomstReserveFondsUdlodningVærdiStigningSummering"/>
+												<xs:element ref="ekap2018:ReservefondUdlodningSummering"/>
 											</xs:sequence>
 										</xs:complexType>
 									</xs:element>
@@ -254,11 +254,11 @@
 											</xs:sequence>
 										</xs:complexType>
 									</xs:element>
-									<xs:element name="KapitalIndkomstReserveFondsUdlodningVærdiStigning" minOccurs="0">
+									<xs:element name="ReservefondUdlodning" minOccurs="0">
 										<xs:complexType>
 											<xs:sequence>
 												<xs:element ref="ekap2018:SumAfvigelseProcent" minOccurs="0"/>
-												<xs:element ref="ekap2018:KapitalIndkomstReserveFondsUdlodningVærdiStigningSummering"/>
+												<xs:element ref="ekap2018:ReservefondUdlodningSummering"/>
 											</xs:sequence>
 										</xs:complexType>
 									</xs:element>
@@ -300,11 +300,11 @@
 											</xs:sequence>
 										</xs:complexType>
 									</xs:element>
-									<xs:element name="KapitalIndkomstReserveFondsUdlodningVærdiStigning" minOccurs="0">
+									<xs:element name="ReservefondUdlodning" minOccurs="0">
 										<xs:complexType>
 											<xs:sequence>
 												<xs:element ref="ekap2018:SumAfvigelseProcent" minOccurs="0"/>
-												<xs:element ref="ekap2018:KapitalIndkomstReserveFondsUdlodningVærdiStigningSummering"/>
+												<xs:element ref="ekap2018:ReservefondUdlodningSummering"/>
 											</xs:sequence>
 										</xs:complexType>
 									</xs:element>

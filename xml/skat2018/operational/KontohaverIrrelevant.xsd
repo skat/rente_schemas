@@ -3,7 +3,7 @@
 	<xs:include schemaLocation="../types/KontohaverUkendtMarkeringType.xsd"/>
 	<xs:element name="KontohaverIrrelevant" type="ekap2018:KontohaverUkendtMarkeringType">
 		<xs:annotation>
-			<xs:documentation>Angiver at der er en kontohaver, som ikke skal identificeres. fx. ved kvartalsindberetninger hvor kun personer med cpr-nr (både indlændinge og udlændinge) og danske enkeltmandsvirksomheder indberettes. Feltet opsættes som tomt tag.</xs:documentation>
+			<xs:documentation>Angiver at der er en kontohaver, som ikke skal identificeres. Feltet opsættes som tomt tag.</xs:documentation>
 		</xs:annotation>
 	</xs:element>
 </xs:schema>

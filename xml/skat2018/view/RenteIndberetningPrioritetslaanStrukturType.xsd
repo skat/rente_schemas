@@ -2,7 +2,7 @@
 <xs:schema xmlns:ekap2018="http://skat.dk/ekapital/2018/01/01" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://skat.dk/ekapital/2018/01/01" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0">
 	<xs:annotation>
 		<xs:documentation/>
-		<xs:documentation>r17853</xs:documentation>
+		<xs:documentation>r17863</xs:documentation>
 	</xs:annotation>
 	<xs:include schemaLocation="../class/Indkomst.xsd"/>
 	<xs:include schemaLocation="../class/Virksomhed.xsd"/>
@@ -16,7 +16,7 @@
 	<xs:include schemaLocation="../class/Rente.xsd"/>
 	<xs:include schemaLocation="../class/Laan.xsd"/>
 	<xs:include schemaLocation="../class/Kontantlaan.xsd"/>
-	<xs:include schemaLocation="../class/KapitalIndkomst.xsd"/>
+	<xs:include schemaLocation="../operational/ReservefondUdlodning.xsd"/>
 	<xs:include schemaLocation="../class/LaanForhold.xsd"/>
 	<xs:include schemaLocation="../class/Kontoperiode.xsd"/>
 	<xs:include schemaLocation="../class/KontoType.xsd"/>
@@ -117,7 +117,7 @@
 													<xs:element ref="ekap2018:LånRestgældBeløb" minOccurs="0"/>
 													<xs:element ref="ekap2018:LånKursværdi" minOccurs="0"/>
 													<xs:element ref="ekap2018:KontantlånKurstab" minOccurs="0"/>
-													<xs:element ref="ekap2018:KapitalIndkomstReserveFondsUdlodningVærdiStigning" minOccurs="0"/>
+													<xs:element ref="ekap2018:ReservefondUdlodning" minOccurs="0"/>
 												</xs:sequence>
 											</xs:complexType>
 										</xs:element>
@@ -134,7 +134,7 @@
 																				<xs:element ref="ekap2018:RenteBeløb"/>
 																				<xs:element ref="ekap2018:KontantlånIndfriKode" minOccurs="0"/>
 																				<xs:element ref="ekap2018:KontantlånKurstab" minOccurs="0"/>
-																				<xs:element ref="ekap2018:KapitalIndkomstReserveFondsUdlodningVærdiStigning" minOccurs="0"/>
+																				<xs:element ref="ekap2018:ReservefondUdlodning" minOccurs="0"/>
 																				<xs:element ref="ekap2018:LånForholdRestanceMarkering"/>
 																				<xs:element ref="ekap2018:KontoperiodeOpstartDato" minOccurs="0"/>
 																				<xs:element ref="ekap2018:KontoperiodeOphørDato" minOccurs="0"/>

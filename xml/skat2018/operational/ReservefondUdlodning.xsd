@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:ekap2018="http://skat.dk/ekapital/2018/01/01" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://skat.dk/ekapital/2018/01/01" elementFormDefault="qualified" version="1.0">
+	<xs:include schemaLocation="../types/BeloebType.xsd"/>
+	<xs:element name="ReservefondUdlodning" type="ekap2018:BeløbType">
+		<xs:annotation>
+			<xs:documentation>Beløbstørrelsen af skattepligtige udlodninger fra realkreditinstitutters reservefonde, for så vidt udlodningen skal indtægtsføres af modtageren i udbetalingsåret.</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+</xs:schema>

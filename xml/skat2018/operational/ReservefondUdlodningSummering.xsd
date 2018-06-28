@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns:ekap2018="http://skat.dk/ekapital/2018/01/01" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://skat.dk/ekapital/2018/01/01" elementFormDefault="qualified" version="1.0">
 	<xs:include schemaLocation="../types/BeloebPositivNegativ20Decimaler2Type.xsd"/>
-	<xs:element name="KapitalIndkomstReserveFondsUdlodningVærdiStigningSummering" type="ekap2018:BeløbPositivNegativ20Decimaler2Type">
+	<xs:element name="ReservefondUdlodningSummering" type="ekap2018:BeløbPositivNegativ20Decimaler2Type">
 		<xs:annotation>
-			<xs:documentation>Angiver en summation af reservefondsudlodninger og kapitalværdistigninger.</xs:documentation>
+			<xs:documentation>Angiver en summation af reservefondsudlodninger.</xs:documentation>
 		</xs:annotation>
 	</xs:element>
 </xs:schema>
