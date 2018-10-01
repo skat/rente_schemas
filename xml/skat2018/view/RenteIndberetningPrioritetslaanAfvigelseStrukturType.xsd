@@ -2,7 +2,7 @@
 <xs:schema xmlns:ekap2018="http://skat.dk/ekapital/2018/01/01" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://skat.dk/ekapital/2018/01/01" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0">
 	<xs:annotation>
 		<xs:documentation/>
-		<xs:documentation>r17863</xs:documentation>
+		<xs:documentation>r18070</xs:documentation>
 	</xs:annotation>
 	<xs:include schemaLocation="../operational/SumAfvigelseProcent.xsd"/>
 	<xs:include schemaLocation="../operational/SumAfvigelseAntal.xsd"/>
@@ -86,14 +86,6 @@
 								<xs:sequence>
 									<xs:element ref="ekap2018:SumAfvigelseProcent" minOccurs="0"/>
 									<xs:element ref="ekap2018:SumAfvigelseAntal"/>
-									<xs:element name="LånForholdRestance">
-										<xs:complexType>
-											<xs:sequence>
-												<xs:element ref="ekap2018:SumAfvigelseProcent" minOccurs="0"/>
-												<xs:element ref="ekap2018:SumAfvigelseAntal"/>
-											</xs:sequence>
-										</xs:complexType>
-									</xs:element>
 								</xs:sequence>
 							</xs:complexType>
 						</xs:element>
