@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:ekap2020="http://skat.dk/ekapital/2020/01/01" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://skat.dk/ekapital/2020/01/01" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0">
+	<xs:annotation>
+		<xs:documentation/>
+		<xs:documentation>r20731</xs:documentation>
+	</xs:annotation>
+	<xs:include schemaLocation="../class/Adresse.xsd"/>
+	<xs:element name="IndberetningDanskAdresseStruktur" type="ekap2020:IndberetningDanskAdresseStrukturType"/>
+	<xs:complexType name="IndberetningDanskAdresseStrukturType">
+		<xs:sequence>
+			<xs:element ref="ekap2020:AdresseVejNavn" minOccurs="0"/>
+			<xs:element ref="ekap2020:AdresseFraHusNummer" minOccurs="0"/>
+			<xs:element ref="ekap2020:AdresseTilHusNummer" minOccurs="0"/>
+			<xs:element ref="ekap2020:AdresseFraHusBogstav" minOccurs="0"/>
+			<xs:element ref="ekap2020:AdresseTilHusBogstav" minOccurs="0"/>
+			<xs:element ref="ekap2020:AdresseEtageTekst" minOccurs="0"/>
+			<xs:element ref="ekap2020:AdresseSideDørTekst" minOccurs="0"/>
+			<xs:element ref="ekap2020:AdresseCONavn" minOccurs="0"/>
+			<xs:element ref="ekap2020:AdressePostNummer" minOccurs="0"/>
+			<xs:element ref="ekap2020:AdressePostDistrikt" minOccurs="0"/>
+			<xs:element ref="ekap2020:AdresseByNavn" minOccurs="0"/>
+			<xs:element ref="ekap2020:AdressePostBox" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

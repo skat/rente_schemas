@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:ekap2020="http://skat.dk/ekapital/2020/01/01" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://skat.dk/ekapital/2020/01/01" elementFormDefault="qualified" version="1.0">
+	<xs:include schemaLocation="../types/DatoType.xsd"/>
+	<xs:element name="IndlånKontoInddragelseSpærringDato" type="ekap2020:DatoType">
+		<xs:annotation>
+			<xs:documentation>Alle gyldige datoer i den danske kalender.</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+</xs:schema>

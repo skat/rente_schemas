@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:ekap2020="http://skat.dk/ekapital/2020/01/01" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://skat.dk/ekapital/2020/01/01" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0">
+	<xs:annotation>
+		<xs:documentation/>
+		<xs:documentation>r20731</xs:documentation>
+	</xs:annotation>
+	<xs:include schemaLocation="../class/Land.xsd"/>
+	<xs:include schemaLocation="../class/IndberetningUdenlandskAdresse.xsd"/>
+	<xs:include schemaLocation="../class/AlternativAdresse.xsd"/>
+	<xs:element name="IndberetningUdenlandskAdresseStruktur" type="ekap2020:IndberetningUdenlandskAdresseStrukturType"/>
+	<xs:complexType name="IndberetningUdenlandskAdresseStrukturType">
+		<xs:sequence>
+			<xs:element ref="ekap2020:LandKode" minOccurs="0"/>
+			<xs:element name="AdresseStruktureret" minOccurs="0">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element ref="ekap2020:IndberetningUdenlandskAdresseVejNavn" minOccurs="0"/>
+						<xs:element ref="ekap2020:IndberetningUdenlandskAdresseHusNummer" minOccurs="0"/>
+						<xs:element ref="ekap2020:IndberetningUdenlandskAdresseSideDørTekst" minOccurs="0"/>
+						<xs:element ref="ekap2020:IndberetningUdenlandskAdresseEtageTekst" minOccurs="0"/>
+						<xs:element ref="ekap2020:IndberetningUdenlandskAdressePostDistrikt" minOccurs="0"/>
+						<xs:element ref="ekap2020:IndberetningUdenlandskAdressePostBoksNummer" minOccurs="0"/>
+						<xs:element ref="ekap2020:IndberetningUdenlandskAdressePostNummer" minOccurs="0"/>
+						<xs:element ref="ekap2020:IndberetningUdenlandskAdresseBy" minOccurs="0"/>
+						<xs:element ref="ekap2020:IndberetningUdenlandskAdresseLandsdel" minOccurs="0"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="AdresseUstruktureret" minOccurs="0">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element ref="ekap2020:AlternativAdresseAdresseLinie1" minOccurs="0"/>
+						<xs:element ref="ekap2020:AlternativAdresseAdresseLinie2" minOccurs="0"/>
+						<xs:element ref="ekap2020:AlternativAdresseAdresseLinie3" minOccurs="0"/>
+						<xs:element ref="ekap2020:AlternativAdresseAdresseLinie4" minOccurs="0"/>
+						<xs:element ref="ekap2020:AlternativAdresseAdresseLinie5" minOccurs="0"/>
+						<xs:element ref="ekap2020:AlternativAdresseAdresseLinie6" minOccurs="0"/>
+						<xs:element ref="ekap2020:AlternativAdresseAdresseLinie7" minOccurs="0"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>
