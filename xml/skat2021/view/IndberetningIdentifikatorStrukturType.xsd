@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:ekap2021="http://skat.dk/ekapital/2021/01/01" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://skat.dk/ekapital/2021/01/01" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0">
+	<xs:annotation>
+		<xs:documentation/>
+		<xs:documentation>r20731</xs:documentation>
+	</xs:annotation>
+	<xs:include schemaLocation="../class/Indberetning.xsd"/>
+	<xs:element name="IndberetningIdentifikatorStruktur" type="ekap2021:IndberetningIdentifikatorStrukturType"/>
+	<xs:complexType name="IndberetningIdentifikatorStrukturType">
+		<xs:sequence>
+			<xs:element ref="ekap2021:IndberetningID"/>
+			<xs:element name="RettelseID" minOccurs="0">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element ref="ekap2021:IndberetningID"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>
