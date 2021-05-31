@@ -4,6 +4,8 @@
 		<xs:annotation>
 			<xs:documentation>Alle gyldige datoer i den danske kalender.</xs:documentation>
 		</xs:annotation>
-		<xs:restriction base="xs:date"/>
+		<xs:restriction base="xs:date">
+			<xs:minInclusive value="1900-01-01"/>
+		</xs:restriction>
 	</xs:simpleType>
 </xs:schema>

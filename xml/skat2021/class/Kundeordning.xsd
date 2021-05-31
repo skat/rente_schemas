@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:ekap2021="http://skat.dk/ekapital/2021/01/01" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://skat.dk/ekapital/2021/01/01" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0">
+	<xs:include schemaLocation="../types/BeloebPositivType.xsd"/>
+	<xs:include schemaLocation="../types/BeloebPositivNegativ20Decimaler2Type.xsd"/>
+	<xs:element name="KundeordningBeløb" type="ekap2021:BeløbPositivType">
+		<xs:annotation>
+			<xs:documentation>Angiver skattepligtigt beløb, som er betalt som led i kunde- eller medlemsprogrammer eller lignende generelle ordninger til de enkelte kunder.</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:element name="KundeordningBeløbSummering" type="ekap2021:BeløbPositivNegativ20Decimaler2Type">
+		<xs:annotation>
+			<xs:documentation>Angiver en summation af forskellige bonusordning beløb.</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+</xs:schema>

@@ -2,12 +2,13 @@
 <xs:schema xmlns:ekap2021="http://skat.dk/ekapital/2021/01/01" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://skat.dk/ekapital/2021/01/01" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0">
 	<xs:annotation>
 		<xs:documentation/>
-		<xs:documentation>r20731</xs:documentation>
+		<xs:documentation>r22710</xs:documentation>
 	</xs:annotation>
 	<xs:include schemaLocation="../operational/SumAfvigelseProcent.xsd"/>
 	<xs:include schemaLocation="../operational/SumAfvigelseAntal.xsd"/>
 	<xs:include schemaLocation="../class/Rente.xsd"/>
 	<xs:include schemaLocation="../operational/LaanRestgaeldBeloebSummering.xsd"/>
+	<xs:include schemaLocation="../class/Kundeordning.xsd"/>
 	<xs:element name="RenteIndberetningUdlånAfvigelseStruktur" type="ekap2021:RenteIndberetningUdlånAfvigelseStrukturType"/>
 	<xs:complexType name="RenteIndberetningUdlånAfvigelseStrukturType">
 		<xs:sequence>
@@ -135,6 +136,14 @@
 											</xs:sequence>
 										</xs:complexType>
 									</xs:element>
+									<xs:element name="KundeordningBeløb" minOccurs="0">
+										<xs:complexType>
+											<xs:sequence>
+												<xs:element ref="ekap2021:SumAfvigelseProcent" minOccurs="0"/>
+												<xs:element ref="ekap2021:KundeordningBeløbSummering"/>
+											</xs:sequence>
+										</xs:complexType>
+									</xs:element>
 								</xs:sequence>
 							</xs:complexType>
 						</xs:element>
@@ -154,6 +163,14 @@
 											<xs:sequence>
 												<xs:element ref="ekap2021:SumAfvigelseProcent" minOccurs="0"/>
 												<xs:element ref="ekap2021:LånRestgældBeløbSummering"/>
+											</xs:sequence>
+										</xs:complexType>
+									</xs:element>
+									<xs:element name="KundeordningBeløb" minOccurs="0">
+										<xs:complexType>
+											<xs:sequence>
+												<xs:element ref="ekap2021:SumAfvigelseProcent" minOccurs="0"/>
+												<xs:element ref="ekap2021:KundeordningBeløbSummering"/>
 											</xs:sequence>
 										</xs:complexType>
 									</xs:element>
@@ -179,6 +196,14 @@
 											</xs:sequence>
 										</xs:complexType>
 									</xs:element>
+									<xs:element name="KundeordningBeløb" minOccurs="0">
+										<xs:complexType>
+											<xs:sequence>
+												<xs:element ref="ekap2021:SumAfvigelseProcent" minOccurs="0"/>
+												<xs:element ref="ekap2021:KundeordningBeløbSummering"/>
+											</xs:sequence>
+										</xs:complexType>
+									</xs:element>
 								</xs:sequence>
 							</xs:complexType>
 						</xs:element>
@@ -198,6 +223,14 @@
 											<xs:sequence>
 												<xs:element ref="ekap2021:SumAfvigelseProcent" minOccurs="0"/>
 												<xs:element ref="ekap2021:LånRestgældBeløbSummering"/>
+											</xs:sequence>
+										</xs:complexType>
+									</xs:element>
+									<xs:element name="KundeordningBeløb" minOccurs="0">
+										<xs:complexType>
+											<xs:sequence>
+												<xs:element ref="ekap2021:SumAfvigelseProcent" minOccurs="0"/>
+												<xs:element ref="ekap2021:KundeordningBeløbSummering"/>
 											</xs:sequence>
 										</xs:complexType>
 									</xs:element>
