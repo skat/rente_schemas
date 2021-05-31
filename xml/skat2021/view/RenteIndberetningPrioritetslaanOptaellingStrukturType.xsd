@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:ekap2021="http://skat.dk/ekapital/2021/01/01" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://skat.dk/ekapital/2021/01/01" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0">
+	<xs:annotation>
+		<xs:documentation/>
+		<xs:documentation>r22710</xs:documentation>
+	</xs:annotation>
+	<xs:include schemaLocation="../operational/OptaellingAntal.xsd"/>
+	<xs:include schemaLocation="../class/Rente.xsd"/>
+	<xs:include schemaLocation="../operational/LaanRestgaeldBeloebSummering.xsd"/>
+	<xs:include schemaLocation="../operational/LaanKursvaerdiSummering.xsd"/>
+	<xs:include schemaLocation="../operational/KontantlaanKurstabSummering.xsd"/>
+	<xs:include schemaLocation="../operational/ReservefondUdlodningSummering.xsd"/>
+	<xs:include schemaLocation="../class/Kundeordning.xsd"/>
+	<xs:element name="RenteIndberetningPrioritetslånOptællingStruktur" type="ekap2021:RenteIndberetningPrioritetslånOptællingStrukturType"/>
+	<xs:complexType name="RenteIndberetningPrioritetslånOptællingStrukturType">
+		<xs:sequence>
+			<xs:element name="AntalKonti">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="Total">
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element ref="ekap2021:OptællingAntal"/>
+									<xs:element name="LånForholdRestance">
+										<xs:complexType>
+											<xs:sequence>
+												<xs:element ref="ekap2021:OptællingAntal"/>
+											</xs:sequence>
+										</xs:complexType>
+									</xs:element>
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+						<xs:element name="GodkendtKonto">
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element ref="ekap2021:OptællingAntal"/>
+									<xs:element name="LånForholdRestance">
+										<xs:complexType>
+											<xs:sequence>
+												<xs:element ref="ekap2021:OptællingAntal"/>
+											</xs:sequence>
+										</xs:complexType>
+									</xs:element>
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+						<xs:element name="GodkendtKontoAdvis">
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element ref="ekap2021:OptællingAntal"/>
+									<xs:element name="LånForholdRestance">
+										<xs:complexType>
+											<xs:sequence>
+												<xs:element ref="ekap2021:OptællingAntal"/>
+											</xs:sequence>
+										</xs:complexType>
+									</xs:element>
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+						<xs:element name="FejlKontohaver">
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element ref="ekap2021:OptællingAntal"/>
+									<xs:element name="LånForholdRestance">
+										<xs:complexType>
+											<xs:sequence>
+												<xs:element ref="ekap2021:OptællingAntal"/>
+											</xs:sequence>
+										</xs:complexType>
+									</xs:element>
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+						<xs:element name="FejlKonto">
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element ref="ekap2021:OptællingAntal"/>
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+						<xs:element name="FejlIndberetning">
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element ref="ekap2021:OptællingAntal"/>
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+						<xs:element name="FejlFormat">
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element ref="ekap2021:OptællingAntal"/>
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+						<xs:element name="Invalideret">
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element ref="ekap2021:OptællingAntal"/>
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="AnvendtTotalSummering">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="Total" minOccurs="0">
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element ref="ekap2021:RenteBeløbSummering"/>
+									<xs:element ref="ekap2021:LånRestgældBeløbSummering" minOccurs="0"/>
+									<xs:element ref="ekap2021:LånKursværdiSummering" minOccurs="0"/>
+									<xs:element ref="ekap2021:KontantlånKurstabSummering" minOccurs="0"/>
+									<xs:element ref="ekap2021:ReservefondUdlodningSummering" minOccurs="0"/>
+									<xs:element ref="ekap2021:KundeordningBeløbSummering" minOccurs="0"/>
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+						<xs:element name="GodkendtKontoOgAdvis" minOccurs="0">
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element ref="ekap2021:RenteBeløbSummering"/>
+									<xs:element ref="ekap2021:LånRestgældBeløbSummering" minOccurs="0"/>
+									<xs:element ref="ekap2021:LånKursværdiSummering" minOccurs="0"/>
+									<xs:element ref="ekap2021:KontantlånKurstabSummering" minOccurs="0"/>
+									<xs:element ref="ekap2021:ReservefondUdlodningSummering" minOccurs="0"/>
+									<xs:element ref="ekap2021:KundeordningBeløbSummering" minOccurs="0"/>
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+						<xs:element name="FejlKontohaver" minOccurs="0">
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element ref="ekap2021:RenteBeløbSummering"/>
+									<xs:element ref="ekap2021:LånRestgældBeløbSummering" minOccurs="0"/>
+									<xs:element ref="ekap2021:LånKursværdiSummering" minOccurs="0"/>
+									<xs:element ref="ekap2021:KontantlånKurstabSummering" minOccurs="0"/>
+									<xs:element ref="ekap2021:ReservefondUdlodningSummering" minOccurs="0"/>
+									<xs:element ref="ekap2021:KundeordningBeløbSummering" minOccurs="0"/>
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+						<xs:element name="FejlKonto" minOccurs="0">
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element ref="ekap2021:RenteBeløbSummering"/>
+									<xs:element ref="ekap2021:LånRestgældBeløbSummering" minOccurs="0"/>
+									<xs:element ref="ekap2021:LånKursværdiSummering" minOccurs="0"/>
+									<xs:element ref="ekap2021:KontantlånKurstabSummering" minOccurs="0"/>
+									<xs:element ref="ekap2021:ReservefondUdlodningSummering" minOccurs="0"/>
+									<xs:element ref="ekap2021:KundeordningBeløbSummering" minOccurs="0"/>
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>
