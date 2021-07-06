@@ -115,11 +115,11 @@
 											<xs:complexType>
 												<xs:sequence>
 													<xs:element ref="ekap2021:RenteBeløb"/>
+													<xs:element ref="ekap2021:KundeordningBeløb" minOccurs="0"/>
 													<xs:element ref="ekap2021:LånRestgældBeløb" minOccurs="0"/>
 													<xs:element ref="ekap2021:LånKursværdi" minOccurs="0"/>
 													<xs:element ref="ekap2021:KontantlånKurstab" minOccurs="0"/>
 													<xs:element ref="ekap2021:ReservefondUdlodning" minOccurs="0"/>
-													<xs:element ref="ekap2021:KundeordningBeløb" minOccurs="0"/>
 												</xs:sequence>
 											</xs:complexType>
 										</xs:element>
