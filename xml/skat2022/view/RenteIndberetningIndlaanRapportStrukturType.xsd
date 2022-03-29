@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:ekap2022="http://skat.dk/ekapital/2022/01/01" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://skat.dk/ekapital/2022/01/01" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0">
+	<xs:annotation>
+		<xs:documentation/>
+		<xs:documentation>r24082</xs:documentation>
+	</xs:annotation>
+	<xs:include schemaLocation="../view/RapportOptaellingScopeStrukturType.xsd"/>
+	<xs:include schemaLocation="../view/RenteIndberetningIndlaanOptaellingStrukturType.xsd"/>
+	<xs:include schemaLocation="../view/RenteIndberetningIndlaanAfvigelseStrukturType.xsd"/>
+	<xs:element name="RenteIndberetningIndlånRapportStruktur" type="ekap2022:RenteIndberetningIndlånRapportStrukturType"/>
+	<xs:complexType name="RenteIndberetningIndlånRapportStrukturType">
+		<xs:sequence>
+			<xs:element ref="ekap2022:RapportOptællingScopeStruktur"/>
+			<xs:element ref="ekap2022:RenteIndberetningIndlånOptællingStruktur"/>
+			<xs:element name="Sammenligning" minOccurs="0">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element ref="ekap2022:RapportOptællingScopeStruktur"/>
+						<xs:element ref="ekap2022:RenteIndberetningIndlånOptællingStruktur"/>
+						<xs:element ref="ekap2022:RenteIndberetningIndlånAfvigelseStruktur"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>
