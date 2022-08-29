@@ -4,10 +4,8 @@
 		<xs:annotation>
 			<xs:documentation>Beløb angivet som decimaltal, fx. 1500,00</xs:documentation>
 		</xs:annotation>
-		<xs:restriction base="xs:decimal">
-			<xs:minInclusive value="0"/>
-			<xs:totalDigits value="13"/>
-			<xs:fractionDigits value="2"/>
+		<xs:restriction base="xs:string">
+			<xs:pattern value="([\+]){0,1}[0-9]{1,11}([,][0-9]{1,2}){0,1}"/>
 		</xs:restriction>
 	</xs:simpleType>
 </xs:schema>
