@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:ekap2022="http://skat.dk/ekapital/2022/01/01" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://skat.dk/ekapital/2022/01/01" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0">
+	<xs:annotation>
+		<xs:documentation>En person der er berettiget til at agere på vegne af en virksomhed.</xs:documentation>
+	</xs:annotation>
+	<xs:include schemaLocation="../types/MarkeringType.xsd"/>
+	<xs:element name="VirksomhedFormandAdministrator" type="ekap2022:MarkeringType">
+		<xs:annotation>
+			<xs:documentation>Angiver om person er formand eller administrator for en virksomhed og dermed indberettes på vegne af denne.</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+</xs:schema>
