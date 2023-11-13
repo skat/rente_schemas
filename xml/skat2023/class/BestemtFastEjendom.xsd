@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:ekap2023="http://skat.dk/ekapital/2023/01/01" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://skat.dk/ekapital/2023/01/01" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0">
+	<xs:annotation>
+		<xs:documentation>Fra Matriklen: En fast ejendom der er 'bestemt', dvs. tilstrækkelig individualiseret, stedbestemt og afgrænset.  Bestemt fast ejendom underopdeles i ejendomstyperne: · Samlet fast ejendom (inkl. samejede bygninger) · Bygninger på fremmed grund* · Ejerlejligheder, herunder ejerlejlighed i BPFG  Ejendomsbegrebet Bestemt fast ejendom er defineret og afgrænset nærmere af den retspraksis, som er opstået i tilknytning til tinglysningslovens § 10, stk. 1.  *: Bygning eller teknisk anlæg, hvis ejerskab afviger fra ejerskabet til underliggende grund og som er bestemt til varig forbliven på stedet - i konstruktionsmæssig henseende uafhængig af eventuelle andre bygninger (bortset fra fælles brandmur, som da skal være tinglyst efter byggeloven).</xs:documentation>
+	</xs:annotation>
+	<xs:include schemaLocation="../types/BFENummerType.xsd"/>
+	<xs:element name="BestemtFastEjendomBFENummer" type="ekap2023:BFENummerType">
+		<xs:annotation>
+			<xs:documentation>Fra Matriklen: Unikt fortløbende identifikation tildelt den specifikke bestemte fast ejendom.  OBS: formatet foreløbigt defineret alene som Integer datatype fra Matriklens side.</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+</xs:schema>
