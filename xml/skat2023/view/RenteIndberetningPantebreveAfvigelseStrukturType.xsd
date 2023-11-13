@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:ekap2023="http://skat.dk/ekapital/2023/01/01" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://skat.dk/ekapital/2023/01/01" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0">
+	<xs:annotation>
+		<xs:documentation/>
+		<xs:documentation>r25782</xs:documentation>
+	</xs:annotation>
+	<xs:include schemaLocation="../operational/SumAfvigelseProcent.xsd"/>
+	<xs:include schemaLocation="../operational/SumAfvigelseAntal.xsd"/>
+	<xs:include schemaLocation="../class/Rente.xsd"/>
+	<xs:include schemaLocation="../operational/LaanRestgaeldBeloebSummering.xsd"/>
+	<xs:element name="RenteIndberetningPantebreveAfvigelseStruktur" type="ekap2023:RenteIndberetningPantebreveAfvigelseStrukturType"/>
+	<xs:complexType name="RenteIndberetningPantebreveAfvigelseStrukturType">
+		<xs:sequence>
+			<xs:element name="AntalKonti">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="Total">
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element ref="ekap2023:SumAfvigelseProcent" minOccurs="0"/>
+									<xs:element ref="ekap2023:SumAfvigelseAntal"/>
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+						<xs:element name="GodkendtKonto">
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element ref="ekap2023:SumAfvigelseProcent" minOccurs="0"/>
+									<xs:element ref="ekap2023:SumAfvigelseAntal"/>
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+						<xs:element name="GodkendtKontoAdvis">
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element ref="ekap2023:SumAfvigelseProcent" minOccurs="0"/>
+									<xs:element ref="ekap2023:SumAfvigelseAntal"/>
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+						<xs:element name="FejlKontohaver">
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element ref="ekap2023:SumAfvigelseProcent" minOccurs="0"/>
+									<xs:element ref="ekap2023:SumAfvigelseAntal"/>
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+						<xs:element name="FejlKonto">
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element ref="ekap2023:SumAfvigelseProcent" minOccurs="0"/>
+									<xs:element ref="ekap2023:SumAfvigelseAntal"/>
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+						<xs:element name="FejlIndberetning">
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element ref="ekap2023:SumAfvigelseProcent" minOccurs="0"/>
+									<xs:element ref="ekap2023:SumAfvigelseAntal"/>
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+						<xs:element name="FejlFormat">
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element ref="ekap2023:SumAfvigelseProcent" minOccurs="0"/>
+									<xs:element ref="ekap2023:SumAfvigelseAntal"/>
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+						<xs:element name="Invalideret">
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element ref="ekap2023:SumAfvigelseProcent" minOccurs="0"/>
+									<xs:element ref="ekap2023:SumAfvigelseAntal"/>
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="AnvendtTotalSummering">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="Total" minOccurs="0">
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element name="RenteBeløb">
+										<xs:complexType>
+											<xs:sequence>
+												<xs:element ref="ekap2023:SumAfvigelseProcent" minOccurs="0"/>
+												<xs:element ref="ekap2023:RenteBeløbSummering"/>
+											</xs:sequence>
+										</xs:complexType>
+									</xs:element>
+									<xs:element name="LånRestgældBeløb" minOccurs="0">
+										<xs:complexType>
+											<xs:sequence>
+												<xs:element ref="ekap2023:SumAfvigelseProcent" minOccurs="0"/>
+												<xs:element ref="ekap2023:LånRestgældBeløbSummering"/>
+											</xs:sequence>
+										</xs:complexType>
+									</xs:element>
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+						<xs:element name="GodkendtKontoOgAdvis" minOccurs="0">
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element name="RenteBeløb">
+										<xs:complexType>
+											<xs:sequence>
+												<xs:element ref="ekap2023:SumAfvigelseProcent" minOccurs="0"/>
+												<xs:element ref="ekap2023:RenteBeløbSummering"/>
+											</xs:sequence>
+										</xs:complexType>
+									</xs:element>
+									<xs:element name="LånRestgældBeløb" minOccurs="0">
+										<xs:complexType>
+											<xs:sequence>
+												<xs:element ref="ekap2023:SumAfvigelseProcent" minOccurs="0"/>
+												<xs:element ref="ekap2023:LånRestgældBeløbSummering"/>
+											</xs:sequence>
+										</xs:complexType>
+									</xs:element>
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+						<xs:element name="FejlKontohaver" minOccurs="0">
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element name="RenteBeløb">
+										<xs:complexType>
+											<xs:sequence>
+												<xs:element ref="ekap2023:SumAfvigelseProcent" minOccurs="0"/>
+												<xs:element ref="ekap2023:RenteBeløbSummering"/>
+											</xs:sequence>
+										</xs:complexType>
+									</xs:element>
+									<xs:element name="LånRestgældBeløb" minOccurs="0">
+										<xs:complexType>
+											<xs:sequence>
+												<xs:element ref="ekap2023:SumAfvigelseProcent" minOccurs="0"/>
+												<xs:element ref="ekap2023:LånRestgældBeløbSummering"/>
+											</xs:sequence>
+										</xs:complexType>
+									</xs:element>
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+						<xs:element name="FejlKonto" minOccurs="0">
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element name="RenteBeløb">
+										<xs:complexType>
+											<xs:sequence>
+												<xs:element ref="ekap2023:SumAfvigelseProcent" minOccurs="0"/>
+												<xs:element ref="ekap2023:RenteBeløbSummering"/>
+											</xs:sequence>
+										</xs:complexType>
+									</xs:element>
+									<xs:element name="LånRestgældBeløb" minOccurs="0">
+										<xs:complexType>
+											<xs:sequence>
+												<xs:element ref="ekap2023:SumAfvigelseProcent" minOccurs="0"/>
+												<xs:element ref="ekap2023:LånRestgældBeløbSummering"/>
+											</xs:sequence>
+										</xs:complexType>
+									</xs:element>
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>
