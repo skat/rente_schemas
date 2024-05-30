@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:ekap2024="http://skat.dk/ekapital/2024/01/01" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://skat.dk/ekapital/2024/01/01" elementFormDefault="qualified" version="1.0">
+	<xs:simpleType name="BFENummerType">
+		<xs:annotation>
+			<xs:documentation>Fra Matriklen: Unikt fortløbende identifikation tildelt den specifikke bestemte fast ejendom.  OBS: formatet foreløbigt defineret alene som Integer datatype fra Matriklens side.</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:integer">
+			<xs:totalDigits value="10"/>
+		</xs:restriction>
+	</xs:simpleType>
+</xs:schema>

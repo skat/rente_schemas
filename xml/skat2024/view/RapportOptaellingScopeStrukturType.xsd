@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:ekap2024="http://skat.dk/ekapital/2024/01/01" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://skat.dk/ekapital/2024/01/01" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0">
+	<xs:annotation>
+		<xs:documentation/>
+		<xs:documentation>r26782</xs:documentation>
+	</xs:annotation>
+	<xs:include schemaLocation="../operational/MasseindleveringReference.xsd"/>
+	<xs:include schemaLocation="../class/Indkomst.xsd"/>
+	<xs:include schemaLocation="../class/Virksomhed.xsd"/>
+	<xs:element name="RapportOptællingScopeStruktur" type="ekap2024:RapportOptællingScopeStrukturType"/>
+	<xs:complexType name="RapportOptællingScopeStrukturType">
+		<xs:sequence>
+			<xs:element ref="ekap2024:MasseindleveringReference" minOccurs="0"/>
+			<xs:element name="Indberetningsperiode" minOccurs="0">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element ref="ekap2024:IndkomstÅr"/>
+						<xs:element ref="ekap2024:IndkomstPeriodeTil" minOccurs="0"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="Indberetningspligtig" minOccurs="0">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element ref="ekap2024:VirksomhedSENummer"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>
