@@ -1,7 +1,15 @@
 XML skemaer til Renteindberetninger
 ===================================
 
-Her er de frit tilgængelig XML skemaer for renteindberetninger gældende fra 2017 og frem.
+OBS: Dette repository opdateres ikke længere. 
+
+For nyeste version af XML, se [Eksternwiki](https://eksternwiki.skat.dk/projects/eKapitalModernisering/Rente/Leverancer/).
+
+Som altid er der også viden at hente på skat.dk/rente 
+
+Dette repository vil snart blive arkiveret.
+
+Her er de frit tilgængelige XML-skemaer for renteindberetninger gældende fra 2017 og frem.
 
 Der er 3 branches
 
